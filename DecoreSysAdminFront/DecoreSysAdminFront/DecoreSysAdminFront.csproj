@@ -226,32 +226,32 @@
     <Content Include="Service References\EmployeeServiceRef\DecoreSysAdminFront.EmployeeServiceRef.SectionInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\EmployeeServiceRef\Service1.disco" />
     <None Include="Service References\EmployeeServiceRef\configuration91.svcinfo" />
     <None Include="Service References\EmployeeServiceRef\configuration.svcinfo" />
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF.wsdl" />
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\EmployeeServiceRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF.disco" />
     <Content Include="Service References\LoginServiceRef\DecoreSysAdminFront.LoginServiceRef.EmployeeUsers.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\LoginServiceRef\DecoreSysAdminFront.LoginServiceRef.StudentUsers.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\EmployeeServiceRef\Service1.wsdl" />
-    <None Include="Service References\EmployeeServiceRef\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EmployeeServiceRef\Service11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EmployeeServiceRef\Service12.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EmployeeServiceRef\Service13.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\LoginServiceRef\configuration91.svcinfo" />
     <None Include="Service References\LoginServiceRef\configuration.svcinfo" />
     <None Include="Service References\LoginServiceRef\LoginService1.wsdl" />
