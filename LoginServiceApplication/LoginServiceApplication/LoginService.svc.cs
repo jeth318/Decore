@@ -20,11 +20,6 @@ namespace LoginServiceApplication
         EmployeeUsers employeeUser = new EmployeeUsers();
         StudentUsers studentUser = new StudentUsers();
 
-
-
-
-
-
         public StudentUsers LoginStudent(string email, string password)
         {
 
