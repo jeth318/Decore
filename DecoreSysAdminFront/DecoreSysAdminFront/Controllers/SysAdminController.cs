@@ -137,13 +137,12 @@ namespace DecoreSysAdminFront.Controllers
 
         // POST: SysAdmin/AtttachStudent 
         [HttpPost]
-        
         public ActionResult AttatchStudent(int id, StudentInfo newStudentInfo)
         {
-            studentInfo.UserId = id;
+            newStudentInfo.UserId = id;
             try
             {
-                studentService.CreateStudent(studentInfo);
+                studentService.CreateStudent(newStudentInfo);
                 return RedirectToAction("Dashboard");
             }
             catch
@@ -247,12 +246,12 @@ namespace DecoreSysAdminFront.Controllers
 
         // POST: SysAdmin/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, UserInfo updatedUser)
         {
             try
             {
-                // TODO: Add update logic here
-                return RedirectToAction("Index");
+                userService.UpdateUser(updatedUser);
+                return RedirectToAction("Dashboard");
             }
             catch
             {
