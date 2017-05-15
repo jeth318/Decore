@@ -16,6 +16,7 @@ namespace DecoreSysAdminFront.Controllers
        
         public ActionResult Index()
         {
+
             return View();
         }
 
