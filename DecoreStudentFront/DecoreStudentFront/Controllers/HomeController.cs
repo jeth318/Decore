@@ -81,6 +81,9 @@ namespace DecoreStudentFront.Controllers
                 {
                     FormsAuthentication.RedirectFromLoginPage(studentUser.Id.ToString(), false);
                     return null;
+                } else
+                {
+                    return RedirectToAction("Index");
                 }
             }
             catch (Exception)
