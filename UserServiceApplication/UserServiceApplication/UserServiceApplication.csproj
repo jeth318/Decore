@@ -101,20 +101,30 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
-    <None Include="Service References\EmployeeServiceRef\Service1.wsdl" />
-    <None Include="Service References\EmployeeServiceRef\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EmployeeServiceRef\Service11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EmployeeServiceRef\Service12.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EmployeeServiceRef\Service13.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF.disco" />
     <Content Include="Service References\EmployeeServiceRef\UserService.EmployeeServiceRef.EmployeeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF.wsdl" />
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\EmployeeServiceRef\UserService.EmployeeServiceRef.AccessInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EmployeeServiceRef\UserService.EmployeeServiceRef.RoleInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EmployeeServiceRef\UserService.EmployeeServiceRef.SectionInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\StudentServiceRef\StudentService.disco" />
@@ -124,7 +134,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\EmployeeServiceRef\Service1.disco" />
     <None Include="Service References\EmployeeServiceRef\configuration91.svcinfo" />
     <None Include="Service References\EmployeeServiceRef\configuration.svcinfo" />
     <None Include="Service References\EmployeeServiceRef\Reference.svcmap">

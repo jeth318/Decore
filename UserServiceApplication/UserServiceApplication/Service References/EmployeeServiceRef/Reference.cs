@@ -15,166 +15,9 @@ namespace UserService.EmployeeServiceRef {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EmployeeInfo", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AccessInfo", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
     [System.SerializableAttribute()]
-    public partial class EmployeeInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UserService.EmployeeServiceRef.AccessInfo[] AccessField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime CreatedAtField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CreatedByIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UserService.EmployeeServiceRef.RoleInfo RoleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UserService.EmployeeServiceRef.SectionInfo SectionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime UpdatedAtField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int UserIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UserService.EmployeeServiceRef.AccessInfo[] Access {
-            get {
-                return this.AccessField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AccessField, value) != true)) {
-                    this.AccessField = value;
-                    this.RaisePropertyChanged("Access");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime CreatedAt {
-            get {
-                return this.CreatedAtField;
-            }
-            set {
-                if ((this.CreatedAtField.Equals(value) != true)) {
-                    this.CreatedAtField = value;
-                    this.RaisePropertyChanged("CreatedAt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CreatedById {
-            get {
-                return this.CreatedByIdField;
-            }
-            set {
-                if ((this.CreatedByIdField.Equals(value) != true)) {
-                    this.CreatedByIdField = value;
-                    this.RaisePropertyChanged("CreatedById");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UserService.EmployeeServiceRef.RoleInfo Role {
-            get {
-                return this.RoleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RoleField, value) != true)) {
-                    this.RoleField = value;
-                    this.RaisePropertyChanged("Role");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UserService.EmployeeServiceRef.SectionInfo Section {
-            get {
-                return this.SectionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SectionField, value) != true)) {
-                    this.SectionField = value;
-                    this.RaisePropertyChanged("Section");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime UpdatedAt {
-            get {
-                return this.UpdatedAtField;
-            }
-            set {
-                if ((this.UpdatedAtField.Equals(value) != true)) {
-                    this.UpdatedAtField = value;
-                    this.RaisePropertyChanged("UpdatedAt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int UserId {
-            get {
-                return this.UserIdField;
-            }
-            set {
-                if ((this.UserIdField.Equals(value) != true)) {
-                    this.UserIdField = value;
-                    this.RaisePropertyChanged("UserId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RoleInfo", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
-    [System.SerializableAttribute()]
-    public partial class RoleInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class AccessInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -195,10 +38,10 @@ namespace UserService.EmployeeServiceRef {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SectionIdField;
+        private System.DateTime UpdatedAtField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime UpdatedAtField;
+        private System.Nullable<int> UpdatedByIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -276,14 +119,129 @@ namespace UserService.EmployeeServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int SectionId {
+        public System.DateTime UpdatedAt {
             get {
-                return this.SectionIdField;
+                return this.UpdatedAtField;
             }
             set {
-                if ((this.SectionIdField.Equals(value) != true)) {
-                    this.SectionIdField = value;
-                    this.RaisePropertyChanged("SectionId");
+                if ((this.UpdatedAtField.Equals(value) != true)) {
+                    this.UpdatedAtField = value;
+                    this.RaisePropertyChanged("UpdatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> UpdatedById {
+            get {
+                return this.UpdatedByIdField;
+            }
+            set {
+                if ((this.UpdatedByIdField.Equals(value) != true)) {
+                    this.UpdatedByIdField = value;
+                    this.RaisePropertyChanged("UpdatedById");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EmployeeInfo", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+    [System.SerializableAttribute()]
+    public partial class EmployeeInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime CreatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CreatedByIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UserService.EmployeeServiceRef.RoleInfo[] RolesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime UpdatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> UpdatedByIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UserIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime CreatedAt {
+            get {
+                return this.CreatedAtField;
+            }
+            set {
+                if ((this.CreatedAtField.Equals(value) != true)) {
+                    this.CreatedAtField = value;
+                    this.RaisePropertyChanged("CreatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CreatedById {
+            get {
+                return this.CreatedByIdField;
+            }
+            set {
+                if ((this.CreatedByIdField.Equals(value) != true)) {
+                    this.CreatedByIdField = value;
+                    this.RaisePropertyChanged("CreatedById");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UserService.EmployeeServiceRef.RoleInfo[] Roles {
+            get {
+                return this.RolesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RolesField, value) != true)) {
+                    this.RolesField = value;
+                    this.RaisePropertyChanged("Roles");
                 }
             }
         }
@@ -297,6 +255,221 @@ namespace UserService.EmployeeServiceRef {
                 if ((this.UpdatedAtField.Equals(value) != true)) {
                     this.UpdatedAtField = value;
                     this.RaisePropertyChanged("UpdatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> UpdatedById {
+            get {
+                return this.UpdatedByIdField;
+            }
+            set {
+                if ((this.UpdatedByIdField.Equals(value) != true)) {
+                    this.UpdatedByIdField = value;
+                    this.RaisePropertyChanged("UpdatedById");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UserId {
+            get {
+                return this.UserIdField;
+            }
+            set {
+                if ((this.UserIdField.Equals(value) != true)) {
+                    this.UserIdField = value;
+                    this.RaisePropertyChanged("UserId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RoleInfo", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+    [System.SerializableAttribute()]
+    public partial class RoleInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UserService.EmployeeServiceRef.AccessInfo[] AccessField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime CreatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CreatedByIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UserService.EmployeeServiceRef.EmployeeInfo[] EmployeesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UserService.EmployeeServiceRef.SectionInfo SectionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime UpdatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> UpdatedByIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UserService.EmployeeServiceRef.AccessInfo[] Access {
+            get {
+                return this.AccessField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AccessField, value) != true)) {
+                    this.AccessField = value;
+                    this.RaisePropertyChanged("Access");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime CreatedAt {
+            get {
+                return this.CreatedAtField;
+            }
+            set {
+                if ((this.CreatedAtField.Equals(value) != true)) {
+                    this.CreatedAtField = value;
+                    this.RaisePropertyChanged("CreatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CreatedById {
+            get {
+                return this.CreatedByIdField;
+            }
+            set {
+                if ((this.CreatedByIdField.Equals(value) != true)) {
+                    this.CreatedByIdField = value;
+                    this.RaisePropertyChanged("CreatedById");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UserService.EmployeeServiceRef.EmployeeInfo[] Employees {
+            get {
+                return this.EmployeesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmployeesField, value) != true)) {
+                    this.EmployeesField = value;
+                    this.RaisePropertyChanged("Employees");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public UserService.EmployeeServiceRef.SectionInfo Section {
+            get {
+                return this.SectionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SectionField, value) != true)) {
+                    this.SectionField = value;
+                    this.RaisePropertyChanged("Section");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime UpdatedAt {
+            get {
+                return this.UpdatedAtField;
+            }
+            set {
+                if ((this.UpdatedAtField.Equals(value) != true)) {
+                    this.UpdatedAtField = value;
+                    this.RaisePropertyChanged("UpdatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> UpdatedById {
+            get {
+                return this.UpdatedByIdField;
+            }
+            set {
+                if ((this.UpdatedByIdField.Equals(value) != true)) {
+                    this.UpdatedByIdField = value;
+                    this.RaisePropertyChanged("UpdatedById");
                 }
             }
         }
@@ -339,7 +512,13 @@ namespace UserService.EmployeeServiceRef {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UserService.EmployeeServiceRef.RoleInfo[] RolesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime UpdatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> UpdatedByIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -430,6 +609,19 @@ namespace UserService.EmployeeServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public UserService.EmployeeServiceRef.RoleInfo[] Roles {
+            get {
+                return this.RolesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RolesField, value) != true)) {
+                    this.RolesField = value;
+                    this.RaisePropertyChanged("Roles");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime UpdatedAt {
             get {
                 return this.UpdatedAtField;
@@ -442,79 +634,15 @@ namespace UserService.EmployeeServiceRef {
             }
         }
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AccessInfo", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
-    [System.SerializableAttribute()]
-    public partial class AccessInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
+        public System.Nullable<int> UpdatedById {
             get {
-                return this.DescriptionField;
+                return this.UpdatedByIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
+                if ((this.UpdatedByIdField.Equals(value) != true)) {
+                    this.UpdatedByIdField = value;
+                    this.RaisePropertyChanged("UpdatedById");
                 }
             }
         }
@@ -530,58 +658,142 @@ namespace UserService.EmployeeServiceRef {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="EmployeeServiceRef.IService1")]
-    public interface IService1 {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="EmployeeServiceRef.IEmployeeServiceWCF")]
+    public interface IEmployeeServiceWCF {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/IsRunning", ReplyAction="http://tempuri.org/IService1/IsRunningResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/IsRunning", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/IsRunningResponse")]
         bool IsRunning();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/IsRunning", ReplyAction="http://tempuri.org/IService1/IsRunningResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/IsRunning", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/IsRunningResponse")]
         System.Threading.Tasks.Task<bool> IsRunningAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByUserId", ReplyAction="http://tempuri.org/IService1/GetEmployeeByUserIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateAccess", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateAccessResponse")]
+        UserService.EmployeeServiceRef.AccessInfo CreateAccess(int createdById, string name, string description);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateAccess", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateAccessResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.AccessInfo> CreateAccessAsync(int createdById, string name, string description);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateAccess", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateAccessResponse")]
+        UserService.EmployeeServiceRef.AccessInfo UpdateAccess(int updatedById, UserService.EmployeeServiceRef.AccessInfo updatedAccess);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateAccess", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateAccessResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.AccessInfo> UpdateAccessAsync(int updatedById, UserService.EmployeeServiceRef.AccessInfo updatedAccess);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteAccess", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteAccessResponse")]
+        string DeleteAccess(int acessId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteAccess", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteAccessResponse")]
+        System.Threading.Tasks.Task<string> DeleteAccessAsync(int acessId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateEmployeeResponse")]
+        UserService.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateEmployeeResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByUserId", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByUserIdResponse")]
         UserService.EmployeeServiceRef.EmployeeInfo GetEmployeeByUserId(int userId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByUserId", ReplyAction="http://tempuri.org/IService1/GetEmployeeByUserIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByUserId", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByUserIdResponse")]
         System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> GetEmployeeByUserIdAsync(int userId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeById", ReplyAction="http://tempuri.org/IService1/GetEmployeeByIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeById", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByIdResponse")]
         UserService.EmployeeServiceRef.EmployeeInfo GetEmployeeById(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeById", ReplyAction="http://tempuri.org/IService1/GetEmployeeByIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeById", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByIdResponse")]
         System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> GetEmployeeByIdAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateEmployee", ReplyAction="http://tempuri.org/IService1/CreateEmployeeResponse")]
-        UserService.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] sectionIdsIn, int[] roleIdsIn);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRoles", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRolesResponse")]
+        UserService.EmployeeServiceRef.EmployeeInfo ChangeEmployeeRoles(int updatedById, int employeeId, int[] rolesToAddId, int[] rolesToRemoveId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateEmployee", ReplyAction="http://tempuri.org/IService1/CreateEmployeeResponse")]
-        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] sectionIdsIn, int[] roleIdsIn);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRoles", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRolesResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeRolesAsync(int updatedById, int employeeId, int[] rolesToAddId, int[] rolesToRemoveId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSections", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSectionsResponse")]
+        UserService.EmployeeServiceRef.EmployeeInfo ChangeEmployeeSections(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSections", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSectionsResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeSectionsAsync(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployeeResponse")]
+        string DeleteEmployee(int employeeId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployeeResponse")]
+        System.Threading.Tasks.Task<string> DeleteEmployeeAsync(int employeeId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateRoleResponse")]
+        UserService.EmployeeServiceRef.RoleInfo CreateRole(int createdById, int sectionId, string name, string description, int[] access);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateRoleResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.RoleInfo> CreateRoleAsync(int createdById, int sectionId, string name, string description, int[] access);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateRoleResponse")]
+        UserService.EmployeeServiceRef.RoleInfo UpdateRole(int updatedById, UserService.EmployeeServiceRef.RoleInfo updatedRole);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateRoleResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.RoleInfo> UpdateRoleAsync(int updatedById, UserService.EmployeeServiceRef.RoleInfo updatedRole);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteRoleResponse")]
+        string DeleteRole(int roleId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteRoleResponse")]
+        System.Threading.Tasks.Task<string> DeleteRoleAsync(int roleId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateSectionResponse")]
+        UserService.EmployeeServiceRef.SectionInfo CreateSection(int createdById, string name, string description, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateSectionResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.SectionInfo> CreateSectionAsync(int createdById, string name, string description, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetSectionById", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetSectionByIdResponse")]
+        UserService.EmployeeServiceRef.SectionInfo GetSectionById(int sectionId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetSectionById", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetSectionByIdResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.SectionInfo> GetSectionByIdAsync(int sectionId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetAllSections", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetAllSectionsResponse")]
+        UserService.EmployeeServiceRef.SectionInfo[] GetAllSections();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetAllSections", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetAllSectionsResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.SectionInfo[]> GetAllSectionsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateSectionResponse")]
+        UserService.EmployeeServiceRef.SectionInfo UpdateSection(int updatedById, UserService.EmployeeServiceRef.SectionInfo updatedSection);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateSectionResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.SectionInfo> UpdateSectionAsync(int updatedById, UserService.EmployeeServiceRef.SectionInfo updatedSection);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteSectionResponse")]
+        string DeleteSection(int sectionId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteSectionResponse")]
+        System.Threading.Tasks.Task<string> DeleteSectionAsync(int sectionId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : UserService.EmployeeServiceRef.IService1, System.ServiceModel.IClientChannel {
+    public interface IEmployeeServiceWCFChannel : UserService.EmployeeServiceRef.IEmployeeServiceWCF, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<UserService.EmployeeServiceRef.IService1>, UserService.EmployeeServiceRef.IService1 {
+    public partial class EmployeeServiceWCFClient : System.ServiceModel.ClientBase<UserService.EmployeeServiceRef.IEmployeeServiceWCF>, UserService.EmployeeServiceRef.IEmployeeServiceWCF {
         
-        public Service1Client() {
+        public EmployeeServiceWCFClient() {
         }
         
-        public Service1Client(string endpointConfigurationName) : 
+        public EmployeeServiceWCFClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public Service1Client(string endpointConfigurationName, string remoteAddress) : 
+        public EmployeeServiceWCFClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public EmployeeServiceWCFClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public EmployeeServiceWCFClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
@@ -591,6 +803,38 @@ namespace UserService.EmployeeServiceRef {
         
         public System.Threading.Tasks.Task<bool> IsRunningAsync() {
             return base.Channel.IsRunningAsync();
+        }
+        
+        public UserService.EmployeeServiceRef.AccessInfo CreateAccess(int createdById, string name, string description) {
+            return base.Channel.CreateAccess(createdById, name, description);
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.AccessInfo> CreateAccessAsync(int createdById, string name, string description) {
+            return base.Channel.CreateAccessAsync(createdById, name, description);
+        }
+        
+        public UserService.EmployeeServiceRef.AccessInfo UpdateAccess(int updatedById, UserService.EmployeeServiceRef.AccessInfo updatedAccess) {
+            return base.Channel.UpdateAccess(updatedById, updatedAccess);
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.AccessInfo> UpdateAccessAsync(int updatedById, UserService.EmployeeServiceRef.AccessInfo updatedAccess) {
+            return base.Channel.UpdateAccessAsync(updatedById, updatedAccess);
+        }
+        
+        public string DeleteAccess(int acessId) {
+            return base.Channel.DeleteAccess(acessId);
+        }
+        
+        public System.Threading.Tasks.Task<string> DeleteAccessAsync(int acessId) {
+            return base.Channel.DeleteAccessAsync(acessId);
+        }
+        
+        public UserService.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn) {
+            return base.Channel.CreateEmployee(userIdIn, createdByIdin, sectionIds, roleIdsIn);
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn) {
+            return base.Channel.CreateEmployeeAsync(userIdIn, createdByIdin, sectionIds, roleIdsIn);
         }
         
         public UserService.EmployeeServiceRef.EmployeeInfo GetEmployeeByUserId(int userId) {
@@ -609,12 +853,92 @@ namespace UserService.EmployeeServiceRef {
             return base.Channel.GetEmployeeByIdAsync(id);
         }
         
-        public UserService.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] sectionIdsIn, int[] roleIdsIn) {
-            return base.Channel.CreateEmployee(userIdIn, createdByIdin, sectionIdsIn, roleIdsIn);
+        public UserService.EmployeeServiceRef.EmployeeInfo ChangeEmployeeRoles(int updatedById, int employeeId, int[] rolesToAddId, int[] rolesToRemoveId) {
+            return base.Channel.ChangeEmployeeRoles(updatedById, employeeId, rolesToAddId, rolesToRemoveId);
         }
         
-        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] sectionIdsIn, int[] roleIdsIn) {
-            return base.Channel.CreateEmployeeAsync(userIdIn, createdByIdin, sectionIdsIn, roleIdsIn);
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeRolesAsync(int updatedById, int employeeId, int[] rolesToAddId, int[] rolesToRemoveId) {
+            return base.Channel.ChangeEmployeeRolesAsync(updatedById, employeeId, rolesToAddId, rolesToRemoveId);
+        }
+        
+        public UserService.EmployeeServiceRef.EmployeeInfo ChangeEmployeeSections(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds) {
+            return base.Channel.ChangeEmployeeSections(updatedById, employeeId, sectionsToAddIds, sectionsToRemoveIds);
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeSectionsAsync(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds) {
+            return base.Channel.ChangeEmployeeSectionsAsync(updatedById, employeeId, sectionsToAddIds, sectionsToRemoveIds);
+        }
+        
+        public string DeleteEmployee(int employeeId) {
+            return base.Channel.DeleteEmployee(employeeId);
+        }
+        
+        public System.Threading.Tasks.Task<string> DeleteEmployeeAsync(int employeeId) {
+            return base.Channel.DeleteEmployeeAsync(employeeId);
+        }
+        
+        public UserService.EmployeeServiceRef.RoleInfo CreateRole(int createdById, int sectionId, string name, string description, int[] access) {
+            return base.Channel.CreateRole(createdById, sectionId, name, description, access);
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.RoleInfo> CreateRoleAsync(int createdById, int sectionId, string name, string description, int[] access) {
+            return base.Channel.CreateRoleAsync(createdById, sectionId, name, description, access);
+        }
+        
+        public UserService.EmployeeServiceRef.RoleInfo UpdateRole(int updatedById, UserService.EmployeeServiceRef.RoleInfo updatedRole) {
+            return base.Channel.UpdateRole(updatedById, updatedRole);
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.RoleInfo> UpdateRoleAsync(int updatedById, UserService.EmployeeServiceRef.RoleInfo updatedRole) {
+            return base.Channel.UpdateRoleAsync(updatedById, updatedRole);
+        }
+        
+        public string DeleteRole(int roleId) {
+            return base.Channel.DeleteRole(roleId);
+        }
+        
+        public System.Threading.Tasks.Task<string> DeleteRoleAsync(int roleId) {
+            return base.Channel.DeleteRoleAsync(roleId);
+        }
+        
+        public UserService.EmployeeServiceRef.SectionInfo CreateSection(int createdById, string name, string description, string email) {
+            return base.Channel.CreateSection(createdById, name, description, email);
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.SectionInfo> CreateSectionAsync(int createdById, string name, string description, string email) {
+            return base.Channel.CreateSectionAsync(createdById, name, description, email);
+        }
+        
+        public UserService.EmployeeServiceRef.SectionInfo GetSectionById(int sectionId) {
+            return base.Channel.GetSectionById(sectionId);
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.SectionInfo> GetSectionByIdAsync(int sectionId) {
+            return base.Channel.GetSectionByIdAsync(sectionId);
+        }
+        
+        public UserService.EmployeeServiceRef.SectionInfo[] GetAllSections() {
+            return base.Channel.GetAllSections();
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.SectionInfo[]> GetAllSectionsAsync() {
+            return base.Channel.GetAllSectionsAsync();
+        }
+        
+        public UserService.EmployeeServiceRef.SectionInfo UpdateSection(int updatedById, UserService.EmployeeServiceRef.SectionInfo updatedSection) {
+            return base.Channel.UpdateSection(updatedById, updatedSection);
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.SectionInfo> UpdateSectionAsync(int updatedById, UserService.EmployeeServiceRef.SectionInfo updatedSection) {
+            return base.Channel.UpdateSectionAsync(updatedById, updatedSection);
+        }
+        
+        public string DeleteSection(int sectionId) {
+            return base.Channel.DeleteSection(sectionId);
+        }
+        
+        public System.Threading.Tasks.Task<string> DeleteSectionAsync(int sectionId) {
+            return base.Channel.DeleteSectionAsync(sectionId);
         }
     }
 }

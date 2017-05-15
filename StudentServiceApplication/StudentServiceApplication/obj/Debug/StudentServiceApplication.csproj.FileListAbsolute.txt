@@ -66,4 +66,3 @@ C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplicatio
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.csprojResolveAssemblyReference.cache
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.dll
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.pdb
-\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.csprojResolveAssemblyReference.cache

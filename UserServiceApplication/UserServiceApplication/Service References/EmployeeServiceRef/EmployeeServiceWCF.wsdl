@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EmployeeServiceWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://193.10.202.73/EmployeeService/EmployeeServiceWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://193.10.202.73/EmployeeService/EmployeeServiceWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://193.10.202.73/EmployeeService/EmployeeServiceWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EmployeeService" />
+      <xsd:import schemaLocation="http://193.10.202.73/EmployeeService/EmployeeServiceWCF.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEmployeeServiceWCF_IsRunning_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsRunning" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_IsRunning_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsRunningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_CreateAccess_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAccess" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_CreateAccess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_UpdateAccess_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccess" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_UpdateAccess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_DeleteAccess_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAccess" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_DeleteAccess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_CreateEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_CreateEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_GetEmployeeByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeByUserId" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_GetEmployeeByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_GetEmployeeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeById" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_GetEmployeeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_ChangeEmployeeRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeEmployeeRoles" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_ChangeEmployeeRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeEmployeeRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_ChangeEmployeeSections_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeEmployeeSections" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_ChangeEmployeeSections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeEmployeeSectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_DeleteEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_DeleteEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_CreateRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRole" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_CreateRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_UpdateRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRole" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_UpdateRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_DeleteRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRole" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_DeleteRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_CreateSection_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSection" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_CreateSection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_GetSectionById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSectionById" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_GetSectionById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSectionByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_GetAllSections_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSections" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_GetAllSections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_UpdateSection_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSection" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_UpdateSection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_DeleteSection_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSection" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeServiceWCF_DeleteSection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSectionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEmployeeServiceWCF">
+    <wsdl:operation name="IsRunning">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/IsRunning" message="tns:IEmployeeServiceWCF_IsRunning_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/IsRunningResponse" message="tns:IEmployeeServiceWCF_IsRunning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/CreateAccess" message="tns:IEmployeeServiceWCF_CreateAccess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/CreateAccessResponse" message="tns:IEmployeeServiceWCF_CreateAccess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/UpdateAccess" message="tns:IEmployeeServiceWCF_UpdateAccess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/UpdateAccessResponse" message="tns:IEmployeeServiceWCF_UpdateAccess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/DeleteAccess" message="tns:IEmployeeServiceWCF_DeleteAccess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/DeleteAccessResponse" message="tns:IEmployeeServiceWCF_DeleteAccess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/CreateEmployee" message="tns:IEmployeeServiceWCF_CreateEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/CreateEmployeeResponse" message="tns:IEmployeeServiceWCF_CreateEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByUserId" message="tns:IEmployeeServiceWCF_GetEmployeeByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByUserIdResponse" message="tns:IEmployeeServiceWCF_GetEmployeeByUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeById" message="tns:IEmployeeServiceWCF_GetEmployeeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByIdResponse" message="tns:IEmployeeServiceWCF_GetEmployeeById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeEmployeeRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRoles" message="tns:IEmployeeServiceWCF_ChangeEmployeeRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRolesResponse" message="tns:IEmployeeServiceWCF_ChangeEmployeeRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeEmployeeSections">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSections" message="tns:IEmployeeServiceWCF_ChangeEmployeeSections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSectionsResponse" message="tns:IEmployeeServiceWCF_ChangeEmployeeSections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployee" message="tns:IEmployeeServiceWCF_DeleteEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployeeResponse" message="tns:IEmployeeServiceWCF_DeleteEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/CreateRole" message="tns:IEmployeeServiceWCF_CreateRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/CreateRoleResponse" message="tns:IEmployeeServiceWCF_CreateRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/UpdateRole" message="tns:IEmployeeServiceWCF_UpdateRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/UpdateRoleResponse" message="tns:IEmployeeServiceWCF_UpdateRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/DeleteRole" message="tns:IEmployeeServiceWCF_DeleteRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/DeleteRoleResponse" message="tns:IEmployeeServiceWCF_DeleteRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/CreateSection" message="tns:IEmployeeServiceWCF_CreateSection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/CreateSectionResponse" message="tns:IEmployeeServiceWCF_CreateSection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSectionById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/GetSectionById" message="tns:IEmployeeServiceWCF_GetSectionById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/GetSectionByIdResponse" message="tns:IEmployeeServiceWCF_GetSectionById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSections">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/GetAllSections" message="tns:IEmployeeServiceWCF_GetAllSections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/GetAllSectionsResponse" message="tns:IEmployeeServiceWCF_GetAllSections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/UpdateSection" message="tns:IEmployeeServiceWCF_UpdateSection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/UpdateSectionResponse" message="tns:IEmployeeServiceWCF_UpdateSection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/DeleteSection" message="tns:IEmployeeServiceWCF_DeleteSection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeServiceWCF/DeleteSectionResponse" message="tns:IEmployeeServiceWCF_DeleteSection_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEmployeeServiceWCF" type="tns:IEmployeeServiceWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsRunning">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/IsRunning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccess">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/CreateAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccess">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/UpdateAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccess">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/DeleteAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmployee">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/CreateEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeByUserId">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeById">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeEmployeeRoles">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeEmployeeSections">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRole">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/CreateRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/UpdateRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/DeleteRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSection">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/CreateSection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSectionById">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/GetSectionById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSections">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/GetAllSections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSection">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/UpdateSection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSection">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeServiceWCF/DeleteSection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmployeeServiceWCF">
+    <wsdl:port name="BasicHttpBinding_IEmployeeServiceWCF" binding="tns:BasicHttpBinding_IEmployeeServiceWCF">
+      <soap:address location="http://193.10.202.73/EmployeeService/EmployeeServiceWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

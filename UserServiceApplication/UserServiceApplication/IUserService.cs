@@ -22,6 +22,9 @@ namespace UserServiceApplication
         StudentUsers GetStudentUser(int user_Id);
 
         [OperationContract]
+        List<StudentUsers> GetAllStudentUsers();
+
+        [OperationContract]
         EmployeeUsers GetEmployeetUser(int user_Id);
 
         [OperationContract]
@@ -95,9 +98,11 @@ namespace UserServiceApplication
         [DataMember]
         public bool EmailVerified { get; set; }
         [DataMember]
-        public string Password { get; set; }
-        [DataMember]
         public string TelNum { get; set; }
+
+        [DataMember]
+        public string Password { get; set; }
+
         [DataMember]
         public string UnionName { get; set; }
         [DataMember]
@@ -106,6 +111,8 @@ namespace UserServiceApplication
         public string ProgramCode { get; set; }
         [DataMember]
         public bool SuccessfulOperation { get; set; }
+
+
 
     }
 
@@ -126,8 +133,12 @@ namespace UserServiceApplication
         public string Email { get; set; }
         [DataMember]
         public bool EmailVerified { get; set; }
+
         [DataMember]
         public string TelNum { get; set; }
+
+        [DataMember]
+        public string Password { get; set; }
         [DataMember]
         public EmployeeInfo EmployeeInfo { get; set; }
         [DataMember]

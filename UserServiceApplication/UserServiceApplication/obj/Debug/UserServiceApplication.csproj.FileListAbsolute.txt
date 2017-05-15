@@ -21,6 +21,7 @@
 \\Mac\Home\Documents\Visual Studio 2015\Projects\UserServiceApplication\UserServiceApplication\bin\Microsoft.ApplicationInsights.xml
 \\Mac\Home\Documents\Visual Studio 2015\Projects\UserServiceApplication\UserServiceApplication\obj\Debug\UserService.dll
 \\Mac\Home\Documents\Visual Studio 2015\Projects\UserServiceApplication\UserServiceApplication\obj\Debug\UserService.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\UserServiceApplication\UserServiceApplication\obj\Debug\UserServiceApplication.csprojResolveAssemblyReference.cache
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\UserServiceApplication\UserServiceApplication\obj\Debug\UserService.dll
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\UserServiceApplication\UserServiceApplication\obj\Debug\UserService.pdb
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\UserServiceApplication\UserServiceApplication\bin\ApplicationInsights.config

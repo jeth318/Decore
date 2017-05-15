@@ -27,43 +27,4 @@ namespace LoginServiceApplication
         [OperationContract]
         bool IsRunning();
     }
-
-
-    /*
-    [DataContract]
-    public class EmployeeUsers
-    {
-        [DataMember]
-        public int Id { get; set; }
-
-        [DataMember]
-        public int? Student_Id { get; set; }
-
-        [DataMember]
-        public int? Personal_Id { get; set; }
-
-        [DataMember]
-        public string SocSecNum { get; set; }
-
-        [DataMember]
-        public string FirstName { get; set; }
-
-        [DataMember]
-        public string LastName { get; set; }
-
-        [DataMember]
-        public string Email { get; set; }
-
-        [DataMember]
-        public bool EmailVerified { get; set; }
-
-        [DataMember]
-        public string TelNum { get; set; }
-
-        [DataMember]
-        public EmployeeInfo EmployeeInfo { get; set; }
-    }*/
-
-
-
 }

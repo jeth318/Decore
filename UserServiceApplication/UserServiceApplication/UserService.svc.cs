@@ -20,7 +20,7 @@ namespace UserServiceApplication
         Users userModel = new Users();
         StudentInfo studentInfo = new StudentInfo();
         EmployeeInfo employeeInfo = new EmployeeInfo();
-        Service1Client employeeService = new Service1Client();
+        EmployeeServiceWCFClient employeeService = new EmployeeServiceWCFClient();
         StudentServiceClient studentService = new StudentServiceClient();
         
         UserDbModel db = new UserDbModel();
@@ -89,9 +89,7 @@ namespace UserServiceApplication
         }
 
         public StudentUsers GetStudentUser(int user_Id)
-        {
-           
-
+        {        
             try
             {
                 studentInfo = studentService.GetStudentByUserId(user_Id);
@@ -129,30 +127,36 @@ namespace UserServiceApplication
 
             for (int i = 0; i < studentInfoList.Count; i++)
             {
-                try
-                {
-                    userModel = db.Users.Find(studentInfoList[i].UserId);
+                
+                    try
+                    {
+                        userModel = db.Users.Find(studentInfoList[i].UserId);
 
-                    StudentUsers studentUser = new StudentUsers();
-                    studentUser.Id = userModel.Id;
-                    studentUser.SocSecNum = userModel.SocSecNum;
-                    studentUser.FirstName = userModel.FirstName;
-                    studentUser.LastName = userModel.LastName;
-                    studentUser.TelNum = userModel.TelNum;
-                    studentUser.Email = userModel.Email;
-                    studentUser.EmailVerified = userInfo.EmailVerified;
-                    studentUser.StudentId = studentInfoList[i].Id;
-                    studentUser.ProgramCode = studentInfoList[i].ProgramCode;
-                    studentUser.UnionExpiration = studentInfoList[i].UnionExpiration;
-                    studentUser.UnionName = studentInfoList[i].UnionName;
+                        if(userModel != null)
+                        {
+                            StudentUsers studentUser = new StudentUsers();
 
-                    studentUserList.Add(studentUser);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-            }
+                            studentUser.Id = userModel.Id;
+                            studentUser.SocSecNum = userModel.SocSecNum;
+                            studentUser.FirstName = userModel.FirstName;
+                            studentUser.LastName = userModel.LastName;
+                            studentUser.TelNum = userModel.TelNum;
+                            studentUser.Email = userModel.Email;
+                            studentUser.EmailVerified = userInfo.EmailVerified;
+                            studentUser.StudentId = studentInfoList[i].Id;
+                            studentUser.ProgramCode = studentInfoList[i].ProgramCode;
+                            studentUser.UnionExpiration = studentInfoList[i].UnionExpiration;
+                            studentUser.UnionName = studentInfoList[i].UnionName;
+
+                            studentUserList.Add(studentUser);
+                        }                                                                           
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }                                                                                                                   
+        }
             return studentUserList;
         }
 
@@ -190,6 +194,7 @@ namespace UserServiceApplication
             return employeeUser;
         }
 
+
         public UserInfo GetUserBySocSecNum(string socSecNum)
         {
             try
@@ -211,7 +216,7 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
-                return userInfo;             
+                return userInfo;
             }
 
             return userInfo;
@@ -257,7 +262,6 @@ namespace UserServiceApplication
                 userModel.LastName = user.LastName;
                 userModel.Email = user.Email;
                 userModel.EmailVerified = user.EmailVerified;
-                userModel.Password = user.Password;
                 userModel.StudentId = user.StudentId;
                 userModel.EmployeeId = user.EmployeeId;
                 userModel.TelNum = user.TelNum;

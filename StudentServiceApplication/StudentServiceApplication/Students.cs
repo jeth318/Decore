@@ -15,7 +15,6 @@ namespace StudentServiceApplication
         [StringLength(50)]
         public string UnionName { get; set; }
 
-        [Column(TypeName = "date")]
         public DateTime? UnionExpiration { get; set; }
 
         [StringLength(50)]
