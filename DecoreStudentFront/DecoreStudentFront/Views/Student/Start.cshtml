@@ -1,0 +1,22 @@
+﻿@model DecoreStudentFront.UserServiceRef.StudentUsers
+@{
+    ViewBag.Title = "Start";
+    Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
+}
+
+<h2>Start</h2>
+
+
+<h3>Välkommen @ViewBag.User</h3>
+
+
+<p style="background-color: brown;">Här antar jag att vi bara ska ha tomma a href # till typ:  EVENTS, MIN INFORMATION, SITTNING bla bla bla.</p>
+
+
+<br /><br />
+<h3 style="padding: 10px; background-color: yellow; color: black;">@Html.ActionLink("Edit this account", "Edit", new { id = Model.Id })</h3>
+<br /><br />
+<h3 style="padding: 10px; background-color: black; color: white;">@Html.ActionLink("Delete this account", "Delete", new { id = Model.Id })</h3>
+
+
+

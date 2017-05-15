@@ -1,0 +1,69 @@
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\ApplicationInsights.config
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.dll.config
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.pdb
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.Web.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.WindowsServer.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.ApplicationInsights.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.Web.xml
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.WindowsServer.xml
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.ApplicationInsights.xml
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.csprojResolveAssemblyReference.cache
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.pdb
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.SqlServer.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.xml
+c:\users\jeth0010\documents\visual studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\ApplicationInsights.config
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.dll.config
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.Agent.Intercept.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.DependencyCollector.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.PerfCounterCollector.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.Web.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.WindowsServer.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.ApplicationInsights.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.DependencyCollector.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.Web.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.WindowsServer.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.ApplicationInsights.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.pdb
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\ApplicationInsights.config
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.dll.config
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.pdb
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.SqlServer.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.Web.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\EntityFramework.SqlServer.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.Web.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.csprojResolveAssemblyReference.cache
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.csprojResolveAssemblyReference.cache

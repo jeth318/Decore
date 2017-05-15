@@ -1,0 +1,57 @@
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\ApplicationInsights.config
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.dll.config
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.pdb
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.Web.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.WindowsServer.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.ApplicationInsights.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.Web.xml
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.WindowsServer.xml
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.ApplicationInsights.xml
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.dll
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.pdb
+c:\users\jeth0010\documents\visual studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\ApplicationInsights.config
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.dll.config
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.Agent.Intercept.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.DependencyCollector.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.PerfCounterCollector.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.Web.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.WindowsServer.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.ApplicationInsights.dll
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.DependencyCollector.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.Web.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.WindowsServer.xml
+\\Mac\Home\Documents\Visual Studio 2015\Projects\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\ApplicationInsights.config
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.dll.config
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.pdb
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.Web.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.Web.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.csprojResolveAssemblyReference.cache
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.pdb

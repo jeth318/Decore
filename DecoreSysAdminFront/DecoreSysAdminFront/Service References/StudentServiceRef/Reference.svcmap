@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="41093e36-fdf7-497a-b001-dcf0c9651078" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://193.10.202.71/StudentServiceApplication/StudentService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="StudentService3.xsd" MetadataType="Schema" ID="f1711f37-93ee-483c-86b0-674af98fe834" SourceId="1" SourceUrl="http://193.10.202.71/StudentServiceApplication/StudentService.svc?xsd=xsd2" />
+    <MetadataFile FileName="StudentService31.xsd" MetadataType="Schema" ID="1e5167f5-d198-4639-87b0-8590e0bc0e93" SourceId="1" SourceUrl="http://193.10.202.71/StudentServiceApplication/StudentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="StudentService1.disco" MetadataType="Disco" ID="8685094e-e2e0-4ed5-8b08-f347617391ed" SourceId="1" SourceUrl="http://193.10.202.71/StudentServiceApplication/StudentService.svc?disco" />
+    <MetadataFile FileName="StudentService32.xsd" MetadataType="Schema" ID="7a42b3c4-bb9c-420f-a186-d7979915e309" SourceId="1" SourceUrl="http://193.10.202.71/StudentServiceApplication/StudentService.svc?xsd=xsd0" />
+    <MetadataFile FileName="StudentService1.wsdl" MetadataType="Wsdl" ID="1f71b62b-fffe-49db-b1a2-b159f269a39a" SourceId="1" SourceUrl="http://193.10.202.71/StudentServiceApplication/StudentService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

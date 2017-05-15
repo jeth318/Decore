@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UserServiceApplication" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UserServiceApplication" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://193.10.202.71/LoginServiceApplication/LoginService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/EmployeeService" />
+  <xs:complexType name="StudentUsers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailVerified" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SocSecNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudentId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SuccessfulOperation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TelNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnionExpiration" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UnionName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StudentUsers" nillable="true" type="tns:StudentUsers" />
+  <xs:complexType name="EmployeeUsers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailVerified" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EmployeeId" nillable="true" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="EmployeeInfo" nillable="true" type="q1:EmployeeInfo" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SocSecNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuccessfulOperation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TelNum" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmployeeUsers" nillable="true" type="tns:EmployeeUsers" />
+</xs:schema>
