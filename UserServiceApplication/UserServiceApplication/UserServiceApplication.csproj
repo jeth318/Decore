@@ -99,6 +99,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\UserDb.mdf" />
+    <Content Include="App_Data\UserDb_log.ldf">
+      <DependentUpon>UserDb.mdf</DependentUpon>
+    </Content>
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF.disco" />
@@ -196,9 +200,7 @@
     <WCFMetadataStorage Include="Service References\EmployeeServiceRef\" />
     <WCFMetadataStorage Include="Service References\StudentServiceRef\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

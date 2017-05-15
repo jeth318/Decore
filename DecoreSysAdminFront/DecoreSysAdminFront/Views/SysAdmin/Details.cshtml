@@ -1,122 +1,56 @@
 ﻿@model DecoreSysAdminFront.UserServiceRef.UserInfo
 
 @{
-    ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>UserInfo</h4>
+<div style="text-align: center;">
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+    <h1>Redigera student</h1>
+            <h3>Epostadress: @Html.DisplayFor(model => model.Email)</h3> 
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+            <h3>Verifierat konto: @Html.DisplayFor(model => model.EmailVerified)</h3>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EmailVerified)
-        </dt>
+            <h3>Anställnings ID: @Html.DisplayFor(model => model.EmployeeId)</h3>
 
-        <dd>
-            @Html.DisplayFor(model => model.EmailVerified)
-        </dd>
+            <h3>Förnamn: @Html.DisplayFor(model => model.FirstName)</h3>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EmployeeId)
-        </dt>
+            <h3>Efternamn: @Html.DisplayFor(model => model.LastName)</h3>
 
-        <dd>
-            @Html.DisplayFor(model => model.EmployeeId)
-        </dd>
+            <h3>Personnummer: @Html.DisplayFor(model => model.SocSecNum)</h3>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Password)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SocSecNum)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SocSecNum)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.StudentId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.StudentId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SuccessfulOperation)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SuccessfulOperation)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TelNum)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TelNum)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) 
-    
-
+            <h3>Telefonnummer: @Html.DisplayFor(model => model.TelNum)</h3>
+   
+    <a href='@Url.Action("Edit", "SysAdmin", new { id = Model.Id })' class="btn btn-success" style="margin-left: 5px;">Redigera</a>
+    <a href="../Dashboard" class="btn btn-info" style="margin-left: 5px;">Tillbaka</a>
+    <br /><br />
     
     @if (Model.StudentId == null && Model.EmployeeId == null)
     {
         @Html.ActionLink("Gör till student", "AttatchStudent", new { id = Model.Id })
+        <br />
         @Html.ActionLink("Gör till personal", "AttatchEmployee", new { id = Model.Id })
     }
-    else if(Model.StudentId != null && Model.EmployeeId != null)
+    else if (Model.StudentId != null && Model.EmployeeId != null)
     {
         @Html.ActionLink("Frånkoppla student", "DetatchStudent", new { id = Model.Id })
+        <br />
         @Html.ActionLink("Frånkoppla personal", "DetachEmployee", new { id = Model.Id })
     }
     else if (Model.StudentId == null && Model.EmployeeId != null)
     {
         @Html.ActionLink("Gör till student", "DetatchStudent", new { id = Model.Id })
+        <br />
         @Html.ActionLink("Frånkoppla personal", "DetachEmployee", new { id = Model.Id })
     }
     else if (Model.StudentId != null && Model.EmployeeId == null)
     {
         @Html.ActionLink("Frånkoppla student", "DetatchStudent", new { id = Model.Id })
+        <br />
         @Html.ActionLink("Gör till personal", "DetachEmployee", new { id = Model.Id })
     }
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+</div>
+
+
+

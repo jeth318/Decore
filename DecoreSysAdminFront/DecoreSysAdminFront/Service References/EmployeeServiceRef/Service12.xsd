@@ -14,6 +14,68 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="CreateAccess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="createdById" type="xs:int" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAccessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="CreateAccessResult" nillable="true" type="q1:AccessInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAccess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="updatedById" type="xs:int" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="updatedAccess" nillable="true" type="q2:AccessInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAccessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="UpdateAccessResult" nillable="true" type="q3:AccessInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAccess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="acessId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAccessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteAccessResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userIdIn" type="xs:int" />
+        <xs:element minOccurs="0" name="createdByIdin" type="xs:int" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="sectionIds" nillable="true" type="q4:ArrayOfint" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="roleIdsIn" nillable="true" type="q5:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="CreateEmployeeResult" nillable="true" type="q6:EmployeeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetEmployeeByUserId">
     <xs:complexType>
       <xs:sequence>
@@ -24,7 +86,7 @@
   <xs:element name="GetEmployeeByUserIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="GetEmployeeByUserIdResult" nillable="true" type="q1:EmployeeInfo" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="GetEmployeeByUserIdResult" nillable="true" type="q7:EmployeeInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -38,24 +100,174 @@
   <xs:element name="GetEmployeeByIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="GetEmployeeByIdResult" nillable="true" type="q2:EmployeeInfo" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="GetEmployeeByIdResult" nillable="true" type="q8:EmployeeInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CreateEmployee">
+  <xs:element name="ChangeEmployeeRoles">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="userIdIn" type="xs:int" />
-        <xs:element minOccurs="0" name="createdByIdin" type="xs:int" />
-        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="sectionIdsIn" nillable="true" type="q3:ArrayOfint" />
-        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="roleIdsIn" nillable="true" type="q4:ArrayOfint" />
+        <xs:element minOccurs="0" name="updatedById" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeId" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="rolesToAddId" nillable="true" type="q9:ArrayOfint" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="rolesToRemoveId" nillable="true" type="q10:ArrayOfint" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CreateEmployeeResponse">
+  <xs:element name="ChangeEmployeeRolesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="CreateEmployeeResult" nillable="true" type="q5:EmployeeInfo" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="ChangeEmployeeRolesResult" nillable="true" type="q11:EmployeeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeEmployeeSections">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="updatedById" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeId" type="xs:int" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="sectionsToAddIds" nillable="true" type="q12:ArrayOfint" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="sectionsToRemoveIds" nillable="true" type="q13:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeEmployeeSectionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="ChangeEmployeeSectionsResult" nillable="true" type="q14:EmployeeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="employeeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteEmployeeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="createdById" type="xs:int" />
+        <xs:element minOccurs="0" name="sectionId" type="xs:int" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="access" nillable="true" type="q15:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="CreateRoleResult" nillable="true" type="q16:RoleInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="updatedById" type="xs:int" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="updatedRole" nillable="true" type="q17:RoleInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="UpdateRoleResult" nillable="true" type="q18:RoleInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteRoleResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="createdById" type="xs:int" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="CreateSectionResult" nillable="true" type="q19:SectionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSectionById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sectionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSectionByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="GetSectionByIdResult" nillable="true" type="q20:SectionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSections">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSectionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="GetAllSectionsResult" nillable="true" type="q21:ArrayOfSectionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="updatedById" type="xs:int" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="updatedSection" nillable="true" type="q22:SectionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/EmployeeService" minOccurs="0" name="UpdateSectionResult" nillable="true" type="q23:SectionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sectionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSectionResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

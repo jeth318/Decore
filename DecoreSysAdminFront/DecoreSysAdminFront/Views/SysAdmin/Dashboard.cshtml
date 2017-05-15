@@ -5,16 +5,10 @@
     Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
 }
 
-<h2>Dashboard</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <div class="container">
     <div class="page-header">
        <a href="@Url.Action("AddStudent", "SysAdmin")" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-plus"></span> Lägg till student</a>
-        <br />
-       <a href="#" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-plus"></span> Lägg til personal</a>
+       <a href="#" class="btn btn-lg btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> Lägg till personal</a>
     </div>
 </div>
 
@@ -56,7 +50,3 @@
     </div>
 </div>
 
-<div class="container">
-    <p class="pull-right"><a href="#">Tillbaka</a></p>
-
-</div><!-- /.container -->

@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://193.10.202.71/StudentServiceApplication/StudentService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:5040/StudentService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="StudentService3.xsd" MetadataType="Schema" ID="f1711f37-93ee-483c-86b0-674af98fe834" SourceId="1" SourceUrl="http://193.10.202.71/StudentServiceApplication/StudentService.svc?xsd=xsd2" />
-    <MetadataFile FileName="StudentService31.xsd" MetadataType="Schema" ID="1e5167f5-d198-4639-87b0-8590e0bc0e93" SourceId="1" SourceUrl="http://193.10.202.71/StudentServiceApplication/StudentService.svc?xsd=xsd1" />
-    <MetadataFile FileName="StudentService1.disco" MetadataType="Disco" ID="8685094e-e2e0-4ed5-8b08-f347617391ed" SourceId="1" SourceUrl="http://193.10.202.71/StudentServiceApplication/StudentService.svc?disco" />
-    <MetadataFile FileName="StudentService32.xsd" MetadataType="Schema" ID="7a42b3c4-bb9c-420f-a186-d7979915e309" SourceId="1" SourceUrl="http://193.10.202.71/StudentServiceApplication/StudentService.svc?xsd=xsd0" />
-    <MetadataFile FileName="StudentService1.wsdl" MetadataType="Wsdl" ID="1f71b62b-fffe-49db-b1a2-b159f269a39a" SourceId="1" SourceUrl="http://193.10.202.71/StudentServiceApplication/StudentService.svc?wsdl" />
+    <MetadataFile FileName="StudentService.xsd" MetadataType="Schema" ID="8009b31d-befd-4f1e-9733-5da6c2e98fa6" SourceId="1" SourceUrl="http://localhost:5040/StudentService.svc?xsd=xsd2" />
+    <MetadataFile FileName="StudentService.wsdl" MetadataType="Wsdl" ID="bded26bf-7fd2-459a-b12e-13bad9c79696" SourceId="1" SourceUrl="http://localhost:5040/StudentService.svc?wsdl" />
+    <MetadataFile FileName="StudentService.disco" MetadataType="Disco" ID="3b96e753-d716-4541-ade0-1f841ac4aebf" SourceId="1" SourceUrl="http://localhost:5040/StudentService.svc?disco" />
+    <MetadataFile FileName="StudentService1.xsd" MetadataType="Schema" ID="5d2e579f-8287-4829-b70a-83d672ebdae4" SourceId="1" SourceUrl="http://localhost:5040/StudentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="StudentService2.xsd" MetadataType="Schema" ID="97023dd1-3e03-4f1c-a6b4-261a728f45d4" SourceId="1" SourceUrl="http://localhost:5040/StudentService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -38,7 +38,7 @@ namespace LoginServiceApplication.StudentServiceRef {
         private string UnionNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int User_IdField;
+        private int UserIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -116,14 +116,14 @@ namespace LoginServiceApplication.StudentServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int User_Id {
+        public int UserId {
             get {
-                return this.User_IdField;
+                return this.UserIdField;
             }
             set {
-                if ((this.User_IdField.Equals(value) != true)) {
-                    this.User_IdField = value;
-                    this.RaisePropertyChanged("User_Id");
+                if ((this.UserIdField.Equals(value) != true)) {
+                    this.UserIdField = value;
+                    this.RaisePropertyChanged("UserId");
                 }
             }
         }
