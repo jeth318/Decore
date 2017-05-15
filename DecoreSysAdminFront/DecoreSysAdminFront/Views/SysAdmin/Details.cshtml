@@ -24,32 +24,35 @@
     <a href='@Url.Action("Edit", "SysAdmin", new { id = Model.Id })' class="btn btn-success" style="margin-left: 5px;">Redigera</a>
     <a href="../Dashboard" class="btn btn-info" style="margin-left: 5px;">Tillbaka</a>
     <br /><br />
-    
-    @if (Model.StudentId == null && Model.EmployeeId == null)
-    {
-        @Html.ActionLink("Gör till student", "AttatchStudent", new { id = Model.Id })
-        <br />
-        @Html.ActionLink("Gör till personal", "AttatchEmployee", new { id = Model.Id })
-    }
-    else if (Model.StudentId != null && Model.EmployeeId != null)
-    {
-        @Html.ActionLink("Frånkoppla student", "DetatchStudent", new { id = Model.Id })
-        <br />
-        @Html.ActionLink("Frånkoppla personal", "DetachEmployee", new { id = Model.Id })
-    }
-    else if (Model.StudentId == null && Model.EmployeeId != null)
-    {
-        @Html.ActionLink("Gör till student", "DetatchStudent", new { id = Model.Id })
-        <br />
-        @Html.ActionLink("Frånkoppla personal", "DetachEmployee", new { id = Model.Id })
-    }
-    else if (Model.StudentId != null && Model.EmployeeId == null)
-    {
-        @Html.ActionLink("Frånkoppla student", "DetatchStudent", new { id = Model.Id })
-        <br />
-        @Html.ActionLink("Gör till personal", "DetachEmployee", new { id = Model.Id })
-    }
-
+   
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4" style="text-align:center; background-color: white; color: black; font-size: 20px;">
+            @if (Model.StudentId == null && Model.EmployeeId == null)
+            {
+                @Html.ActionLink("Gör till student", "AttatchStudent", new { id = Model.Id })
+                <br />
+                @Html.ActionLink("Gör till personal", "AttatchEmployee", new { id = Model.Id })
+            }
+            else if (Model.StudentId != null && Model.EmployeeId != null)
+            {
+                @Html.ActionLink("Frånkoppla student", "DetatchStudent", new { id = Model.Id })
+                <br />
+                @Html.ActionLink("Frånkoppla personal", "DetachEmployee", new { id = Model.Id })
+            }
+            else if (Model.StudentId == null && Model.EmployeeId != null)
+            {
+                @Html.ActionLink("Gör till student", "DetatchStudent", new { id = Model.Id })
+                <br />
+                @Html.ActionLink("Frånkoppla personal", "DetachEmployee", new { id = Model.Id })
+            }
+            else if (Model.StudentId != null && Model.EmployeeId == null)
+            {
+                @Html.ActionLink("Frånkoppla student", "DetatchStudent", new { id = Model.Id })
+                <br />
+                @Html.ActionLink("Gör till personal", "DetachEmployee", new { id = Model.Id })
+            }
+        </div>
+    </div>
 </div>
 
 
