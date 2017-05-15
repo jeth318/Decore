@@ -154,6 +154,5 @@ C:\Users\elka0021\Desktop\DecoreSysAdminFront\DecoreSysAdminFront\obj\Debug\Deco
 \\Mac\Home\Desktop\Grupp1\DecoreSysAdminFront\DecoreSysAdminFront\bin\System.Web.WebPages.Razor.xml
 \\Mac\Home\Desktop\Grupp1\DecoreSysAdminFront\DecoreSysAdminFront\bin\Antlr3.Runtime.pdb
 \\Mac\Home\Desktop\Grupp1\DecoreSysAdminFront\DecoreSysAdminFront\bin\Newtonsoft.Json.xml
-\\Mac\Home\Desktop\Grupp1\DecoreSysAdminFront\DecoreSysAdminFront\obj\Debug\DecoreSysAdminFront.csprojResolveAssemblyReference.cache
 \\Mac\Home\Desktop\Grupp1\DecoreSysAdminFront\DecoreSysAdminFront\obj\Debug\DecoreSysAdminFront.dll
 \\Mac\Home\Desktop\Grupp1\DecoreSysAdminFront\DecoreSysAdminFront\obj\Debug\DecoreSysAdminFront.pdb

@@ -261,6 +261,7 @@ namespace UserServiceApplication
                 userModel.FirstName = user.FirstName;
                 userModel.LastName = user.LastName;
                 userModel.Email = user.Email;
+                userModel.Password = userModel.Password;
                 userModel.EmailVerified = user.EmailVerified;
                 userModel.StudentId = user.StudentId;
                 userModel.EmployeeId = user.EmployeeId;
@@ -322,27 +323,35 @@ namespace UserServiceApplication
         public bool SetUserStudentId(int User_Id, int? student_Id)
         {
             bool result = false;
+
+
             userModel = db.Users.Find(User_Id);
 
-            var row = (from users in db.Users
-                      where users.StudentId == student_Id
-                      select users).FirstOrDefault();
-            
-            if (row == null)
+            if(student_Id == null)
             {
-                userModel.StudentId = student_Id;
-                
-                try
+                userModel.StudentId = null;
+
+            } else {
+                var row = (from users in db.Users
+                           where users.StudentId == student_Id
+                           select users).FirstOrDefault();
+
+                if (row == null)
                 {
-                    db.SaveChanges();
-                    result = true;
-                }
-                catch (Exception)
-                {
-                    result = false;
-                }
+                    userModel.StudentId = student_Id;                
+                }           
             }
-                        
+
+            try
+            {
+                db.SaveChanges();
+                result = true;
+            }
+            catch (Exception)
+            {
+                result = false;
+            }
+
             return result;
         }
 
@@ -351,23 +360,28 @@ namespace UserServiceApplication
             bool result = false;
             userModel = db.Users.Find(User_Id);
 
-            var row = (from users in db.Users
-                      where users.EmployeeId == employee_Id
-                      select users).FirstOrDefault();
-
-            if (row == null)
+            if(employee_Id == null)
             {
-                userModel.EmployeeId = employee_Id;
+                userModel.EmployeeId = null;
+            } else
+            {
+                var row = (from users in db.Users
+                           where users.EmployeeId == employee_Id
+                           select users).FirstOrDefault();
 
-                try
+                if (row == null)
                 {
-                    db.SaveChanges();
-                    result = true;
+                    userModel.EmployeeId = employee_Id;
                 }
-                catch (Exception)
-                {
-                    result = false;
-                }
+            }  
+            try
+            {
+                db.SaveChanges();
+                result = true;
+            }
+            catch (Exception)
+            {
+                result = false;
             }
 
             return result;
