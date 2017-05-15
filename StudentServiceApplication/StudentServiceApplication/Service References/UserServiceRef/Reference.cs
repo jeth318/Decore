@@ -243,6 +243,9 @@ namespace StudentServiceApplication.UserServiceRef {
         private string LastNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ProgramCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -334,6 +337,19 @@ namespace StudentServiceApplication.UserServiceRef {
                 if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
                     this.LastNameField = value;
                     this.RaisePropertyChanged("LastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
                 }
             }
         }
@@ -470,6 +486,9 @@ namespace StudentServiceApplication.UserServiceRef {
         private string LastNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SocSecNumField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -580,6 +599,19 @@ namespace StudentServiceApplication.UserServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string SocSecNum {
             get {
                 return this.SocSecNumField;
@@ -638,9 +670,6 @@ namespace StudentServiceApplication.UserServiceRef {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private StudentServiceApplication.UserServiceRef.AccessInfo[] AccessField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime CreatedAtField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -650,7 +679,157 @@ namespace StudentServiceApplication.UserServiceRef {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private StudentServiceApplication.UserServiceRef.RoleInfo RoleField;
+        private StudentServiceApplication.UserServiceRef.RoleInfo[] RolesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime UpdatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> UpdatedByIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UserIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime CreatedAt {
+            get {
+                return this.CreatedAtField;
+            }
+            set {
+                if ((this.CreatedAtField.Equals(value) != true)) {
+                    this.CreatedAtField = value;
+                    this.RaisePropertyChanged("CreatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CreatedById {
+            get {
+                return this.CreatedByIdField;
+            }
+            set {
+                if ((this.CreatedByIdField.Equals(value) != true)) {
+                    this.CreatedByIdField = value;
+                    this.RaisePropertyChanged("CreatedById");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public StudentServiceApplication.UserServiceRef.RoleInfo[] Roles {
+            get {
+                return this.RolesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RolesField, value) != true)) {
+                    this.RolesField = value;
+                    this.RaisePropertyChanged("Roles");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime UpdatedAt {
+            get {
+                return this.UpdatedAtField;
+            }
+            set {
+                if ((this.UpdatedAtField.Equals(value) != true)) {
+                    this.UpdatedAtField = value;
+                    this.RaisePropertyChanged("UpdatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> UpdatedById {
+            get {
+                return this.UpdatedByIdField;
+            }
+            set {
+                if ((this.UpdatedByIdField.Equals(value) != true)) {
+                    this.UpdatedByIdField = value;
+                    this.RaisePropertyChanged("UpdatedById");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UserId {
+            get {
+                return this.UserIdField;
+            }
+            set {
+                if ((this.UserIdField.Equals(value) != true)) {
+                    this.UserIdField = value;
+                    this.RaisePropertyChanged("UserId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RoleInfo", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+    [System.SerializableAttribute()]
+    public partial class RoleInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private StudentServiceApplication.UserServiceRef.AccessInfo[] AccessField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime CreatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CreatedByIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private StudentServiceApplication.UserServiceRef.EmployeeInfo[] EmployeesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private StudentServiceApplication.UserServiceRef.SectionInfo SectionField;
@@ -659,7 +838,7 @@ namespace StudentServiceApplication.UserServiceRef {
         private System.DateTime UpdatedAtField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int UserIdField;
+        private System.Nullable<int> UpdatedByIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -711,147 +890,6 @@ namespace StudentServiceApplication.UserServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public StudentServiceApplication.UserServiceRef.RoleInfo Role {
-            get {
-                return this.RoleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RoleField, value) != true)) {
-                    this.RoleField = value;
-                    this.RaisePropertyChanged("Role");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public StudentServiceApplication.UserServiceRef.SectionInfo Section {
-            get {
-                return this.SectionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SectionField, value) != true)) {
-                    this.SectionField = value;
-                    this.RaisePropertyChanged("Section");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime UpdatedAt {
-            get {
-                return this.UpdatedAtField;
-            }
-            set {
-                if ((this.UpdatedAtField.Equals(value) != true)) {
-                    this.UpdatedAtField = value;
-                    this.RaisePropertyChanged("UpdatedAt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int UserId {
-            get {
-                return this.UserIdField;
-            }
-            set {
-                if ((this.UserIdField.Equals(value) != true)) {
-                    this.UserIdField = value;
-                    this.RaisePropertyChanged("UserId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RoleInfo", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
-    [System.SerializableAttribute()]
-    public partial class RoleInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime CreatedAtField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CreatedByIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SectionIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime UpdatedAtField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime CreatedAt {
-            get {
-                return this.CreatedAtField;
-            }
-            set {
-                if ((this.CreatedAtField.Equals(value) != true)) {
-                    this.CreatedAtField = value;
-                    this.RaisePropertyChanged("CreatedAt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CreatedById {
-            get {
-                return this.CreatedByIdField;
-            }
-            set {
-                if ((this.CreatedByIdField.Equals(value) != true)) {
-                    this.CreatedByIdField = value;
-                    this.RaisePropertyChanged("CreatedById");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Description {
             get {
                 return this.DescriptionField;
@@ -860,6 +898,19 @@ namespace StudentServiceApplication.UserServiceRef {
                 if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
                     this.DescriptionField = value;
                     this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public StudentServiceApplication.UserServiceRef.EmployeeInfo[] Employees {
+            get {
+                return this.EmployeesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmployeesField, value) != true)) {
+                    this.EmployeesField = value;
+                    this.RaisePropertyChanged("Employees");
                 }
             }
         }
@@ -891,14 +942,14 @@ namespace StudentServiceApplication.UserServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int SectionId {
+        public StudentServiceApplication.UserServiceRef.SectionInfo Section {
             get {
-                return this.SectionIdField;
+                return this.SectionField;
             }
             set {
-                if ((this.SectionIdField.Equals(value) != true)) {
-                    this.SectionIdField = value;
-                    this.RaisePropertyChanged("SectionId");
+                if ((object.ReferenceEquals(this.SectionField, value) != true)) {
+                    this.SectionField = value;
+                    this.RaisePropertyChanged("Section");
                 }
             }
         }
@@ -912,6 +963,19 @@ namespace StudentServiceApplication.UserServiceRef {
                 if ((this.UpdatedAtField.Equals(value) != true)) {
                     this.UpdatedAtField = value;
                     this.RaisePropertyChanged("UpdatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> UpdatedById {
+            get {
+                return this.UpdatedByIdField;
+            }
+            set {
+                if ((this.UpdatedByIdField.Equals(value) != true)) {
+                    this.UpdatedByIdField = value;
+                    this.RaisePropertyChanged("UpdatedById");
                 }
             }
         }
@@ -954,7 +1018,13 @@ namespace StudentServiceApplication.UserServiceRef {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private StudentServiceApplication.UserServiceRef.RoleInfo[] RolesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime UpdatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> UpdatedByIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1045,6 +1115,19 @@ namespace StudentServiceApplication.UserServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public StudentServiceApplication.UserServiceRef.RoleInfo[] Roles {
+            get {
+                return this.RolesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RolesField, value) != true)) {
+                    this.RolesField = value;
+                    this.RaisePropertyChanged("Roles");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime UpdatedAt {
             get {
                 return this.UpdatedAtField;
@@ -1053,6 +1136,19 @@ namespace StudentServiceApplication.UserServiceRef {
                 if ((this.UpdatedAtField.Equals(value) != true)) {
                     this.UpdatedAtField = value;
                     this.RaisePropertyChanged("UpdatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> UpdatedById {
+            get {
+                return this.UpdatedByIdField;
+            }
+            set {
+                if ((this.UpdatedByIdField.Equals(value) != true)) {
+                    this.UpdatedByIdField = value;
+                    this.RaisePropertyChanged("UpdatedById");
                 }
             }
         }
@@ -1077,6 +1173,12 @@ namespace StudentServiceApplication.UserServiceRef {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime CreatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CreatedByIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescriptionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1085,6 +1187,12 @@ namespace StudentServiceApplication.UserServiceRef {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime UpdatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> UpdatedByIdField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -1092,6 +1200,32 @@ namespace StudentServiceApplication.UserServiceRef {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime CreatedAt {
+            get {
+                return this.CreatedAtField;
+            }
+            set {
+                if ((this.CreatedAtField.Equals(value) != true)) {
+                    this.CreatedAtField = value;
+                    this.RaisePropertyChanged("CreatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CreatedById {
+            get {
+                return this.CreatedByIdField;
+            }
+            set {
+                if ((this.CreatedByIdField.Equals(value) != true)) {
+                    this.CreatedByIdField = value;
+                    this.RaisePropertyChanged("CreatedById");
+                }
             }
         }
         
@@ -1134,6 +1268,32 @@ namespace StudentServiceApplication.UserServiceRef {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime UpdatedAt {
+            get {
+                return this.UpdatedAtField;
+            }
+            set {
+                if ((this.UpdatedAtField.Equals(value) != true)) {
+                    this.UpdatedAtField = value;
+                    this.RaisePropertyChanged("UpdatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> UpdatedById {
+            get {
+                return this.UpdatedByIdField;
+            }
+            set {
+                if ((this.UpdatedByIdField.Equals(value) != true)) {
+                    this.UpdatedByIdField = value;
+                    this.RaisePropertyChanged("UpdatedById");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1165,6 +1325,12 @@ namespace StudentServiceApplication.UserServiceRef {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetStudentUser", ReplyAction="http://tempuri.org/IUserService/GetStudentUserResponse")]
         System.Threading.Tasks.Task<StudentServiceApplication.UserServiceRef.StudentUsers> GetStudentUserAsync(int user_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllStudentUsers", ReplyAction="http://tempuri.org/IUserService/GetAllStudentUsersResponse")]
+        StudentServiceApplication.UserServiceRef.StudentUsers[] GetAllStudentUsers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllStudentUsers", ReplyAction="http://tempuri.org/IUserService/GetAllStudentUsersResponse")]
+        System.Threading.Tasks.Task<StudentServiceApplication.UserServiceRef.StudentUsers[]> GetAllStudentUsersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetEmployeetUser", ReplyAction="http://tempuri.org/IUserService/GetEmployeetUserResponse")]
         StudentServiceApplication.UserServiceRef.EmployeeUsers GetEmployeetUser(int user_Id);
@@ -1270,6 +1436,14 @@ namespace StudentServiceApplication.UserServiceRef {
         
         public System.Threading.Tasks.Task<StudentServiceApplication.UserServiceRef.StudentUsers> GetStudentUserAsync(int user_Id) {
             return base.Channel.GetStudentUserAsync(user_Id);
+        }
+        
+        public StudentServiceApplication.UserServiceRef.StudentUsers[] GetAllStudentUsers() {
+            return base.Channel.GetAllStudentUsers();
+        }
+        
+        public System.Threading.Tasks.Task<StudentServiceApplication.UserServiceRef.StudentUsers[]> GetAllStudentUsersAsync() {
+            return base.Channel.GetAllStudentUsersAsync();
         }
         
         public StudentServiceApplication.UserServiceRef.EmployeeUsers GetEmployeetUser(int user_Id) {

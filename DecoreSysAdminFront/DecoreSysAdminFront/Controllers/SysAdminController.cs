@@ -14,7 +14,7 @@ namespace DecoreSysAdminFront.Controllers
     {
         UserServiceClient userService = new UserServiceClient();
         StudentServiceClient studentService = new StudentServiceClient();
-        Service1Client employeeService = new Service1Client();
+        EmployeeServiceWCFClient employeeService = new EmployeeServiceWCFClient();
         UserInfo userInfo = new UserInfo();
         StudentInfo studentInfo = new StudentInfo();     
         StudentUsers studentUser = new StudentUsers();

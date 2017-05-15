@@ -131,16 +131,16 @@
     <Content Include="Service References\EmployeeServiceRef\UserService.EmployeeServiceRef.SectionInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\EmployeeServiceRef\configuration91.svcinfo" />
+    <None Include="Service References\EmployeeServiceRef\configuration.svcinfo" />
+    <None Include="Service References\EmployeeServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Service References\StudentServiceRef\StudentService.disco" />
     <None Include="Service References\StudentServiceRef\configuration91.svcinfo" />
     <None Include="Service References\StudentServiceRef\configuration.svcinfo" />
     <None Include="Service References\StudentServiceRef\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\EmployeeServiceRef\configuration91.svcinfo" />
-    <None Include="Service References\EmployeeServiceRef\configuration.svcinfo" />
-    <None Include="Service References\EmployeeServiceRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

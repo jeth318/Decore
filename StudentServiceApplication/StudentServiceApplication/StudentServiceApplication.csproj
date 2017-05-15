@@ -114,19 +114,15 @@
     <Content Include="Service References\UserServiceRef\StudentServiceApplication.UserServiceRef.EmployeeUsers.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\UserServiceRef\UserService.disco" />
     <None Include="Service References\UserServiceRef\configuration91.svcinfo" />
     <None Include="Service References\UserServiceRef\configuration.svcinfo" />
     <None Include="Service References\UserServiceRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\UserServiceRef\UserService1.disco" />
     <Content Include="StudentService.svc" />
     <Content Include="Web.config" />
-    <None Include="Service References\UserServiceRef\UserService.wsdl" />
-    <None Include="Service References\UserServiceRef\UserService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Employee.cs" />
@@ -149,13 +145,17 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Service References\UserServiceRef\UserService.xsd">
+    <None Include="Service References\UserServiceRef\UserService1.wsdl" />
+    <None Include="Service References\UserServiceRef\UserService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserServiceRef\UserService1.xsd">
+    <None Include="Service References\UserServiceRef\UserService41.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserServiceRef\UserService3.xsd">
+    <None Include="Service References\UserServiceRef\UserService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceRef\UserService43.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">

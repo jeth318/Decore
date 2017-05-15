@@ -127,23 +127,13 @@
     <Content Include="Service References\StudentServiceRef\LoginServiceApplication.StudentServiceRef.StudentInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\StudentServiceRef\StudentService.disco" />
     <None Include="Service References\StudentServiceRef\configuration91.svcinfo" />
     <None Include="Service References\StudentServiceRef\configuration.svcinfo" />
     <None Include="Service References\StudentServiceRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\StudentServiceRef\StudentService.wsdl" />
-    <None Include="Service References\StudentServiceRef\StudentService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\StudentServiceRef\StudentService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\StudentServiceRef\StudentService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Service References\StudentServiceRef\StudentService1.disco" />
     <Content Include="Service References\UserServiceRef\LoginServiceApplication.UserServiceRef.UserInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -153,18 +143,24 @@
     <Content Include="Service References\UserServiceRef\LoginServiceApplication.UserServiceRef.EmployeeUsers.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\UserServiceRef\UserService.disco" />
+    <None Include="Service References\StudentServiceRef\StudentService1.wsdl" />
+    <None Include="Service References\StudentServiceRef\StudentService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StudentServiceRef\StudentService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StudentServiceRef\StudentService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\UserServiceRef\configuration91.svcinfo" />
     <None Include="Service References\UserServiceRef\configuration.svcinfo" />
     <None Include="Service References\UserServiceRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\UserServiceRef\UserService1.disco" />
     <Content Include="Web.config" />
-    <None Include="Service References\UserServiceRef\UserService.wsdl" />
-    <None Include="Service References\UserServiceRef\UserService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginService.svc.cs">
@@ -196,13 +192,17 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Service References\UserServiceRef\UserService.xsd">
+    <None Include="Service References\UserServiceRef\UserService1.wsdl" />
+    <None Include="Service References\UserServiceRef\UserService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserServiceRef\UserService1.xsd">
+    <None Include="Service References\UserServiceRef\UserService41.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserServiceRef\UserService3.xsd">
+    <None Include="Service References\UserServiceRef\UserService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceRef\UserService43.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">

@@ -32,6 +32,9 @@ namespace DecoreSysAdminFront.Controllers
                 {
                     FormsAuthentication.RedirectFromLoginPage(employeeUser.Id.ToString(), false);                   
                     return null;
+                } else
+                {
+                    return RedirectToAction("Index");
                 }
             }
             catch (Exception)
@@ -39,7 +42,7 @@ namespace DecoreSysAdminFront.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View();
+            
         }
         
               
