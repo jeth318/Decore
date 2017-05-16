@@ -1,11 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DecoreStudentFront",
-    "\\DecoreSysAdminFront",
-    "\\UserServiceApplication",
+    "\\DecoreSysAdminFront\\DecoreSysAdminFront",
+    "\\DecoreSysAdminFront\\DecoreSysAdminFront\\Controllers",
+    "\\DecoreSysAdminFront\\DecoreSysAdminFront\\Service References",
+    "\\LoginServiceApplication\\LoginServiceApplication",
+    "\\Projektportal\\Projektportal",
     "\\UserServiceApplication\\UserServiceApplication"
   ],
-  "SelectedNode": "\\DecoreSysAdminFront\\DecoreSysAdminFront.sln",
+  "SelectedNode": "\\DecoreStudentFront",
   "PreviewInSolutionExplorer": false
 }
