@@ -20,8 +20,10 @@ namespace DecoreStudentFront.Controllers
         {
             string idString = User.Identity.Name;
             int id = Int32.Parse(idString);
+
             try
             {
+                
                 studentUser = userService.GetStudentUser(id);
                 ViewBag.User = studentUser.FirstName + " " + studentUser.LastName;
                 return View(studentUser);
