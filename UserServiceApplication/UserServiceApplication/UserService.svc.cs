@@ -20,72 +20,52 @@ namespace UserServiceApplication
         Users userModel = new Users();
         StudentInfo studentInfo = new StudentInfo();
         EmployeeInfo employeeInfo = new EmployeeInfo();
+        StudentUsers studentUser = new StudentUsers();
         EmployeeServiceWCFClient employeeService = new EmployeeServiceWCFClient();
         StudentServiceClient studentService = new StudentServiceClient();
         
         UserDbModel db = new UserDbModel();
 
-        public UserInfo CreateUser(UserInfo user)
+        public UserInfo CreateUser(UserInfo userInfo)
         {
             var row = (from users in db.Users
-                      where users.Email == user.Email
+                      where users.Email == userInfo.Email
                       select users).FirstOrDefault();
-        
+
             if(row == null)
             {
-                userModel.SocSecNum = user.SocSecNum;
-                userModel.FirstName = user.FirstName;
-                userModel.LastName = user.LastName;
-                userModel.Email = user.Email;
-                userModel.EmailVerified = user.EmailVerified;
-                userModel.Password = user.Password;
-                userModel.StudentId = user.StudentId;
-                userModel.EmployeeId = user.EmployeeId;
-                userModel.TelNum = user.TelNum;
+                userModel = ConvertToUser(userInfo);
 
                 try
                 {
                     db.Users.Add(userModel);
                     db.SaveChanges();
-                    user.SuccessfulOperation = true;
+                    userInfo.SuccessfulOperation = true;
+                    userInfo.Password = null;
+                    return userInfo;
                 }
                 catch (Exception)
                 {
-                    throw;                    
+                    return null;
                 }       
-            }
-            
-            return user;
+            } else
+            {
+                return null;
+            }         
         }
 
         public UserInfo GetUserById(int user_Id)
         {
             try
             {
-                //userModel = db.Users.Find(user_Id);
-
-                userModel = (from users in db.Users
-                             where users.Id == user_Id
-                             select users).FirstOrDefault();
-
-
-                userInfo.Id = userModel.Id;
-                userInfo.SocSecNum = userModel.SocSecNum;
-                userInfo.FirstName = userModel.FirstName;
-                userInfo.LastName = userModel.LastName;
-                userInfo.Email = userModel.Email;
-                userInfo.EmailVerified = userModel.EmailVerified;
-                userInfo.StudentId = userModel.StudentId;
-                userInfo.EmployeeId = userModel.EmployeeId;
-                userInfo.TelNum = userModel.TelNum;
-                userInfo.SuccessfulOperation = true;
+                userModel = db.Users.Find(user_Id);
+                userInfo = ConvertToUserInfo(userModel);
+                return userInfo;              
             }
             catch (Exception)
             {
-              
-            }
-           
-            return userInfo;
+                return null;
+            }           
         }
 
         public StudentUsers GetStudentUser(int user_Id)
@@ -94,30 +74,14 @@ namespace UserServiceApplication
             {
                 studentInfo = studentService.GetStudentByUserId(user_Id);
                 userModel = db.Users.Find(studentInfo.UserId);
+                studentUser = ConvertToStudentUser(userModel, studentInfo);
+                return studentUser;
             }
             catch (Exception)
             {
-                
-            }
-
-            StudentUsers studentUser = new StudentUsers();
-            studentUser.Id = userModel.Id;
-            studentUser.SocSecNum = userModel.SocSecNum;
-            studentUser.FirstName = userModel.FirstName;
-            studentUser.LastName = userModel.LastName;
-            studentUser.TelNum = userModel.TelNum;
-            studentUser.Email = userModel.Email;
-            studentUser.EmailVerified = userModel.EmailVerified;
-            studentUser.StudentId = studentInfo.Id;
-            studentUser.ProgramCode = studentInfo.ProgramCode;
-            studentUser.UnionExpiration = studentInfo.UnionExpiration;
-            studentUser.UnionName = studentInfo.UnionName;
-            studentUser.SuccessfulOperation = true;
-
-            return studentUser;
+                return null;
+            }           
         }
-
-
 
         public List<StudentUsers> GetAllStudentUsers()
         {
@@ -162,36 +126,17 @@ namespace UserServiceApplication
 
         public EmployeeUsers GetEmployeetUser(int user_Id)
         {
-            EmployeeUsers employeeUser = new EmployeeUsers();
-
             try
             {
-                employeeInfo = employeeService.GetEmployeeByUserId(user_Id);
                 userModel = db.Users.Find(employeeInfo.UserId);
+                employeeInfo = employeeService.GetEmployeeByUserId(user_Id);
+                EmployeeUsers employeeUser = ConvertToEmployeeUser(userModel, employeeInfo);
+                return employeeUser;
             }
             catch (Exception)
-            {
-                throw;
+            {            
+                return null;
             }
-
-            try
-            {
-                employeeUser.Id = userModel.Id;
-                employeeUser.SocSecNum = userModel.SocSecNum;
-                employeeUser.FirstName = userModel.FirstName;
-                employeeUser.LastName = userModel.LastName;
-                employeeUser.TelNum = userModel.TelNum;
-                employeeUser.Email = userModel.Email;
-                employeeUser.EmailVerified = userModel.EmailVerified;
-                employeeUser.EmployeeInfo = employeeInfo;
-                employeeUser.SuccessfulOperation = true;
-            }
-            catch (Exception)
-            {
-
-            }
-
-            return employeeUser;
         }
 
 
@@ -203,16 +148,8 @@ namespace UserServiceApplication
                              where users.SocSecNum == socSecNum
                              select users).FirstOrDefault();
 
-                userInfo.Id = userModel.Id;
-                userInfo.SocSecNum = userModel.SocSecNum;
-                userInfo.FirstName = userModel.FirstName;
-                userInfo.LastName = userModel.LastName;
-                userInfo.Email = userModel.Email;
-                userInfo.EmailVerified = userModel.EmailVerified;
-                userInfo.StudentId = userModel.StudentId;
-                userInfo.EmployeeId = userModel.EmployeeId;
-                userInfo.TelNum = userModel.TelNum;
-                userInfo.SuccessfulOperation = true;
+                userInfo = ConvertToUserInfo(userModel);
+
             }
             catch (Exception)
             {
@@ -228,48 +165,34 @@ namespace UserServiceApplication
             List<UserInfo> userInfoList = new List<UserInfo>();       
 
             for (int i = 0; i < userModelList.Count; i++)
-            {
-                UserInfo userInfo = new UserInfo();
-                userInfo.Id = userModelList[i].Id;
-                userInfo.SocSecNum = userModelList[i].SocSecNum;
-                userInfo.FirstName = userModelList[i].FirstName;
-                userInfo.LastName = userModelList[i].LastName;
-                userInfo.Email = userModelList[i].Email;
-                userInfo.EmailVerified = userModelList[i].EmailVerified;
-                userInfo.StudentId = userModelList[i].StudentId;
-                userInfo.EmployeeId = userModelList[i].EmployeeId;
-                userInfo.TelNum = userModelList[i].TelNum;
-                userInfo.SuccessfulOperation = true;
-                userInfoList.Add(userInfo);   
-                
+            {            
+                // Fill up empty user object by find from db              
+                userModel = db.Users.Find(userModelList[i].Id);
+                // Convert to UserInfo-object
+                userInfo = ConvertToUserInfo(userModel);            
+                // Add to list
+                userInfoList.Add(userInfo);           
             }
 
             return userInfoList;
         }
 
         public UserInfo UpdateUser(UserInfo user)
-        {
-
-            userModel = db.Users.Find(user.Id);
-            if(userModel != null)
+        {          
+            if(user.Id > 0)
             {
                 userModel = (from x in db.Users
                              where x.Id == user.Id
                              select x).FirstOrDefault();
 
-                userModel.SocSecNum = user.SocSecNum;
-                userModel.FirstName = user.FirstName;
-                userModel.LastName = user.LastName;
-                userModel.Email = user.Email;
-                userModel.Password = userModel.Password;
-                userModel.EmailVerified = user.EmailVerified;
-                userModel.StudentId = user.StudentId;
-                userModel.EmployeeId = user.EmployeeId;
-                userModel.TelNum = user.TelNum;
-
+                userModel = ConvertToUser(user);
+           
                 try
-                {
+                {             
                     db.SaveChanges();
+                    user = ConvertToUserInfo(db.Users.Find(user.Id));
+                    // Hiding password field
+                    user.Password = null;
                     user.SuccessfulOperation = true;
                 }
                 catch (Exception)
@@ -305,19 +228,11 @@ namespace UserServiceApplication
 
             if(userModel != null)
             {
-                userInfo.Id = userModel.Id;
-                userInfo.SocSecNum = userModel.SocSecNum;
-                userInfo.FirstName = userModel.FirstName;
-                userInfo.LastName = userModel.LastName;
-                userInfo.Email = userModel.Email;
-                userInfo.EmailVerified = userModel.EmailVerified;
-                userInfo.StudentId = userModel.StudentId;
-                userInfo.EmployeeId = userModel.StudentId;
-                userInfo.TelNum = userModel.TelNum;
-                userInfo.SuccessfulOperation = true;
-            }
-           
-            return userInfo;
+                userInfo = ConvertToUserInfo(userModel);
+                return userInfo;           
+            } else {
+                return null;
+            }            
         }
 
         public bool SetUserStudentId(int User_Id, int? student_Id)
@@ -391,5 +306,85 @@ namespace UserServiceApplication
         {
             return true;
         }
+
+        private UserInfo ConvertToUserInfo(Users userModel)
+        {
+            if (userModel != null)
+            {
+                UserInfo userInfo = new UserInfo();
+                userInfo.Id = userModel.Id;
+                userInfo.SocSecNum = userModel.SocSecNum;
+                userInfo.FirstName = userModel.FirstName;
+                userInfo.LastName = userModel.LastName;
+                userInfo.Email = userModel.Email;
+                userInfo.EmailVerified = userModel.EmailVerified;
+                userInfo.StudentId = userModel.StudentId;
+                userInfo.EmployeeId = userModel.StudentId;
+                userInfo.TelNum = userModel.TelNum;
+                userInfo.SuccessfulOperation = true;
+
+                return userInfo;
+
+            } else {
+                return null;
+            }
+        }      
+
+        private Users ConvertToUser(UserInfo userInfo)
+        {
+            if (userInfo != null)
+            {
+                Users userModel = new Users();
+                userModel.SocSecNum = userInfo.SocSecNum;
+                userModel.FirstName = userInfo.FirstName;
+                userModel.LastName = userInfo.LastName;
+                userModel.Email = userInfo.Email;
+                userModel.EmailVerified = userInfo.EmailVerified;
+                userModel.Password = userInfo.Password;
+                userModel.StudentId = userInfo.StudentId;
+                userModel.EmployeeId = userInfo.EmployeeId;
+                userModel.TelNum = userInfo.TelNum;
+               
+                return userModel;
+            } else {
+                return null;
+            }
+        }
+
+        private StudentUsers ConvertToStudentUser(Users userModel, StudentInfo studentInfo)
+        {
+            StudentUsers studentUser = new StudentUsers();
+            studentUser.Id = userModel.Id;
+            studentUser.SocSecNum = userModel.SocSecNum;
+            studentUser.FirstName = userModel.FirstName;
+            studentUser.LastName = userModel.LastName;
+            studentUser.TelNum = userModel.TelNum;
+            studentUser.Email = userModel.Email;
+            studentUser.EmailVerified = userModel.EmailVerified;
+            studentUser.StudentId = studentInfo.Id;
+            studentUser.ProgramCode = studentInfo.ProgramCode;
+            studentUser.UnionExpiration = studentInfo.UnionExpiration;
+            studentUser.UnionName = studentInfo.UnionName;
+            studentUser.SuccessfulOperation = true;
+
+            return studentUser;
+        }
+
+        public EmployeeUsers ConvertToEmployeeUser(Users userModel, EmployeeInfo employeeInfo)
+        {
+            EmployeeUsers employeeUser = new EmployeeUsers();
+            employeeUser.Id = userModel.Id;
+            employeeUser.SocSecNum = userModel.SocSecNum;
+            employeeUser.FirstName = userModel.FirstName;
+            employeeUser.LastName = userModel.LastName;
+            employeeUser.TelNum = userModel.TelNum;
+            employeeUser.Email = userModel.Email;
+            employeeUser.EmailVerified = userModel.EmailVerified;
+            employeeUser.EmployeeInfo = employeeInfo;
+            employeeUser.SuccessfulOperation = true;
+
+            return employeeUser;
+        }
+
     }
 }

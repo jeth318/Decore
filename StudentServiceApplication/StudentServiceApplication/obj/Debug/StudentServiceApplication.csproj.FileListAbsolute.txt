@@ -88,3 +88,4 @@ C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplicatio
 \\Mac\Home\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.ApplicationInsights.xml
 \\Mac\Home\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.dll
 \\Mac\Home\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.pdb
+\\Mac\Home\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.csprojResolveAssemblyReference.cache
