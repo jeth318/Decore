@@ -10,10 +10,6 @@ namespace UserService
     {
         public int Id { get; set; }
 
-        public int? StudentId { get; set; }
-
-        public int? EmployeeId { get; set; }
-
         [Required]
         [StringLength(50)]
         public string SocSecNum { get; set; }

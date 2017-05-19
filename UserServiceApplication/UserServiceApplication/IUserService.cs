@@ -42,11 +42,12 @@ namespace UserServiceApplication
         [OperationContract]
         bool DeleteUser(int user_Id);
 
-        [OperationContract]
+       /* [OperationContract]
         bool SetUserStudentId(int user_Id, int? student_Id);
 
         [OperationContract]
         bool SetUserEmployeeId(int user_Id, int? employee_Id);
+        */
 
         [OperationContract]
         bool IsRunning();
@@ -58,10 +59,7 @@ namespace UserServiceApplication
     {
         [DataMember]
         public int Id { get; set; }
-        [DataMember]
-        public int? StudentId { get; set; }
-        [DataMember]
-        public int? EmployeeId { get; set; }
+       
         [DataMember]
         public string SocSecNum { get; set; }
         [DataMember]
