@@ -100,21 +100,6 @@ namespace UserServiceApplication
                     if (userModel != null)
                     {
                         StudentUsers studentUser = ConvertToStudentUser(userModel, studentInfoList[i]);
-
-                        /*  studentUser.Id = userModel.Id;
-                          studentUser.SocSecNum = userModel.SocSecNum;
-                          studentUser.FirstName = userModel.FirstName;
-                          studentUser.LastName = userModel.LastName;
-                          studentUser.TelNum = userModel.TelNum;
-                          studentUser.Email = userModel.Email;
-                          studentUser.EmailVerified = userInfo.EmailVerified;
-                          studentUser.StudentId = studentInfoList[i].Id;
-                          studentUser.ProgramCode = studentInfoList[i].ProgramCode;
-                          studentUser.UnionExpiration = studentInfoList[i].UnionExpiration;
-                          studentUser.UnionName = studentInfoList[i].UnionName;
-
-                      */
-
                         studentUserList.Add(studentUser);
                     }
                 }
@@ -282,76 +267,6 @@ namespace UserServiceApplication
             }
         }
 
-        /*  public bool SetUserStudentId(int User_Id, int? student_Id)
-          {
-              bool result = false;
-
-
-              userModel = db.Users.Find(User_Id);
-
-              if (student_Id == null)
-              {
-                  userModel.StudentId = null;
-
-              }
-              else
-              {
-                  var row = (from users in db.Users
-                             where users.StudentId == student_Id
-                             select users).FirstOrDefault();
-
-                  if (row == null)
-                  {
-                      userModel.StudentId = student_Id;
-                  }
-              }
-
-              try
-              {
-                  db.SaveChanges();
-                  result = true;
-              }
-              catch (Exception)
-              {
-                  result = false;
-              }
-
-              return result;
-          }
-          */
-
-        /* public bool SetUserEmployeeId(int User_Id, int? employee_Id)
-         {
-             bool result = false;
-             userModel = db.Users.Find(User_Id);
-
-             if (employee_Id == null)
-             {
-                 userModel.EmployeeId = null;
-             }
-             else
-             {
-                 var row = (from users in db.Users
-                            where users.EmployeeId == employee_Id
-                            select users).FirstOrDefault();
-
-                 if (row == null)
-                 {
-                     userModel.EmployeeId = employee_Id;
-                 }
-             }
-             try
-             {
-                 db.SaveChanges();
-                 result = true;
-             }
-             catch (Exception)
-             {
-                 result = false;
-             }
-
-             return result;
-         } */
 
         public bool IsRunning()
         {
@@ -392,8 +307,6 @@ namespace UserServiceApplication
                 userModel.Email = userInfo.Email;
                 userModel.EmailVerified = userInfo.EmailVerified;
                 userModel.Password = userInfo.Password;
-                userModel.StudentId = userInfo.StudentId;
-                userModel.EmployeeId = userInfo.EmployeeId;
                 userModel.TelNum = userInfo.TelNum;
 
                 return userModel;
