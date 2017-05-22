@@ -85,11 +85,20 @@
                     @Html.AntiForgeryToken()
 
                     <div class="login-form">
+                        <br />
+                        @if((string)TempData["Message"] == "Registreringen lyckades!")
+                        {
+                           <h3 style="color: green;">@TempData["Message"]</h3>
+                        }
+                        else if ((string)TempData["Message"] == "Registreringen misslyckades")
+                        {
+                            <h3 style="color: darkred;">@TempData["Message"]</h3>
+                        }
                         <h2 class="login-h2">Inloggning</h2>
 
                         <div class="form-group login-group" style="text-align: left">
                             @Html.LabelFor(model => model.Username, "Användarnamn")
-                            @Html.TextBoxFor(model => model.Username, new { @class = "form-control", placeholder = "email@gmail.com" })
+                            @Html.TextBoxFor(model => model.Username, new { @class = "form-control", placeholder = "email@gmail.com", Value = TempData["Email"]})
                             <div class="error-holder">
                                 @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
                             </div>

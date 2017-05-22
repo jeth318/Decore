@@ -88,6 +88,10 @@
 
                 <div class="login-form">
 
+                    @if ((string)TempData["Message"] == "Registreringen misslyckades")
+                    {
+                        <h3 style="color: darkred;">@TempData["Message"]</h3>
+                    }
 
                     <h2 class="login-h2">Registrera studentkonto</h2>
 

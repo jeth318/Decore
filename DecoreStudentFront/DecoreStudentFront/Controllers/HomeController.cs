@@ -25,6 +25,8 @@ namespace DecoreStudentFront.Controllers
             // Passing empty studentUser object for the register-form.
             UserServiceRef.StudentUsers studUser = new UserServiceRef.StudentUsers();
             ViewBag.Message = TempData["Message"];
+            ViewBag.Email = TempData["Email"];
+            ViewBag.Password = TempData["Password"];
 
             var viewModel = new LoginViewModel
             {
@@ -67,12 +69,15 @@ namespace DecoreStudentFront.Controllers
                 studentInfo = studentService.CreateStudent(studentInfo);
                 studentService.Close();
 
-                TempData["Message"] = "Successfull registration";
+                TempData["Message"] = "Registreringen lyckades!";
+                TempData["Email"] = regViewModel.Email;
+                TempData["Password"] = regViewModel.Password;
                 return RedirectToAction("Index");
             }
             catch
             {
-                TempData["Message"] = "Failed when registering the student user";
+                TempData["Message"] = "Registreringen misslyckades";
+                ViewBag.Message = TempData["Message"];
                 return View(regViewModel);
             }
         }
