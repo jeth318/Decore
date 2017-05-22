@@ -54,7 +54,7 @@
                         @Html.ActionLink("Hem", "Start", "Student")
                     </li>
                     <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "EventList" ? "active" : "")">
-                        @Html.ActionLink("Alla Event", "Index", "EventList")
+                       <a href="http://193.10.202.72/Homepage/Homepage/Home/Apply">Anmälan till Event</a>
                     </li>    
                     <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Student/MyInfo" ? "active" : "")">
                         @Html.ActionLink("Mina uppgifter", "MyInfo", "Student")
