@@ -65,22 +65,22 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-
+                    
                     <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Home" ? "active" : "")">
                         @Html.ActionLink("Hem", "Index", "Home")
                     </li>
                     <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "EventList" ? "active" : "")">
                         @Html.ActionLink("Alla Event", "Index", "EventList")
-                    </li>               
+                    </li>    
                     <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Student" ? "active" : "")">
                         @Html.ActionLink("Mina uppgifter", "MyInfo", "Student")
-                    </li> 
-                 
+                    </li>                           
                 </ul>
                 <ul class="nav navbar-nav pull-right"></ul>
             </div>
         </div>
     </nav>
+    <h2 style="color: black">Välkommen @ViewBag.User</h2>
 
     @RenderBody()
 
