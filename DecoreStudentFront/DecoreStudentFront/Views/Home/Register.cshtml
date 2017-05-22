@@ -3,7 +3,7 @@
 
 @{
     ViewBag.Title = "Register";
-    Layout = "~/Views/Shared/_navbar.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Register</h2>
@@ -25,7 +25,7 @@
     }
 
     .header {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(~/../content/images/summerparty.jpg);
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(~/img/summerparty.jpg);
         background-attachment: fixed;
         background-position: 50% 50%;
         background-repeat: no-repeat;
@@ -80,7 +80,7 @@
 <section>
     <div class="header">
         <div class="text-box text-center">
-            <img src="~/content/images/decore-logo.png">
+             <img src="~/img/decore-logo.png">
 
             @using (Html.BeginForm("Register", "Home", "POST"))
             {

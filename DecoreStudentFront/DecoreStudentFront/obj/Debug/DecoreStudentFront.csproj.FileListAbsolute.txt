@@ -261,3 +261,4 @@ H:\Decore Git\DecoreStudentFront\DecoreStudentFront\bin\Newtonsoft.Json.xml
 H:\Decore Git\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.dll
 H:\Decore Git\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.pdb
 H:\Decore Git\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.csprojResolveAssemblyReference.cache
