@@ -26,7 +26,7 @@ namespace DecoreStudentFront.Controllers
             UserServiceRef.StudentUsers studUser = new UserServiceRef.StudentUsers();
             ViewBag.Message = TempData["Message"];
             ViewBag.Email = TempData["Email"];
-            ViewBag.Password = TempData["Password"];
+          
 
             var viewModel = new LoginViewModel
             {
@@ -71,7 +71,7 @@ namespace DecoreStudentFront.Controllers
 
                 TempData["Message"] = "Registreringen lyckades!";
                 TempData["Email"] = regViewModel.Email;
-                TempData["Password"] = regViewModel.Password;
+            
                 return RedirectToAction("Index");
             }
             catch

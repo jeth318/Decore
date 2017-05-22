@@ -4,7 +4,7 @@
 
 @{
     ViewBag.Title = "Event Page";
-    Layout = "~/Views/Shared/_navbar_start.cshtml";
+    Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
 }
 <style>
     .event {
@@ -24,6 +24,8 @@
 </style>
 
 <div class="content" style="display: block">
+
+    <h1 style="text-align: center;">Akuella evenemang</h1>
 
     @foreach (var item in Model.Events.OrderByDescending(Model => Model.CreatedAt))
     {
