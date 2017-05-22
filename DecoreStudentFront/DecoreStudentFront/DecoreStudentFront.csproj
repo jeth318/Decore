@@ -192,6 +192,7 @@
     <Compile Include="TicketViewModel.cs" />
     <Compile Include="ViewModels\EventViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\TicketViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -433,7 +434,6 @@
     <Content Include="vendor\font-awesome\scss\_variables.scss" />
     <Content Include="Views\Shared\_LayoutLoggedIn.cshtml" />
     <Content Include="Views\Student\Start.cshtml" />
-    <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Student\Delete.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\EventList\Index.cshtml" />
@@ -452,6 +452,8 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Shared\_navbar_start.cshtml" />
+    <Content Include="Views\Student\MyInfo.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

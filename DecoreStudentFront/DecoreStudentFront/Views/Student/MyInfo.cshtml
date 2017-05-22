@@ -1,0 +1,97 @@
+﻿@model DecoreStudentFront.UserServiceRef.StudentUsers
+
+@{
+    ViewBag.Title = "MyInfo";
+    Layout = "~/Views/Shared/_navbar_start.cshtml";
+}
+
+<h2>MyInfo</h2>
+
+<div>
+    <h4>Mina uppgifter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgramCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProgramCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SocSecNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SocSecNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentId)
+        </dt>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnionExpiration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnionExpiration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnionName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Tillbaka", "Start")
+</p>

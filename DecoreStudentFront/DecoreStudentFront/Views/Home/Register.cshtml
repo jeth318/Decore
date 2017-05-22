@@ -1,9 +1,12 @@
-﻿@model DecoreStudentFront.ViewModels.LoginViewModel
+﻿
+@model DecoreStudentFront.ViewModels.RegisterViewModel
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_navbar.cshtml";
 }
+
+<h2>Register</h2>
 
 <style>
     .box--first {
@@ -74,50 +77,81 @@
     }
 </style>
 
-    <section>
-        <div class="header">
-            <div class="text-box text-center">
-                <img src="~/content/images/decore-logo.png">
+<section>
+    <div class="header">
+        <div class="text-box text-center">
+            <img src="~/content/images/decore-logo.png">
 
-                @using (Html.BeginForm("Login", "Home", "POST"))
-                {
-                    @Html.AntiForgeryToken()
+            @using (Html.BeginForm("Register", "Home", "POST"))
+            {
+                @Html.AntiForgeryToken()
 
-                    <div class="login-form">
+                <div class="login-form">
 
 
-                        <h2 class="login-h2">Inloggning</h2>
+                    <h2 class="login-h2">Registrera studentkonto</h2>
 
-                        <div class="form-group login-group" style="text-align: left">
-                            @Html.LabelFor(model => model.Username, "Användarnamn")
-                            @Html.TextBoxFor(model => model.Username, new { @class = "form-control", placeholder = "email@gmail.com" })
-                            <div class="error-holder">
-                                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
-                            </div>
+                    <div class="form-group login-group" style="text-align: left">
+                        @Html.LabelFor(model => model.Email, "Epost")
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "email@gmail.com" })
+                        <div class="error-holder">
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                         </div>
-
-                        <div class="form-group login-group" style="text-align: left">
-                            @Html.LabelFor(model => model.Password, "Lösenord")
-                            @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "password" })
-                            <div class="error-holder">
-                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-
-                        <input type="submit" value="Logga in" class="btn btn-primary create-save-btn" />
-                        <br />
-                        <br />
-                        <a href="Home/Register">Registrera nytt konto</a>
                     </div>
-                }
+                    <div class="form-group login-group" style="text-align: left">
+                        @Html.LabelFor(model => model.Password, "Lösenord")
+                        @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "" })
+                        <div class="error-holder">
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group login-group" style="text-align: left">
+                        @Html.LabelFor(model => model.FirstName, "Namn")
+                        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", placeholder = "Kalle" })
+                        <div class="error-holder">
+                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group login-group" style="text-align: left">
+                        @Html.LabelFor(model => model.LastName, "Efternamn")
+                        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", placeholder = "Karlsson" })
+                        <div class="error-holder">
+                            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group login-group" style="text-align: left">
+                        @Html.LabelFor(model => model.SocSecNum, "Personnummer")
+                        @Html.TextBoxFor(model => model.SocSecNum, new { @class = "form-control", placeholder = "19XXXXXX-XXXX" })
+                        <div class="error-holder">
+                            @Html.ValidationMessageFor(model => model.SocSecNum, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group login-group" style="text-align: left">
+                        @Html.LabelFor(model => model.TelNum, "Mobilnummer")
+                        @Html.TextBoxFor(model => model.TelNum, new { @class = "form-control", placeholder = "070-504 24 94" })
+                        <div class="error-holder">
+                            @Html.ValidationMessageFor(model => model.TelNum, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group login-group" style="text-align: left">
+                        @Html.LabelFor(model => model.UnionName, "Studentkår")
+                        @Html.TextBoxFor(model => model.UnionName, new { @class = "form-control", placeholder = "DeCore / VästSex" })
+                        <div class="error-holder">
+                            @Html.ValidationMessageFor(model => model.UnionName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Registrera!" class="btn btn-primary create-save-btn" />
+                </div>
+            }
 
 
-                <p class="login-p">For students by students</p>
-            </div>
+            <p class="login-p">For students by students</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    
+
 
 <div class="box box--first">
     <div class="row">

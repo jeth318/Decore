@@ -38,23 +38,22 @@ namespace DecoreStudentFront.Controllers
 
         public ActionResult Register()
         {
-            return View();
+            return View(new RegisterViewModel());
         }
    
         [HttpPost]
-        public ActionResult Register(LoginViewModel loginViewModel)
+        public ActionResult Register(RegisterViewModel regViewModel)
         {
-            UserServiceRef.StudentUsers newStudentUser = loginViewModel.studentUser;
+         
             // Building a StudentUsers-object combining the UserInfo and StudentInfo-objects.
-            userInfo.Email = newStudentUser.Email;
-            userInfo.SocSecNum = newStudentUser.SocSecNum;
-            userInfo.Password = newStudentUser.Password;
-            userInfo.FirstName = newStudentUser.FirstName;
-            userInfo.LastName = newStudentUser.LastName;
-            userInfo.TelNum = newStudentUser.TelNum;
-            studentInfo.ProgramCode = newStudentUser.ProgramCode;
-            studentInfo.UnionExpiration = newStudentUser.UnionExpiration;
-            studentInfo.UnionName = newStudentUser.UnionName;
+            userInfo.Email = regViewModel.Email;
+            userInfo.SocSecNum = regViewModel.SocSecNum;
+            userInfo.Password = regViewModel.Password;
+            userInfo.FirstName = regViewModel.FirstName;
+            userInfo.LastName = regViewModel.LastName;
+            userInfo.TelNum = regViewModel.TelNum;
+            studentInfo.ProgramCode = regViewModel.ProgramCode;
+            studentInfo.UnionName = regViewModel.UnionName;
 
             try
             {
@@ -74,7 +73,7 @@ namespace DecoreStudentFront.Controllers
             catch
             {
                 TempData["Message"] = "Failed when registering the student user";
-                return View();
+                return View(regViewModel);
             }
         }
 

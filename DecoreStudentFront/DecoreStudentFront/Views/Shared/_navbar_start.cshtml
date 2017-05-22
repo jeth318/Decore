@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="~/Content/Site.css" rel="stylesheet">
-    <meta charset="utf-8">
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -66,13 +67,13 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     
-                    <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Home" ? "active" : "")">
-                        @Html.ActionLink("Hem", "Index", "Home")
+                    <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Student" ? "active" : "")">
+                        @Html.ActionLink("Hem", "Start", "Student")
                     </li>
                     <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "EventList" ? "active" : "")">
                         @Html.ActionLink("Alla Event", "Index", "EventList")
                     </li>    
-                    <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Student" ? "active" : "")">
+                    <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Student/MyInfo" ? "active" : "")">
                         @Html.ActionLink("Mina uppgifter", "MyInfo", "Student")
                     </li>                           
                 </ul>

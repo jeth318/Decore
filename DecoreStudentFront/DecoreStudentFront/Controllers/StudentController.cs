@@ -55,6 +55,15 @@ namespace DecoreStudentFront.Controllers
             }      
         }
 
+        public ActionResult MyInfo()
+        {
+            string idString = User.Identity.Name;
+            int id = Int32.Parse(idString);
+
+            studentUser = userService.GetStudentUser(id);
+            return View(studentUser);
+        }
+
         public ActionResult Edit(int id)
         {
             try
