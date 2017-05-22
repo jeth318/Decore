@@ -10,7 +10,6 @@ using DecoreStudentFront.StudentServiceRef;
 
 namespace DecoreStudentFront.Controllers
 {
-    [AllowAnonymous]
     public class HomeController : Controller
     {
         UserInfo userInfo = new UserInfo();
@@ -20,13 +19,12 @@ namespace DecoreStudentFront.Controllers
         StudentServiceClient studentService = new StudentServiceClient();
 
 
-        public ActionResult Index(string returnUrl)
+        public ActionResult Index()
         {
             // Passing empty studentUser object for the register-form.
-
             UserServiceRef.StudentUsers studUser = new UserServiceRef.StudentUsers();
             ViewBag.Message = TempData["Message"];
-            ViewBag.ReturnUrl = returnUrl;
+
             return View(studUser);
         }
 
@@ -71,53 +69,11 @@ namespace DecoreStudentFront.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Login(string userinputLogin, string passwordinputLogin, string returnUrl)
+        public ActionResult Login(string userinputLogin, string passwordinputLogin)
         {
-            if (Request.IsAuthenticated)
-            {       
-                if (string.IsNullOrEmpty(returnUrl))
-                {
-                    return RedirectToAction("Start", "Student");
-                } else
-                {
-                    return Redirect(returnUrl);
-                }
-                         
-            } else
-            {
-                try
-                {
-                    LoginServiceClient loginService = new LoginServiceClient();
-                    studentUser = loginService.LoginStudent(userinputLogin, passwordinputLogin);
-                    loginService.Close();
-                    if (studentUser.SuccessfulOperation == true)
-                    {
-                        FormsAuthentication.SetAuthCookie(studentUser.Id.ToString(), false);
-
-                       
-                        if (!string.IsNullOrEmpty(returnUrl))
-                        {
-                            return Redirect(returnUrl);
-                        } else
-                        {
-                            return RedirectToAction("Index");
-                        }
-                           
-                    }
-                    else
-                    {
-                        return RedirectToAction("Index");
-                    }
-                }
-                catch (Exception)
-                {
-                    TempData["Message"] = "Login failed";
-                }
-            }
+            LoginServiceClient loginService = new LoginServiceClient();
             
-            
-            /*try
+            try
             {
                 studentUser = loginService.LoginStudent(userinputLogin, passwordinputLogin);
                 loginService.Close();
@@ -134,7 +90,7 @@ namespace DecoreStudentFront.Controllers
             {
                 TempData["Message"] = "Login failed";
             }
-            */
+
             return RedirectToAction("Index");
         }
     }

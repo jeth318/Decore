@@ -1,0 +1,90 @@
+﻿@using System.Web.Mvc.Html
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="~/Content/Site.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <style>
+        .navbar {
+            border-bottom: transparent;
+        }
+
+        .navbar-default {
+            background-color: #1893FD;
+            -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+            -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+            box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+        }
+
+            .navbar-default li a {
+                color: white !important;
+                font-weight: bold;
+            }
+
+            .navbar-default .navbar-nav li a:hover {
+                transition: background-color 0.8s ease;
+            }
+
+            .navbar-default .active a {
+                background-color: #1982dc !important;
+            }
+
+        .navbar-header img {
+            width: 100px;
+            position: absolute;
+            left: 10px;
+            top: 0;
+        }
+
+        .navbar-nav {
+            margin-right: 0;
+            margin-left: 40px;
+        }
+    </style>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href='@Url.Action("Index", "Home")'>
+                    <img src='@Url.Content("~/img/decore-logo.png")' />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Home" ? "active" : "")">
+                        @Html.ActionLink("Hem", "Index", "Home")
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "EventList" ? "active" : "")">
+                        @Html.ActionLink("Alla Event", "Index", "EventList")
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "CreateEvent" ? "active" : "")">
+                        @Html.ActionLink("Skapa Event", "Index", "CreateEvent")
+                    </li>
+
+                    <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Alcohol" ? "active" : "")">
+                        @Html.ActionLink("Uppvägning", "Index", "Alcohol")
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav pull-right"></ul>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+</body>
+</html>

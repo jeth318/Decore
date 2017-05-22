@@ -1,0 +1,133 @@
+@using System.Web.Mvc.Html
+
+@model DecoreStudentFront.ViewModels.EventViewModel
+
+
+@{
+    ViewBag.Title = "Event Page";
+    Layout = "~/Views/Shared/_navbar.cshtml";
+}
+
+
+<style>
+    .event {
+        margin-bottom: 30px;
+    }
+
+    .thumbnail {
+        background-color: #FFF;
+        -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+        -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+        box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+        border-radius: 4px;
+        color: #444444;
+    }
+
+
+    .modal-backdrop {
+        z-index: -1;
+    }
+</style>
+
+
+<div class="content" style="display: block">
+
+    @foreach (var item in Model.Events.OrderByDescending(Model => Model.CreatedAt))
+    {
+        <div class="row event" id="myTable">
+            <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+                <div class="thumbnail">
+                    <img src="@item.ImageURL" alt="event image">
+                    <div class="caption">
+                        <h3>@item.Title</h3>
+                        <p>Beskrivning: @item.Description</p>
+                        <p>
+                            Event typ:
+                            @foreach (var eventType in @Model.EventTypes)
+                            {
+                                if (eventType.Id == @item.EventTypeId)
+                                {
+                                    @eventType.Title
+                                }
+                            }
+                        </p>
+
+                        <p>Adress: @item.Adress</p>
+                        <p>Pris på biljett: @item.BasePrice kr</p>
+                        <p>Pris på biljett för medlemmar: @item.MemberPrice kr</p>
+
+                        <p>
+                            Utskott:
+                            @foreach (var sectionType in @Model.SectionTypes)
+                            {
+                                if (sectionType.Id == @item.SectionId)
+                                {
+                                    @sectionType.Description;
+                                }
+                            }
+                        </p>
+
+                        <p>Startdatum för event: @item.StartDate</p>
+                        <p>Slutdatum för event: @item.EndDate</p>
+                        <p>Slutdatum för försäljning: @item.SaleStop</p>
+                        <p>Skapad: @item.CreatedAt</p>
+
+                     
+                        <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#@item.Id">Köp Biljett</button>
+                        <button href="#" class="btn btn-default" role="button">Personal</button>
+
+                        <div class="modal fade" id="@item.Id">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title">Detaljer för köp</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        @using (Html.BeginForm("CreateTicket", "EventList", "POST"))
+                                        {
+
+                                            @Html.AntiForgeryToken()
+
+                                            <h3>Du har valt att köpa biljett för: @item.Title</h3>
+                                            <p>Beskrivning: @item.Description</p>
+                                            <p>Pris per biljett är: @item.BasePrice kr</p>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.TicketViewModel.NumberOfTickets, "Antal Biljetter")
+                                                @Html.TextBoxFor(model => model.TicketViewModel.NumberOfTickets, new { @type = "number", @placeholder = "Ange antal biljetter", @class = "form-control" })
+                                                <div class="error-holder">
+                                                    @Html.ValidationMessageFor(model => model.TicketViewModel.NumberOfTickets, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+
+                                                <div class="form-group">
+                                                    @Html.HiddenFor(model => model.TicketViewModel.TicketId, new { id = "hiddenId" })
+                                                    @Html.HiddenFor(model => model.TicketViewModel.EventId, new { id = @item.Id, Value = @item.Id })
+                                                    <button type="submit" style="float:right;" class="btn btn-info">Köp Biljett</button>
+                                                </div>
+                                                <a href="#" data-dismiss="modal" class="btn">Stäng</a>
+
+
+
+                                            </div>
+                                        }
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
