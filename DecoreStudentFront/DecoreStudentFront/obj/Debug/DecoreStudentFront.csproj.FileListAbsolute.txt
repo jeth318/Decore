@@ -206,7 +206,6 @@ C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\Decore
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\System.Web.WebPages.Razor.xml
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Antlr3.Runtime.pdb
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Newtonsoft.Json.xml
-\\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.csprojResolveAssemblyReference.cache
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.dll
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.pdb
 H:\Decore Git\DecoreStudentFront\DecoreStudentFront\bin\ApplicationInsights.config

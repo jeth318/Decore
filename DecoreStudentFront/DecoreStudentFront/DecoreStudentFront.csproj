@@ -191,6 +191,7 @@
     <Compile Include="StartViewModel.cs" />
     <Compile Include="TicketViewModel.cs" />
     <Compile Include="ViewModels\EventViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\TicketViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

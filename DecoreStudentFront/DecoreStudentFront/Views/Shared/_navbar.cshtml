@@ -71,10 +71,7 @@
                     </li>
                     <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "EventList" ? "active" : "")">
                         @Html.ActionLink("Alla Event", "Index", "EventList")
-                    </li>               
-                    <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Student" ? "active" : "")">
-                        @Html.ActionLink("Mina uppgifter", "MyInfo", "Student")
-                    </li> 
+                    </li>
                  
                 </ul>
                 <ul class="nav navbar-nav pull-right"></ul>

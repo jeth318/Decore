@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using DecoreStudentFront.LoginServiceRef;
 using DecoreStudentFront.UserServiceRef;
 using DecoreStudentFront.StudentServiceRef;
+using DecoreStudentFront.ViewModels;
 
 namespace DecoreStudentFront.Controllers
 {
@@ -25,16 +26,25 @@ namespace DecoreStudentFront.Controllers
             UserServiceRef.StudentUsers studUser = new UserServiceRef.StudentUsers();
             ViewBag.Message = TempData["Message"];
 
-            return View(studUser);
+            var viewModel = new LoginViewModel
+            {
+                Username = "",
+                Password = "",
+                studentUser = studUser
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult Register()
         {
             return View();
         }
+   
         [HttpPost]
-        public ActionResult Register(UserServiceRef.StudentUsers newStudentUser)
-        {          
+        public ActionResult Register(LoginViewModel loginViewModel)
+        {
+            UserServiceRef.StudentUsers newStudentUser = loginViewModel.studentUser;
             // Building a StudentUsers-object combining the UserInfo and StudentInfo-objects.
             userInfo.Email = newStudentUser.Email;
             userInfo.SocSecNum = newStudentUser.SocSecNum;
@@ -68,14 +78,15 @@ namespace DecoreStudentFront.Controllers
             }
         }
 
+        [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult Login(string userinputLogin, string passwordinputLogin)
+        public ActionResult Login(LoginViewModel loginViewModel)
         {
             LoginServiceClient loginService = new LoginServiceClient();
             
             try
             {
-                studentUser = loginService.LoginStudent(userinputLogin, passwordinputLogin);
+                studentUser = loginService.LoginStudent(loginViewModel.Username, loginViewModel.Password);
                 loginService.Close();
                 if (studentUser.SuccessfulOperation == true)
                 {
