@@ -25,7 +25,7 @@
 
 <div class="content" style="display: block">
 
-    <h1 style="text-align: center;">Akuella evenemang</h1>
+    <h1 style="text-align: center;">Akuella evenemang <img src="~/img/events.png" style="height: 100px; width: 100px;" /></h1>
 
     @foreach (var item in Model.Events.OrderByDescending(Model => Model.CreatedAt))
     {

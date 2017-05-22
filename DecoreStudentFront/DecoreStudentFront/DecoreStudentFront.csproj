@@ -206,11 +206,13 @@
     <Content Include="Content\Site.css" />
     <Content Include="img\decore-logo.png" />
     <Content Include="img\downloads-bg.jpg" />
+    <Content Include="img\events.png" />
     <Content Include="img\hv-icon.jpg" />
     <Content Include="img\hv.JPG" />
     <Content Include="img\hv2.jpg" />
     <Content Include="img\intro-bg.jpg" />
     <Content Include="img\map-marker.png" />
+    <Content Include="img\news.png" />
     <Content Include="img\summerparty.jpg" />
     <Content Include="js\grayscale.js" />
     <Content Include="js\grayscale.min.js" />
