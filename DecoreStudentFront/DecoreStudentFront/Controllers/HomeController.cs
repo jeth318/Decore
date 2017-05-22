@@ -20,12 +20,13 @@ namespace DecoreStudentFront.Controllers
         StudentServiceClient studentService = new StudentServiceClient();
 
 
-        public ActionResult Index()
+        public ActionResult Index(string returnUrl)
         {
             // Passing empty studentUser object for the register-form.
+
             UserServiceRef.StudentUsers studUser = new UserServiceRef.StudentUsers();
             ViewBag.Message = TempData["Message"];
-
+            ViewBag.ReturnUrl = returnUrl;
             return View(studUser);
         }
 
