@@ -217,24 +217,24 @@
     </Content>
     <None Include="Service References\LoginServiceRef\configuration91.svcinfo" />
     <None Include="Service References\LoginServiceRef\configuration.svcinfo" />
-    <None Include="Service References\LoginServiceRef\LoginService1.wsdl" />
-    <None Include="Service References\LoginServiceRef\LoginService4.xsd">
+    <None Include="Service References\LoginServiceRef\LoginService.wsdl" />
+    <None Include="Service References\LoginServiceRef\LoginService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\LoginServiceRef\LoginService41.xsd">
+    <None Include="Service References\LoginServiceRef\LoginService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\LoginServiceRef\LoginService42.xsd">
+    <None Include="Service References\LoginServiceRef\LoginService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\LoginServiceRef\LoginService43.xsd">
+    <None Include="Service References\LoginServiceRef\LoginService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\LoginServiceRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\LoginServiceRef\LoginService1.disco" />
+    <None Include="Service References\LoginServiceRef\LoginService.disco" />
     <Content Include="Service References\StudentServiceRef\DecoreStudentFront.StudentServiceRef.StudentInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -244,7 +244,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\StudentServiceRef\StudentService1.disco" />
+    <None Include="Service References\StudentServiceRef\StudentService.disco" />
     <Content Include="Service References\UserServiceRef\DecoreStudentFront.UserServiceRef.EmployeeUsers.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -254,14 +254,14 @@
     <Content Include="Service References\UserServiceRef\DecoreStudentFront.UserServiceRef.UserInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\StudentServiceRef\StudentService1.wsdl" />
-    <None Include="Service References\StudentServiceRef\StudentService3.xsd">
+    <None Include="Service References\StudentServiceRef\StudentService.wsdl" />
+    <None Include="Service References\StudentServiceRef\StudentService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\StudentServiceRef\StudentService31.xsd">
+    <None Include="Service References\StudentServiceRef\StudentService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\StudentServiceRef\StudentService32.xsd">
+    <None Include="Service References\StudentServiceRef\StudentService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\UserServiceRef\configuration91.svcinfo" />
@@ -270,7 +270,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\UserServiceRef\UserService1.disco" />
+    <None Include="Service References\UserServiceRef\UserService.disco" />
     <Content Include="vendor\bootstrap\css\bootstrap.css" />
     <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
     <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
@@ -337,17 +337,17 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Student\Delete.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
-    <None Include="Service References\UserServiceRef\UserService1.wsdl" />
-    <None Include="Service References\UserServiceRef\UserService4.xsd">
+    <None Include="Service References\UserServiceRef\UserService.wsdl" />
+    <None Include="Service References\UserServiceRef\UserService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserServiceRef\UserService41.xsd">
+    <None Include="Service References\UserServiceRef\UserService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserServiceRef\UserService42.xsd">
+    <None Include="Service References\UserServiceRef\UserService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserServiceRef\UserService43.xsd">
+    <None Include="Service References\UserServiceRef\UserService3.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -389,7 +389,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2098</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:2818/</IISUrl>
+          <IISUrl>http://localhost:5084/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

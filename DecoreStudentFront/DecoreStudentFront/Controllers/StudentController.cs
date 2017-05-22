@@ -11,6 +11,7 @@ namespace DecoreStudentFront.Controllers
 {
     public class StudentController : Controller
     {
+        
         UserServiceClient userService = new UserServiceClient();
         StudentUsers studentUser = new StudentUsers();
         UserInfo userInfo = new UserInfo();

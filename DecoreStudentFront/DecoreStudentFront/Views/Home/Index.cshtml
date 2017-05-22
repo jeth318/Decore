@@ -117,7 +117,13 @@
 <section id="login" style="padding-bottom: 330px;  padding-top: 350px;">
     <div class="container">
         <div class="row">
-            <form class="form-horizontal" action="Home/Login" method="post">
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    @Html.ValidationSummary()
+    @Html.AntiForgeryToken()
+
+
                 <fieldset>
                     <div class="form-group">
                         <label class="col-md-12 control-label" for="userinputLogin"></label>
@@ -140,8 +146,8 @@
                             <input type="submit" id="loginSubmit" name="loginSubmit" value="Logga in" class="btn btn-success" />
                         </div>
                     </div>
-                </fieldset>
-            </form>
+                </fieldset>        
+}
         </div>
     </div>
 </section>
