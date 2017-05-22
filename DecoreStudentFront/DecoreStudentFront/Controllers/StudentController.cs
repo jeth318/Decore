@@ -9,6 +9,7 @@ using DecoreStudentFront.UserServiceRef;
 
 namespace DecoreStudentFront.Controllers
 {
+    [Authorize]
     public class StudentController : Controller
     {
         
