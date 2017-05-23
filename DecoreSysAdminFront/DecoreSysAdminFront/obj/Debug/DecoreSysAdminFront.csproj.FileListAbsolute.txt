@@ -208,3 +208,4 @@ C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreSysAdminFront\Decor
 \\Mac\Home\Desktop\Grupp1\DecoreSysAdminFront\DecoreSysAdminFront\bin\Newtonsoft.Json.xml
 \\Mac\Home\Desktop\Grupp1\DecoreSysAdminFront\DecoreSysAdminFront\obj\Debug\DecoreSysAdminFront.dll
 \\Mac\Home\Desktop\Grupp1\DecoreSysAdminFront\DecoreSysAdminFront\obj\Debug\DecoreSysAdminFront.pdb
+\\Mac\Home\Desktop\Grupp1\DecoreSysAdminFront\DecoreSysAdminFront\obj\Debug\DecoreSysAdminFront.csprojResolveAssemblyReference.cache

@@ -5,7 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using DecoreStudentFront.StudentServiceRef;
 using DecoreStudentFront.UserServiceRef;
-    
+using DecoreStudentFront.EventServiceRef;
+using DecoreStudentFront.TicketServiceRef;
+using DecoreStudentFront.EmployeeServiceRef;
+using DecoreStudentFront.ViewModels;
 
 namespace DecoreStudentFront.Controllers
 {
@@ -13,26 +16,52 @@ namespace DecoreStudentFront.Controllers
     {
         UserServiceClient userService = new UserServiceClient();
         StudentUsers studentUser = new StudentUsers();
+        EventServiceClient eventService = new EventServiceClient();
+        private readonly EventServiceClient _eventWCFclient = new EventServiceClient();
+        private readonly TicketServiceClient _ticketWCFclient = new TicketServiceClient();
+        private readonly EmployeeServiceWCFClient _employeeWcfClient = new EmployeeServiceWCFClient();
         UserInfo userInfo = new UserInfo();
-        
+  
+
         // GET: Student
         public ActionResult Start()
         {
+            
             string idString = User.Identity.Name;
             int id = Int32.Parse(idString);
 
+            var events = _eventWCFclient.GetEvents();
+            var eventTypes = _eventWCFclient.GetEventTypes();
+            var sectionTypes = _employeeWcfClient.GetAllSections();
+
+            var viewModel = new EventViewModel
+            {
+                Events = events,
+                EventTypes = eventTypes,
+                SectionTypes = sectionTypes
+            };
+            
             try
             {
                 
                 studentUser = userService.GetStudentUser(id);
                 ViewBag.User = studentUser.FirstName + " " + studentUser.LastName;
-                return View(studentUser);
+                return View(viewModel);
                 
             }
             catch (Exception)
             {
                 return View();
             }      
+        }
+
+        public ActionResult MyInfo()
+        {
+            string idString = User.Identity.Name;
+            int id = Int32.Parse(idString);
+
+            studentUser = userService.GetStudentUser(id);
+            return View(studentUser);
         }
 
         public ActionResult Edit(int id)
@@ -52,7 +81,7 @@ namespace DecoreStudentFront.Controllers
         [HttpPost]
         public ActionResult Edit(int id, UserInfo updatedUser)
         {
-            updatedUser.Id = id;
+            
 
             try
             {

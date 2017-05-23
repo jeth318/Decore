@@ -257,14 +257,16 @@ namespace UserServiceApplication
                              where x.Id == user.Id
                              select x).FirstOrDefault();
 
-                userModel.SocSecNum = user.SocSecNum;
+
+                userModel.Id = userModel.Id;
                 userModel.FirstName = user.FirstName;
                 userModel.LastName = user.LastName;
-                userModel.Email = user.Email;
+                userModel.Email = userModel.Email;
+                userModel.SocSecNum = userModel.SocSecNum;
                 userModel.Password = userModel.Password;
-                userModel.EmailVerified = user.EmailVerified;
-                userModel.StudentId = user.StudentId;
-                userModel.EmployeeId = user.EmployeeId;
+                userModel.EmailVerified = userModel.EmailVerified;
+                userModel.StudentId = userModel.StudentId;
+                userModel.EmployeeId = userModel.EmployeeId;
                 userModel.TelNum = user.TelNum;
 
                 try

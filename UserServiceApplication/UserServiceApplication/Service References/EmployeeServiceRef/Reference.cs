@@ -685,11 +685,17 @@ namespace UserService.EmployeeServiceRef {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteAccess", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteAccessResponse")]
         System.Threading.Tasks.Task<string> DeleteAccessAsync(int acessId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateEmployeeResponse")]
-        UserService.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetAllEmployees", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetAllEmployeesResponse")]
+        UserService.EmployeeServiceRef.EmployeeInfo[] GetAllEmployees();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetAllEmployees", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetAllEmployeesResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo[]> GetAllEmployeesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateEmployeeResponse")]
-        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn);
+        UserService.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] roleIds);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateEmployeeResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] roleIds);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByUserId", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByUserIdResponse")]
         UserService.EmployeeServiceRef.EmployeeInfo GetEmployeeByUserId(int userId);
@@ -709,12 +715,6 @@ namespace UserService.EmployeeServiceRef {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRoles", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRolesResponse")]
         System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeRolesAsync(int updatedById, int employeeId, int[] rolesToAddId, int[] rolesToRemoveId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSections", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSectionsResponse")]
-        UserService.EmployeeServiceRef.EmployeeInfo ChangeEmployeeSections(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSections", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSectionsResponse")]
-        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeSectionsAsync(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployeeResponse")]
         string DeleteEmployee(int employeeId);
         
@@ -726,6 +726,12 @@ namespace UserService.EmployeeServiceRef {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateRoleResponse")]
         System.Threading.Tasks.Task<UserService.EmployeeServiceRef.RoleInfo> CreateRoleAsync(int createdById, int sectionId, string name, string description, int[] access);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetRoleById", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetRoleByIdResponse")]
+        UserService.EmployeeServiceRef.RoleInfo GetRoleById(int roleId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetRoleById", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetRoleByIdResponse")]
+        System.Threading.Tasks.Task<UserService.EmployeeServiceRef.RoleInfo> GetRoleByIdAsync(int roleId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateRoleResponse")]
         UserService.EmployeeServiceRef.RoleInfo UpdateRole(int updatedById, UserService.EmployeeServiceRef.RoleInfo updatedRole);
@@ -829,12 +835,20 @@ namespace UserService.EmployeeServiceRef {
             return base.Channel.DeleteAccessAsync(acessId);
         }
         
-        public UserService.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn) {
-            return base.Channel.CreateEmployee(userIdIn, createdByIdin, sectionIds, roleIdsIn);
+        public UserService.EmployeeServiceRef.EmployeeInfo[] GetAllEmployees() {
+            return base.Channel.GetAllEmployees();
         }
         
-        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn) {
-            return base.Channel.CreateEmployeeAsync(userIdIn, createdByIdin, sectionIds, roleIdsIn);
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo[]> GetAllEmployeesAsync() {
+            return base.Channel.GetAllEmployeesAsync();
+        }
+        
+        public UserService.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] roleIds) {
+            return base.Channel.CreateEmployee(userIdIn, createdByIdin, roleIds);
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] roleIds) {
+            return base.Channel.CreateEmployeeAsync(userIdIn, createdByIdin, roleIds);
         }
         
         public UserService.EmployeeServiceRef.EmployeeInfo GetEmployeeByUserId(int userId) {
@@ -861,14 +875,6 @@ namespace UserService.EmployeeServiceRef {
             return base.Channel.ChangeEmployeeRolesAsync(updatedById, employeeId, rolesToAddId, rolesToRemoveId);
         }
         
-        public UserService.EmployeeServiceRef.EmployeeInfo ChangeEmployeeSections(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds) {
-            return base.Channel.ChangeEmployeeSections(updatedById, employeeId, sectionsToAddIds, sectionsToRemoveIds);
-        }
-        
-        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeSectionsAsync(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds) {
-            return base.Channel.ChangeEmployeeSectionsAsync(updatedById, employeeId, sectionsToAddIds, sectionsToRemoveIds);
-        }
-        
         public string DeleteEmployee(int employeeId) {
             return base.Channel.DeleteEmployee(employeeId);
         }
@@ -883,6 +889,14 @@ namespace UserService.EmployeeServiceRef {
         
         public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.RoleInfo> CreateRoleAsync(int createdById, int sectionId, string name, string description, int[] access) {
             return base.Channel.CreateRoleAsync(createdById, sectionId, name, description, access);
+        }
+        
+        public UserService.EmployeeServiceRef.RoleInfo GetRoleById(int roleId) {
+            return base.Channel.GetRoleById(roleId);
+        }
+        
+        public System.Threading.Tasks.Task<UserService.EmployeeServiceRef.RoleInfo> GetRoleByIdAsync(int roleId) {
+            return base.Channel.GetRoleByIdAsync(roleId);
         }
         
         public UserService.EmployeeServiceRef.RoleInfo UpdateRole(int updatedById, UserService.EmployeeServiceRef.RoleInfo updatedRole) {

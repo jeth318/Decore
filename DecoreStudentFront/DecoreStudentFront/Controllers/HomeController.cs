@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using DecoreStudentFront.LoginServiceRef;
 using DecoreStudentFront.UserServiceRef;
 using DecoreStudentFront.StudentServiceRef;
+using DecoreStudentFront.ViewModels;
+using log4net;
 
 namespace DecoreStudentFront.Controllers
 {
@@ -17,6 +19,7 @@ namespace DecoreStudentFront.Controllers
         LoginServiceRef.StudentUsers studentUser = new LoginServiceRef.StudentUsers();
         UserServiceClient userService = new UserServiceClient();
         StudentServiceClient studentService = new StudentServiceClient();
+        private static readonly ILog logger = LogManager.GetLogger("TestLogger");
 
 
         public ActionResult Index()
@@ -24,27 +27,39 @@ namespace DecoreStudentFront.Controllers
             // Passing empty studentUser object for the register-form.
             UserServiceRef.StudentUsers studUser = new UserServiceRef.StudentUsers();
             ViewBag.Message = TempData["Message"];
+            ViewBag.Email = TempData["Email"];
+          
 
-            return View(studUser);
+            var viewModel = new LoginViewModel
+            {
+                Username = "",
+                Password = "",
+                studentUser = studUser
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult Register()
         {
-            return View();
+            return View(new RegisterViewModel());
         }
+   
         [HttpPost]
-        public ActionResult Register(UserServiceRef.StudentUsers newStudentUser)
-        {          
+        public ActionResult Register(RegisterViewModel regViewModel)
+        {
+         
             // Building a StudentUsers-object combining the UserInfo and StudentInfo-objects.
-            userInfo.Email = newStudentUser.Email;
-            userInfo.SocSecNum = newStudentUser.SocSecNum;
-            userInfo.Password = newStudentUser.Password;
-            userInfo.FirstName = newStudentUser.FirstName;
-            userInfo.LastName = newStudentUser.LastName;
-            userInfo.TelNum = newStudentUser.TelNum;
-            studentInfo.ProgramCode = newStudentUser.ProgramCode;
-            studentInfo.UnionExpiration = newStudentUser.UnionExpiration;
-            studentInfo.UnionName = newStudentUser.UnionName;
+            userInfo.Email = regViewModel.Email;
+            userInfo.SocSecNum = regViewModel.SocSecNum;
+            userInfo.Password = regViewModel.Password;
+            userInfo.FirstName = regViewModel.FirstName;
+            userInfo.LastName = regViewModel.LastName;
+            userInfo.TelNum = regViewModel.TelNum;
+            studentInfo.ProgramCode = regViewModel.ProgramCode;
+            studentInfo.UnionName = regViewModel.UnionName;
+
+            logger.Debug("Someone tried to register");
 
             try
             {
@@ -58,24 +73,29 @@ namespace DecoreStudentFront.Controllers
                 studentInfo = studentService.CreateStudent(studentInfo);
                 studentService.Close();
 
-                TempData["Message"] = "Successfull registration";
+                TempData["Message"] = "Registreringen lyckades!";
+                TempData["Email"] = regViewModel.Email;
+            
                 return RedirectToAction("Index");
             }
             catch
             {
-                TempData["Message"] = "Failed when registering the student user";
-                return View();
+                TempData["Message"] = "Registreringen misslyckades";
+                ViewBag.Message = TempData["Message"];
+                return View(regViewModel);
             }
         }
 
+        [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult Login(string userinputLogin, string passwordinputLogin)
+        public ActionResult Login(LoginViewModel loginViewModel)
         {
+            logger.Debug("Someone tried to login");
             LoginServiceClient loginService = new LoginServiceClient();
             
             try
             {
-                studentUser = loginService.LoginStudent(userinputLogin, passwordinputLogin);
+                studentUser = loginService.LoginStudent(loginViewModel.Username, loginViewModel.Password);
                 loginService.Close();
                 if (studentUser.SuccessfulOperation == true)
                 {

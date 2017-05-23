@@ -17,7 +17,7 @@
     <AssemblyName>DecoreStudentFront</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -153,6 +157,7 @@
     <Compile Include="Controllers\EventListController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="EventViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -187,10 +192,60 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="StartViewModel.cs" />
+    <Compile Include="TicketViewModel.cs" />
     <Compile Include="ViewModels\EventViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\TicketViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\DecoreStudentFront.dll" />
+    <Content Include="bin\DecoreStudentFront.pdb" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\grayscale.css" />
@@ -199,12 +254,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\decore-logo.png" />
     <Content Include="img\downloads-bg.jpg" />
+    <Content Include="img\events.png" />
     <Content Include="img\hv-icon.jpg" />
     <Content Include="img\hv.JPG" />
     <Content Include="img\hv2.jpg" />
     <Content Include="img\intro-bg.jpg" />
     <Content Include="img\map-marker.png" />
+    <Content Include="img\news.png" />
+    <Content Include="img\summerparty.jpg" />
     <Content Include="js\grayscale.js" />
     <Content Include="js\grayscale.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -215,6 +274,11 @@
     <Content Include="sass\grayscale.scss" />
     <Content Include="sass\_mixins.scss" />
     <Content Include="sass\_variables.scss" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\DecoreStudentFront.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -290,24 +354,24 @@
     </None>
     <None Include="Service References\LoginServiceRef\configuration91.svcinfo" />
     <None Include="Service References\LoginServiceRef\configuration.svcinfo" />
-    <None Include="Service References\LoginServiceRef\LoginService1.wsdl" />
-    <None Include="Service References\LoginServiceRef\LoginService4.xsd">
+    <None Include="Service References\LoginServiceRef\LoginService.wsdl" />
+    <None Include="Service References\LoginServiceRef\LoginService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\LoginServiceRef\LoginService41.xsd">
+    <None Include="Service References\LoginServiceRef\LoginService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\LoginServiceRef\LoginService42.xsd">
+    <None Include="Service References\LoginServiceRef\LoginService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\LoginServiceRef\LoginService43.xsd">
+    <None Include="Service References\LoginServiceRef\LoginService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\LoginServiceRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\LoginServiceRef\LoginService1.disco" />
+    <None Include="Service References\LoginServiceRef\LoginService.disco" />
     <Content Include="Service References\StudentServiceRef\DecoreStudentFront.StudentServiceRef.StudentInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -317,10 +381,20 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\StudentServiceRef\StudentService1.disco" />
+    <None Include="Service References\StudentServiceRef\StudentService.disco" />
     <Content Include="Service References\TicketServiceRef\DecoreStudentFront.TicketServiceRef.Ticket.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\StudentServiceRef\StudentService.wsdl" />
+    <None Include="Service References\StudentServiceRef\StudentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StudentServiceRef\StudentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StudentServiceRef\StudentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\TicketServiceRef\TicketService.disco" />
     <None Include="Service References\TicketServiceRef\configuration91.svcinfo" />
     <None Include="Service References\TicketServiceRef\configuration.svcinfo" />
@@ -337,16 +411,6 @@
     <Content Include="Service References\UserServiceRef\DecoreStudentFront.UserServiceRef.UserInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\StudentServiceRef\StudentService1.wsdl" />
-    <None Include="Service References\StudentServiceRef\StudentService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\StudentServiceRef\StudentService31.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\StudentServiceRef\StudentService32.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\TicketServiceRef\TicketService.wsdl" />
     <None Include="Service References\TicketServiceRef\TicketService.xsd">
       <SubType>Designer</SubType>
@@ -363,7 +427,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\UserServiceRef\UserService1.disco" />
+    <None Include="Service References\UserServiceRef\UserService.disco" />
     <Content Include="vendor\bootstrap\css\bootstrap.css" />
     <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
     <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
@@ -427,23 +491,26 @@
     <Content Include="vendor\font-awesome\scss\_variables.scss" />
     <Content Include="Views\Shared\_LayoutLoggedIn.cshtml" />
     <Content Include="Views\Student\Start.cshtml" />
-    <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Student\Delete.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
-    <None Include="Service References\UserServiceRef\UserService1.wsdl" />
-    <None Include="Service References\UserServiceRef\UserService4.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\UserServiceRef\UserService41.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\UserServiceRef\UserService42.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\UserServiceRef\UserService43.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Views\EventList\Index.cshtml" />
+    <Content Include="Views\Shared\_navbar.cshtml" />
+    <None Include="Service References\UserServiceRef\UserService.wsdl" />
+    <None Include="Service References\UserServiceRef\UserService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceRef\UserService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceRef\UserService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceRef\UserService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Views\Shared\_navbar_start.cshtml" />
+    <Content Include="Views\Student\MyInfo.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -482,11 +549,12 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2098</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:3618/</IISUrl>
+          <IISUrl>
+          </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

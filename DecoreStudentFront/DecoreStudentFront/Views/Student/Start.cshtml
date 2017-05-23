@@ -1,22 +1,126 @@
-﻿@model DecoreStudentFront.UserServiceRef.StudentUsers
+﻿@using System.Web.Mvc.Html
+@model DecoreStudentFront.ViewModels.EventViewModel
+
 @{
-    ViewBag.Title = "Start";
+    ViewBag.Title = "Event Page";
     Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
 }
 
-<h2>Start</h2>
+<style>
+    .event {
+        margin-bottom: 30px;
+    }
+
+    .thumbnail {
+        background-color: #FFF;
+        -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+        -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+        box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+        border-radius: 4px;
+        color: #444444;
+    }
 
 
-<h3>Välkommen @ViewBag.User</h3>
+    .modal-backdrop {
+        z-index: -1;
+    }
+</style>
+
+<div class="content" style="display: block">
+
+    <br />
+  
+    <div class="row">
+        <div class="col-md-4 col-md-offset-1 col-sm-12" style="border-radius: 5px; background-color: rebeccapurple; color: white; width: auto;">
+            <h2>Välkommen @ViewBag.User</h2>
+        </div>
+    </div>
+    <br />
+    
+    <div class="row">
+
+        <div class="col-sm-10 col-sm-offset-2 col-md-5">
+            <h2>Studentnyheter! <img src="~/img/news.png" style="height: 50px; width: 50px;"/></h2> 
+            <div class="thumbnail">
+                
+                <div class="caption">
+                    <p>
+                        Received shutters expenses ye he pleasant. Drift as blind above at up. No up simple county stairs do should praise as. 
+                        Drawings sir gay together landlord had law smallest. Formerly welcomed attended declared met say unlocked. 
+                        Jennings outlived no dwelling denoting in peculiar as he believed. Behaviour excellent middleton be as it curiosity departure ourselves.
+
+                        He do subjects prepared bachelor juvenile ye oh. 
+                        He feelings removing informed he as ignorant we prepared. 
+                        Evening do forming observe spirits is in. Country hearted be of justice sending.
+                         On so they as with room cold ye. Be call four my went mean. Celebrated if remarkably especially an.
+                         Going eat set she books found met aware. 
+                    </p>
+                    </div>
 
 
-<p style="background-color: brown;">Här antar jag att vi bara ska ha tomma a href # till typ:  EVENTS, MIN INFORMATION, SITTNING bla bla bla.</p>
+                </div>
+            <br />
+            <div class="thumbnail">
+
+                <div class="caption">
+                    <p>
+                        He do subjects prepared bachelor juvenile ye oh.
+                        He feelings removing informed he as ignorant we prepared.
+                        Evening do forming observe spirits is in. Country hearted attended declared met say unlocked.
+                        Jennings outlived no dwelling denoting in peculiar as he believed. Behaviour excellent middleton be as it curiosity departure ourselves.
+                    </p>
+                </div>
 
 
-<br /><br />
-<h3 style="padding: 10px; background-color: yellow; color: black;">@Html.ActionLink("Edit this account", "Edit", new { id = Model.Id })</h3>
-<br /><br />
-<h3 style="padding: 10px; background-color: black; color: white;">@Html.ActionLink("Delete this account", "Delete", new { id = Model.Id })</h3>
+            </div>
+            <br />
+            <div class="thumbnail">
+
+                <div class="caption">
+                    <p>
+                        He believed. Behaviour excellent middleton be as it curiosity departure ourselves. He do subjects prepared bachelor juvenile ye oh.
+                        He feelings removing informed he as ignorant we prepared.
+                        Evening do forming observe spirits is in. Country hearted 
+                    </p>
+                </div>
 
 
+            </div>
+            </div>
 
+       
+        <div class="col-sm-10 col-md-4">
+            <h2>Aktuella evenemang <img src="~/img/events.png" style="height: 50px; width: 50px;" /></h2>
+            @foreach (var item in Model.Events.OrderByDescending(Model => Model.CreatedAt))
+            {
+
+
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>@item.Title</h3>
+                        <p>
+                            Event typ:
+                            @foreach (var eventType in @Model.EventTypes)
+                            {
+                                if (eventType.Id == @item.EventTypeId)
+                                {
+                                    @eventType.Title
+                                }
+                            }
+                        </p>                     
+                        <p>Startdatum för event: @item.StartDate</p>
+                        <p>Slutdatum för event: @item.EndDate</p>
+
+                        <a href="http://193.10.202.72/Homepage/Homepage/Home/Apply" class="btn btn-primary" role="button" data-toggle="modal" data-target="#@item.Id">Mer info</a>
+                       
+
+
+                    </div>
+                </div>
+
+
+            }
+        </div>
+
+        </div>
+</div>

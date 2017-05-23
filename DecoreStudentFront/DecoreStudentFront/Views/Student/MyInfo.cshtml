@@ -1,0 +1,86 @@
+﻿@model DecoreStudentFront.UserServiceRef.StudentUsers
+
+@{
+    ViewBag.Title = "MyInfo";
+    Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
+}
+
+<h2>MyInfo</h2>
+
+<div>
+    <h4>Mina uppgifter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Epost
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+           Förnamn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            Efternamn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+    
+
+        <dt>
+            Mitt program
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProgramCode)
+        </dd>
+
+        <dt>
+           Personnummer
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SocSecNum)
+        </dd>
+
+   
+        <dt>
+            Mobilnummer
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelNum)
+        </dd>
+     
+
+        <dt>
+            Kårtillhörighet
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnionName)
+        </dd>
+        <dt>
+            Utgångstid för medlemskap
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnionExpiration)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Tillbaka", "Start")
+</p>
