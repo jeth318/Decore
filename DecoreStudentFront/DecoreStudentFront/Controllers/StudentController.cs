@@ -81,7 +81,7 @@ namespace DecoreStudentFront.Controllers
         [HttpPost]
         public ActionResult Edit(int id, UserInfo updatedUser)
         {
-            updatedUser.Id = id;
+            
 
             try
             {
