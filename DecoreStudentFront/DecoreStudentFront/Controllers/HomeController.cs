@@ -8,6 +8,7 @@ using DecoreStudentFront.LoginServiceRef;
 using DecoreStudentFront.UserServiceRef;
 using DecoreStudentFront.StudentServiceRef;
 using DecoreStudentFront.ViewModels;
+using log4net;
 
 namespace DecoreStudentFront.Controllers
 {
@@ -18,6 +19,7 @@ namespace DecoreStudentFront.Controllers
         LoginServiceRef.StudentUsers studentUser = new LoginServiceRef.StudentUsers();
         UserServiceClient userService = new UserServiceClient();
         StudentServiceClient studentService = new StudentServiceClient();
+        private static readonly ILog logger = LogManager.GetLogger("TestLogger");
 
 
         public ActionResult Index()
@@ -57,6 +59,8 @@ namespace DecoreStudentFront.Controllers
             studentInfo.ProgramCode = regViewModel.ProgramCode;
             studentInfo.UnionName = regViewModel.UnionName;
 
+            logger.Debug("Someone tried to register");
+
             try
             {
                 // Creating the main user-account
@@ -86,6 +90,7 @@ namespace DecoreStudentFront.Controllers
         [HttpPost]
         public ActionResult Login(LoginViewModel loginViewModel)
         {
+            logger.Debug("Someone tried to login");
             LoginServiceClient loginService = new LoginServiceClient();
             
             try
