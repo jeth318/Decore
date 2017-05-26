@@ -48,7 +48,9 @@ namespace DecoreStudentFront.Controllers
         [HttpPost]
         public ActionResult Register(RegisterViewModel regViewModel)
         {
-         
+
+            
+
             // Building a StudentUsers-object combining the UserInfo and StudentInfo-objects.
             userInfo.Email = regViewModel.Email;
             userInfo.SocSecNum = regViewModel.SocSecNum;
@@ -59,7 +61,7 @@ namespace DecoreStudentFront.Controllers
             studentInfo.ProgramCode = regViewModel.ProgramCode;
             studentInfo.UnionName = regViewModel.UnionName;
 
-            logger.Debug("Someone tried to register");
+        
 
             try
             {
@@ -75,11 +77,12 @@ namespace DecoreStudentFront.Controllers
 
                 TempData["Message"] = "Registreringen lyckades!";
                 TempData["Email"] = regViewModel.Email;
-            
+                logger.Debug(userInfo.Email + " registered successfully");
                 return RedirectToAction("Index");
             }
             catch
             {
+                logger.Debug(userInfo.Email + " failed registrer");
                 TempData["Message"] = "Registreringen misslyckades";
                 ViewBag.Message = TempData["Message"];
                 return View(regViewModel);
@@ -90,7 +93,9 @@ namespace DecoreStudentFront.Controllers
         [HttpPost]
         public ActionResult Login(LoginViewModel loginViewModel)
         {
-            logger.Debug("Someone tried to login");
+
+            //ThreadContext.Properties["addr"] = Request.UserHostAddress;
+           
             LoginServiceClient loginService = new LoginServiceClient();
             
             try
@@ -100,14 +105,17 @@ namespace DecoreStudentFront.Controllers
                 if (studentUser.SuccessfulOperation == true)
                 {
                     FormsAuthentication.RedirectFromLoginPage(studentUser.Id.ToString(), false);
+                    logger.Debug(studentUser.Email + " logged in");
                     return null;
                 } else
                 {
+                    logger.Debug("Login failed for " + studentUser.Email);
                     return RedirectToAction("Index");
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.Debug("Login crashed. Exeption: " + e);
                 TempData["Message"] = "Login failed";
             }
 

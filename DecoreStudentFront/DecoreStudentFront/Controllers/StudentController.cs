@@ -9,6 +9,7 @@ using DecoreStudentFront.EventServiceRef;
 using DecoreStudentFront.TicketServiceRef;
 using DecoreStudentFront.EmployeeServiceRef;
 using DecoreStudentFront.ViewModels;
+using log4net;
 
 namespace DecoreStudentFront.Controllers
 {
@@ -21,7 +22,8 @@ namespace DecoreStudentFront.Controllers
         private readonly TicketServiceClient _ticketWCFclient = new TicketServiceClient();
         private readonly EmployeeServiceWCFClient _employeeWcfClient = new EmployeeServiceWCFClient();
         UserInfo userInfo = new UserInfo();
-  
+        private static readonly ILog logger = LogManager.GetLogger("TestLogger");
+
 
         // GET: Student
         public ActionResult Start()
@@ -51,6 +53,7 @@ namespace DecoreStudentFront.Controllers
             }
             catch (Exception)
             {
+            
                 return View();
             }      
         }
@@ -61,13 +64,16 @@ namespace DecoreStudentFront.Controllers
             int id = Int32.Parse(idString);
 
             studentUser = userService.GetStudentUser(id);
+            logger.Debug("My info loaded");
             return View(studentUser);
+            
         }
 
         public ActionResult Edit(int id)
         {
             try
             {
+                logger.Debug("Couldn't load my info");
                 userInfo = userService.GetUserById(id);
                 return View(userInfo);
             }
@@ -85,12 +91,13 @@ namespace DecoreStudentFront.Controllers
 
             try
             {
+                logger.Debug("User " + id + " was edited");
                 userService.UpdateUser(updatedUser);
                 return RedirectToAction("Start");
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                logger.Fatal("Edit failed. \nExeption: " + e);
                 ViewBag.Message = "Snap, coulnd't update the user info";
                 return View(userInfo);
             }
