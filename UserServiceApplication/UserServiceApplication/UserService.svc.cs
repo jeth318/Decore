@@ -13,7 +13,7 @@ using UserService.EmployeeServiceRef;
 
 namespace UserServiceApplication
 {
-   
+
     public class UserService : IUserService
     {
         UserInfo userInfo = new UserInfo();
@@ -22,16 +22,16 @@ namespace UserServiceApplication
         EmployeeInfo employeeInfo = new EmployeeInfo();
         EmployeeServiceWCFClient employeeService = new EmployeeServiceWCFClient();
         StudentServiceClient studentService = new StudentServiceClient();
-        
+
         UserDbModel db = new UserDbModel();
 
         public UserInfo CreateUser(UserInfo user)
         {
             var row = (from users in db.Users
-                      where users.Email == user.Email
-                      select users).FirstOrDefault();
-        
-            if(row == null)
+                       where users.Email == user.Email
+                       select users).FirstOrDefault();
+
+            if (row == null)
             {
                 userModel.SocSecNum = user.SocSecNum;
                 userModel.FirstName = user.FirstName;
@@ -51,10 +51,10 @@ namespace UserServiceApplication
                 }
                 catch (Exception)
                 {
-                    throw;                    
-                }       
+                    throw;
+                }
             }
-            
+
             return user;
         }
 
@@ -82,14 +82,14 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
-              
+
             }
-           
+
             return userInfo;
         }
 
         public StudentUsers GetStudentUser(int user_Id)
-        {        
+        {
             try
             {
                 studentInfo = studentService.GetStudentByUserId(user_Id);
@@ -97,7 +97,7 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
-                
+
             }
 
             StudentUsers studentUser = new StudentUsers();
@@ -127,36 +127,36 @@ namespace UserServiceApplication
 
             for (int i = 0; i < studentInfoList.Count; i++)
             {
-                
-                    try
+
+                try
+                {
+                    userModel = db.Users.Find(studentInfoList[i].UserId);
+
+                    if (userModel != null)
                     {
-                        userModel = db.Users.Find(studentInfoList[i].UserId);
+                        StudentUsers studentUser = new StudentUsers();
 
-                        if(userModel != null)
-                        {
-                            StudentUsers studentUser = new StudentUsers();
+                        studentUser.Id = userModel.Id;
+                        studentUser.SocSecNum = userModel.SocSecNum;
+                        studentUser.FirstName = userModel.FirstName;
+                        studentUser.LastName = userModel.LastName;
+                        studentUser.TelNum = userModel.TelNum;
+                        studentUser.Email = userModel.Email;
+                        studentUser.EmailVerified = userInfo.EmailVerified;
+                        studentUser.StudentId = studentInfoList[i].Id;
+                        studentUser.ProgramCode = studentInfoList[i].ProgramCode;
+                        studentUser.UnionExpiration = studentInfoList[i].UnionExpiration;
+                        studentUser.UnionName = studentInfoList[i].UnionName;
 
-                            studentUser.Id = userModel.Id;
-                            studentUser.SocSecNum = userModel.SocSecNum;
-                            studentUser.FirstName = userModel.FirstName;
-                            studentUser.LastName = userModel.LastName;
-                            studentUser.TelNum = userModel.TelNum;
-                            studentUser.Email = userModel.Email;
-                            studentUser.EmailVerified = userInfo.EmailVerified;
-                            studentUser.StudentId = studentInfoList[i].Id;
-                            studentUser.ProgramCode = studentInfoList[i].ProgramCode;
-                            studentUser.UnionExpiration = studentInfoList[i].UnionExpiration;
-                            studentUser.UnionName = studentInfoList[i].UnionName;
-
-                            studentUserList.Add(studentUser);
-                        }                                                                           
+                        studentUserList.Add(studentUser);
                     }
-                    catch (Exception)
-                    {
+                }
+                catch (Exception)
+                {
 
-                        throw;
-                    }                                                                                                                   
-        }
+                    throw;
+                }
+            }
             return studentUserList;
         }
 
@@ -164,32 +164,23 @@ namespace UserServiceApplication
         {
             EmployeeUsers employeeUser = new EmployeeUsers();
 
-            try
-            {
-                employeeInfo = employeeService.GetEmployeeByUserId(user_Id);
-                userModel = db.Users.Find(employeeInfo.UserId);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            employeeInfo = employeeService.GetEmployeeByUserId(user_Id);
+            if (employeeInfo == null)
+                return null;
 
-            try
-            {
-                employeeUser.Id = userModel.Id;
-                employeeUser.SocSecNum = userModel.SocSecNum;
-                employeeUser.FirstName = userModel.FirstName;
-                employeeUser.LastName = userModel.LastName;
-                employeeUser.TelNum = userModel.TelNum;
-                employeeUser.Email = userModel.Email;
-                employeeUser.EmailVerified = userModel.EmailVerified;
-                employeeUser.EmployeeInfo = employeeInfo;
-                employeeUser.SuccessfulOperation = true;
-            }
-            catch (Exception)
-            {
+            userModel = db.Users.Find(employeeInfo.UserId);
 
-            }
+
+            employeeUser.Id = userModel.Id;
+            employeeUser.SocSecNum = userModel.SocSecNum;
+            employeeUser.FirstName = userModel.FirstName;
+            employeeUser.LastName = userModel.LastName;
+            employeeUser.TelNum = userModel.TelNum;
+            employeeUser.Email = userModel.Email;
+            employeeUser.EmailVerified = userModel.EmailVerified;
+            employeeUser.EmployeeInfo = employeeInfo;
+            employeeUser.SuccessfulOperation = true;
+
 
             return employeeUser;
         }
@@ -225,7 +216,7 @@ namespace UserServiceApplication
         public List<UserInfo> GetAllUsers()
         {
             List<Users> userModelList = db.Users.ToList();
-            List<UserInfo> userInfoList = new List<UserInfo>();       
+            List<UserInfo> userInfoList = new List<UserInfo>();
 
             for (int i = 0; i < userModelList.Count; i++)
             {
@@ -240,8 +231,8 @@ namespace UserServiceApplication
                 userInfo.EmployeeId = userModelList[i].EmployeeId;
                 userInfo.TelNum = userModelList[i].TelNum;
                 userInfo.SuccessfulOperation = true;
-                userInfoList.Add(userInfo);   
-                
+                userInfoList.Add(userInfo);
+
             }
 
             return userInfoList;
@@ -251,7 +242,7 @@ namespace UserServiceApplication
         {
 
             userModel = db.Users.Find(user.Id);
-            if(userModel != null)
+            if (userModel != null)
             {
                 userModel = (from x in db.Users
                              where x.Id == user.Id
@@ -277,7 +268,7 @@ namespace UserServiceApplication
                 catch (Exception)
                 {
                     throw;
-                }                               
+                }
             }
             return user;
         }
@@ -288,7 +279,7 @@ namespace UserServiceApplication
 
             // Calling out to studentService for removal of student with associated User-ID.
 
-            if(userModel.StudentId != null)
+            if (userModel.StudentId != null)
             {
                 studentService.DeleteStudent(userModel.StudentId);
             }
@@ -302,23 +293,23 @@ namespace UserServiceApplication
         {
 
             userModel = (from users in db.Users
-                          where users.Email == email && users.Password == password
-                       select users).FirstOrDefault();
+                         where users.Email == email && users.Password == password
+                         select users).FirstOrDefault();
 
-            if(userModel != null)
-            {
-                userInfo.Id = userModel.Id;
-                userInfo.SocSecNum = userModel.SocSecNum;
-                userInfo.FirstName = userModel.FirstName;
-                userInfo.LastName = userModel.LastName;
-                userInfo.Email = userModel.Email;
-                userInfo.EmailVerified = userModel.EmailVerified;
-                userInfo.StudentId = userModel.StudentId;
-                userInfo.EmployeeId = userModel.StudentId;
-                userInfo.TelNum = userModel.TelNum;
-                userInfo.SuccessfulOperation = true;
-            }
-           
+            if (userModel == null)
+                return null;
+
+            userInfo.Id = userModel.Id;
+            userInfo.SocSecNum = userModel.SocSecNum;
+            userInfo.FirstName = userModel.FirstName;
+            userInfo.LastName = userModel.LastName;
+            userInfo.Email = userModel.Email;
+            userInfo.EmailVerified = userModel.EmailVerified;
+            userInfo.StudentId = userModel.StudentId;
+            userInfo.EmployeeId = userModel.StudentId;
+            userInfo.TelNum = userModel.TelNum;
+            userInfo.SuccessfulOperation = true;
+
             return userInfo;
         }
 
@@ -329,19 +320,21 @@ namespace UserServiceApplication
 
             userModel = db.Users.Find(User_Id);
 
-            if(student_Id == null)
+            if (student_Id == null)
             {
                 userModel.StudentId = null;
 
-            } else {
+            }
+            else
+            {
                 var row = (from users in db.Users
                            where users.StudentId == student_Id
                            select users).FirstOrDefault();
 
                 if (row == null)
                 {
-                    userModel.StudentId = student_Id;                
-                }           
+                    userModel.StudentId = student_Id;
+                }
             }
 
             try
@@ -362,10 +355,11 @@ namespace UserServiceApplication
             bool result = false;
             userModel = db.Users.Find(User_Id);
 
-            if(employee_Id == null)
+            if (employee_Id == null)
             {
                 userModel.EmployeeId = null;
-            } else
+            }
+            else
             {
                 var row = (from users in db.Users
                            where users.EmployeeId == employee_Id
@@ -375,7 +369,7 @@ namespace UserServiceApplication
                 {
                     userModel.EmployeeId = employee_Id;
                 }
-            }  
+            }
             try
             {
                 db.SaveChanges();

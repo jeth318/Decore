@@ -23,34 +23,27 @@ namespace LoginServiceApplication
         public StudentUsers LoginStudent(string email, string password)
         {
 
-            try
+            user = userService.ValidateUser(email, password);
+
+            if (user != null)
             {
-                user = userService.ValidateUser(email, password);
                 studentUser = userService.GetStudentUser(user.Id);
                 studentUser.SuccessfulOperation = true;
             }
-            catch (Exception)
-            {
-                      
-            }
-            
             return studentUser;
         }
 
         public EmployeeUsers LoginEmployee(string email, string password)
         {
-            try
-            {
-                user = userService.ValidateUser(email, password);
-                employeeUser = userService.GetEmployeetUser(user.Id);
-                employeeUser.SuccessfulOperation = true;
-            }
-            catch (Exception)
-            {
+            user = userService.ValidateUser(email, password);
+            if (user == null)
+                return null;
 
-                throw;
-            }
-                               
+            employeeUser = userService.GetEmployeetUser(user.Id);
+            if (employeeUser == null)
+                return null;
+
+            employeeUser.SuccessfulOperation = true;
             return employeeUser;
 
         }

@@ -12,6 +12,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="AccessInfo" nillable="true" type="tns:AccessInfo" />
+  <xs:complexType name="ArrayOfEmployeeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeInfo" nillable="true" type="tns:EmployeeInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeInfo" nillable="true" type="tns:ArrayOfEmployeeInfo" />
   <xs:complexType name="EmployeeInfo">
     <xs:sequence>
       <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
@@ -51,12 +57,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfAccessInfo" nillable="true" type="tns:ArrayOfAccessInfo" />
-  <xs:complexType name="ArrayOfEmployeeInfo">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeInfo" nillable="true" type="tns:EmployeeInfo" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEmployeeInfo" nillable="true" type="tns:ArrayOfEmployeeInfo" />
   <xs:complexType name="SectionInfo">
     <xs:sequence>
       <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
