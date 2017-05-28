@@ -74,3 +74,5 @@ C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\
 \\Mac\Home\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.csprojResolveAssemblyReference.cache
 \\Mac\Home\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.dll
 \\Mac\Home\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.pdb
+\\Mac\Home\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\log4net.dll
+\\Mac\Home\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\log4net.xml

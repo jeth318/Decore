@@ -1,0 +1,18 @@
+﻿DEBUG 2017-05-28 13:19:35,141    63ms Logger                 LoginStudent       -  tried to log in
+ [JESPERTHRNB82C5] - 
+ ::1
+DEBUG 2017-05-28 13:23:12,050  8265ms Logger                 LoginEmployee      - sysadmin@hv.se logged in
+ [JESPERTHRNB82C5] - 
+ ::1
+DEBUG 2017-05-28 13:27:08,238   140ms Logger                 LoginStudent       - oioi failed to log in
+ [JESPERTHRNB82C5] - 
+ ::1
+DEBUG 2017-05-28 13:27:30,770 22672ms Logger                 LoginEmployee      - kjj failed to log in
+ [JESPERTHRNB82C5] - 
+ ::1
+DEBUG 2017-05-28 13:31:10,891   249ms Logger                 LoginEmployee      - kjj failed to log in
+ [JESPERTHRNB82C5] - 
+ ::1
+DEBUG 2017-05-28 13:33:32,286   171ms Logger                 LoginStudent       - hjg failed to log in
+ [JESPERTHRNB82C5] - 
+ ::1

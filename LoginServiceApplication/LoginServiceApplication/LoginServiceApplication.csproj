@@ -41,6 +41,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>log4net-2.0.8\bin\mono\4.0\release\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -89,6 +93,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Logs\login_service_log.txt" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="LoginService.svc" />
@@ -133,7 +138,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\StudentServiceRef\StudentService1.disco" />
+    <None Include="Service References\StudentServiceRef\StudentService.disco" />
     <Content Include="Service References\UserServiceRef\LoginServiceApplication.UserServiceRef.UserInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -143,14 +148,14 @@
     <Content Include="Service References\UserServiceRef\LoginServiceApplication.UserServiceRef.EmployeeUsers.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\StudentServiceRef\StudentService1.wsdl" />
-    <None Include="Service References\StudentServiceRef\StudentService3.xsd">
+    <None Include="Service References\StudentServiceRef\StudentService.wsdl" />
+    <None Include="Service References\StudentServiceRef\StudentService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\StudentServiceRef\StudentService31.xsd">
+    <None Include="Service References\StudentServiceRef\StudentService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\StudentServiceRef\StudentService32.xsd">
+    <None Include="Service References\StudentServiceRef\StudentService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\UserServiceRef\configuration91.svcinfo" />
@@ -159,7 +164,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\UserServiceRef\UserService1.disco" />
+    <None Include="Service References\UserServiceRef\UserService.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -192,17 +197,17 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Service References\UserServiceRef\UserService1.wsdl" />
-    <None Include="Service References\UserServiceRef\UserService4.xsd">
+    <None Include="Service References\UserServiceRef\UserService.wsdl" />
+    <None Include="Service References\UserServiceRef\UserService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserServiceRef\UserService41.xsd">
+    <None Include="Service References\UserServiceRef\UserService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserServiceRef\UserService42.xsd">
+    <None Include="Service References\UserServiceRef\UserService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserServiceRef\UserService43.xsd">
+    <None Include="Service References\UserServiceRef\UserService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">
