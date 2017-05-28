@@ -104,7 +104,6 @@ namespace DecoreStudentFront.Controllers
         }
 
 
-
         public ActionResult Delete(int id)
         {
             try
