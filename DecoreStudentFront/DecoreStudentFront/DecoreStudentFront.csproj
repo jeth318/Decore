@@ -266,6 +266,7 @@
     <Content Include="img\summerparty.jpg" />
     <Content Include="js\grayscale.js" />
     <Content Include="js\grayscale.min.js" />
+    <Content Include="Log_Files\log.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
