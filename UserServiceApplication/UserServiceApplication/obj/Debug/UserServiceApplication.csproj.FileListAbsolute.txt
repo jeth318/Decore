@@ -90,3 +90,4 @@ C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\UserServiceApplication\Us
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\UserServiceApplication\UserServiceApplication\obj\Debug\UserServiceApplication.csprojResolveAssemblyReference.cache
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\UserServiceApplication\UserServiceApplication\obj\Debug\UserService.dll
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\UserServiceApplication\UserServiceApplication\obj\Debug\UserService.pdb
+\\Mac\Home\Desktop\Grupp1\UserServiceApplication\UserServiceApplication\bin\log4net.dll
