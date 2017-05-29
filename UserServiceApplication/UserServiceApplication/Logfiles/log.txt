@@ -4,3 +4,9 @@
 DEBUG 2017-05-29 15:49:07,747   687ms TestLogger             IsRunning          - Is running  was called
  [WIN-JUJMH1N8TFP] - 
  ::1
+DEBUG 2017-05-29 15:58:40,987  2609ms TestLogger             IsRunning          - Is running  was called
+ [WIN-JUJMH1N8TFP] - 
+ ::1
+DEBUG 2017-05-29 16:37:29,739 226803ms UserServiceLogger      IsRunning          - Is running  was called
+ [WIN-JUJMH1N8TFP] - 
+ ::1

@@ -49,8 +49,9 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\..\..\log4net-2.0.8\bin\net\4.0\release\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -110,6 +111,7 @@
     <Content Include="bin\EntityFramework.SqlServer.dll" />
     <Content Include="bin\EntityFramework.SqlServer.xml" />
     <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\log4net.dll" />
     <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
@@ -125,6 +127,11 @@
     <Content Include="bin\StudentServiceApplication.dll" />
     <Content Include="bin\StudentServiceApplication.pdb" />
     <Content Include="Logs\log.txt" />
+    <Content Include="obj\Debug\StudentServiceApplication.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\StudentServiceApplication.dll" />
+    <Content Include="obj\Debug\StudentServiceApplication.pdb" />
+    <Content Include="obj\Debug\TempPE\Service References.EmployeeServiceRef.Reference.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Service References.UserServiceRef.Reference.cs.dll" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Service References\UserServiceRef\StudentServiceApplication.UserServiceRef.UserInfo.datasource">
@@ -138,6 +145,11 @@
     </Content>
     <Content Include="bin\ApplicationInsights.config" />
     <Content Include="bin\StudentServiceApplication.dll.config" />
+    <Content Include="obj\Debug\CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\StudentServiceApplication.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Release\CoreCompileInputs.cache" />
     <None Include="Service References\UserServiceRef\configuration91.svcinfo" />
     <None Include="Service References\UserServiceRef\configuration.svcinfo" />
     <None Include="Service References\UserServiceRef\Reference.svcmap">
@@ -150,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Employee.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Service References\UserServiceRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

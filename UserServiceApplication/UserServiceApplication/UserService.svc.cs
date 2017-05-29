@@ -26,7 +26,7 @@ namespace UserServiceApplication
 
         UserDbModel db = new UserDbModel();
 
-        private static readonly ILog logger = LogManager.GetLogger("TestLogger");
+        private static readonly ILog logger = LogManager.GetLogger("UserServiceLogger");
 
 
 

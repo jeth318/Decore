@@ -19,7 +19,7 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost/UserServiceApplication/UserService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://193.10.202.71/UserServiceApplication/UserService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="UserService4.xsd" MetadataType="Schema" ID="e18895d4-a465-4b12-93e7-892d95ea49ee" SourceId="1" SourceUrl="http://localhost/UserServiceApplication/UserService.svc?xsd=xsd1" />

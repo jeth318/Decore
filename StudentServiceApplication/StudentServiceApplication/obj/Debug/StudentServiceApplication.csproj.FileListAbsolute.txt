@@ -97,3 +97,10 @@ C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplica
 C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\log4net.xml
 C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.dll
 C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.pdb
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\ApplicationInsights.config
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.dll.config
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.pdb
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.csprojResolveAssemblyReference.cache
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.dll
+C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.pdb

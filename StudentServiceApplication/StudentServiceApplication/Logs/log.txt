@@ -1,3 +1,12 @@
 DEBUG 2017-05-29 15:18:15,606   156ms StudentServiceLogger   IsRunning          - Is running
  [IT007939] - 
  127.0.0.1
+DEBUG 2017-05-29 16:13:03,340   468ms StudentServiceLogger   IsRunning          - Is running
+ [WIN-JUJMH1N8TFP] - 
+ ::1
+DEBUG 2017-05-29 16:33:05,366   171ms StudentServiceLogger   IsRunning          - Is running
+ [WIN-JUJMH1N8TFP] - 
+ ::1
+DEBUG 2017-05-29 16:55:28,350   696ms StudentServiceLogger   IsRunning          - Is running
+ [WIN-JUJMH1N8TFP] - 
+ ::1

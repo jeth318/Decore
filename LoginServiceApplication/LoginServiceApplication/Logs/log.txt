@@ -16,3 +16,9 @@ DEBUG 2017-05-29 15:01:32,386 57525ms LoginLogger            IsRunning          
 DEBUG 2017-05-29 15:02:12,550 97689ms LoginLogger            IsRunning          - IsRunning UP
  [IT007939] - 
  127.0.0.1
+DEBUG 2017-05-29 16:15:36,691   109ms LoginLogger            IsRunning          - IsRunning UP
+ [WIN-JUJMH1N8TFP] - 
+ ::1
+DEBUG 2017-05-29 16:32:34,032   113ms LoginLogger            IsRunning          - IsRunning UP
+ [WIN-JUJMH1N8TFP] - 
+ ::1
