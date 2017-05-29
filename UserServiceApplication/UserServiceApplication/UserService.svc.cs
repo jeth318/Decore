@@ -9,6 +9,7 @@ using UserServiceApplication;
 using UserService.StudentServiceRef;
 using UserService;
 using UserService.EmployeeServiceRef;
+using log4net;
 
 
 namespace UserServiceApplication
@@ -25,8 +26,13 @@ namespace UserServiceApplication
 
         UserDbModel db = new UserDbModel();
 
+        private static readonly ILog logger = LogManager.GetLogger("UserServiceLogger");
+
+
+
         public UserInfo CreateUser(UserInfo user)
         {
+            logger.Debug("Get user was called");
             var row = (from users in db.Users
                        where users.Email == user.Email
                        select users).FirstOrDefault();
@@ -60,6 +66,7 @@ namespace UserServiceApplication
 
         public UserInfo GetUserById(int user_Id)
         {
+            logger.Debug("Get user was called");
             try
             {
                 //userModel = db.Users.Find(user_Id);
@@ -90,6 +97,7 @@ namespace UserServiceApplication
 
         public StudentUsers GetStudentUser(int user_Id)
         {
+            logger.Debug("Get user was called");
             try
             {
                 studentInfo = studentService.GetStudentByUserId(user_Id);
@@ -385,6 +393,7 @@ namespace UserServiceApplication
 
         public bool IsRunning()
         {
+            logger.Fatal("Is running  was called");
             return true;
         }
     }
