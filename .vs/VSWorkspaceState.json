@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\UserServiceApplication",
-    "\\UserServiceApplication\\UserServiceApplication"
+    "\\UserServiceApplication"
   ],
-  "SelectedNode": "\\UserServiceApplication\\UserServiceApplication\\UserService.svc.cs",
+  "SelectedNode": "\\UserServiceApplication\\UserServiceApplication.sln",
   "PreviewInSolutionExplorer": false
 }

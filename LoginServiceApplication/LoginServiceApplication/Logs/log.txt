@@ -22,3 +22,6 @@ DEBUG 2017-05-29 16:15:36,691   109ms LoginLogger            IsRunning          
 DEBUG 2017-05-29 16:32:34,032   113ms LoginLogger            IsRunning          - IsRunning UP
  [WIN-JUJMH1N8TFP] - 
  ::1
+DEBUG 2017-05-29 18:19:43,780   147ms LoginLogger            IsRunning          - IsRunning UP
+ [WIN-JUJMH1N8TFP] - 
+ ::1
