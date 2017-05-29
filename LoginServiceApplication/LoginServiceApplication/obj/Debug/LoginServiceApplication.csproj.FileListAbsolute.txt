@@ -82,3 +82,4 @@ C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication
 C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.pdb
 C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.dll
 C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.pdb
+C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.csprojResolveAssemblyReference.cache

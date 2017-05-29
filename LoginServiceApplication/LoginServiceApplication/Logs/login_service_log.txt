@@ -16,3 +16,6 @@ DEBUG 2017-05-28 13:31:10,891   249ms Logger                 LoginEmployee      
 DEBUG 2017-05-28 13:33:32,286   171ms Logger                 LoginStudent       - hjg failed to log in
  [JESPERTHRNB82C5] - 
  ::1
+DEBUG 2017-05-29 14:35:07,239    48ms Logger                 IsRunning          - is running
+ [IT007939] - 
+ 127.0.0.1
