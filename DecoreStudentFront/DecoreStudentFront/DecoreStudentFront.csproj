@@ -309,9 +309,6 @@
     <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF.disco" />
     <None Include="Service References\EmployeeServiceRef\configuration91.svcinfo" />
     <None Include="Service References\EmployeeServiceRef\configuration.svcinfo" />
-    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF4.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\EmployeeServiceRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -333,6 +330,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF4.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\EventServiceRef\EventService.disco" />

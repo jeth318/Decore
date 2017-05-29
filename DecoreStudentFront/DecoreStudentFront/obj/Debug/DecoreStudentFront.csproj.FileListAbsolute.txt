@@ -119,7 +119,6 @@ C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\Decore
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\DecoreStudentFront.dll.config
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\DecoreStudentFront.dll
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\DecoreStudentFront.pdb
-C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.csprojResolveAssemblyReference.cache
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.dll
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.pdb
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\ApplicationInsights.config
