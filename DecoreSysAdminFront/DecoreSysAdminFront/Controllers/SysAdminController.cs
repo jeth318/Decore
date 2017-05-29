@@ -104,6 +104,23 @@ namespace DecoreSysAdminFront.Controllers
             }
         }
 
+        public ActionResult AddCoreUser()
+        {
+            return View(userInfo);
+        }
+
+        [HttpPost]
+        public ActionResult AddCoreUser (UserInfo user)
+        {
+
+            userService.CreateUser(user);
+
+            var url = "http://193.10.202.73/Frontend/";
+
+            return Redirect(url);
+
+        }
+
         // GET: SysAdmin/AddEmployee -- NOT IN USE AT THE MOOOMENT -------------------------------------------- 
       
         public ActionResult AddEmployee()

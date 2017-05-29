@@ -391,6 +391,7 @@
     <None Include="Service References\UserServiceRef\UserService3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\SysAdmin\AddCoreUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
