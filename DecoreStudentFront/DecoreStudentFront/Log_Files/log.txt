@@ -1,3 +1,6 @@
 ﻿DEBUG 2017-05-29 00:17:02,981 16713ms TestLogger             Login              - obama@hv.se logged in
  [JESPERTHRNB82C5] - 19
  ::1
+DEBUG 2017-05-29 14:29:09,093 23878ms TestLogger             Login              - obama@hv.se logged in
+ [IT007939] - 
+ 127.0.0.1

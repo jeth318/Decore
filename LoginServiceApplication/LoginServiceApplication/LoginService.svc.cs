@@ -20,11 +20,12 @@ namespace LoginServiceApplication
         UserInfo user = new UserInfo();
         EmployeeUsers employeeUser = new EmployeeUsers();
         StudentUsers studentUser = new StudentUsers();
+
         private static readonly ILog logger = LogManager.GetLogger("Logger");
 
         public StudentUsers LoginStudent(string email, string password)
         {
-            
+
             user = userService.ValidateUser(email, password);
 
             if(user != null)
@@ -62,6 +63,7 @@ namespace LoginServiceApplication
 
         public bool IsRunning()
         {
+            logger.Debug("is running");
             return true;
         }
     }

@@ -76,3 +76,9 @@ C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\LoginServiceApplication\
 \\Mac\Home\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.pdb
 \\Mac\Home\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\log4net.dll
 \\Mac\Home\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\log4net.xml
+C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\ApplicationInsights.config
+C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.dll.config
+C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.dll
+C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.pdb
+C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.dll
+C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\obj\Debug\LoginServiceApplication.pdb

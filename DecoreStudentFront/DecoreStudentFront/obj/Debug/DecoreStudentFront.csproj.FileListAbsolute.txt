@@ -243,3 +243,37 @@ H:\Decore Git\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront
 H:\Decore Git\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.pdb
 H:\Decore Git\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.csprojResolveAssemblyReference.cache
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.csprojResolveAssemblyReference.cache
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\ApplicationInsights.config
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\csc.exe
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\vbc.exe
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\VBCSCompiler.exe
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\DecoreStudentFront.dll.config
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\DecoreStudentFront.dll
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\DecoreStudentFront.pdb
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Microsoft.AI.Web.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Microsoft.ApplicationInsights.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\System.Web.Helpers.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\System.Web.Mvc.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\System.Web.Optimization.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\System.Web.Razor.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\System.Web.WebPages.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\System.Web.WebPages.Razor.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Antlr3.Runtime.pdb
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Newtonsoft.Json.xml
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.csprojResolveAssemblyReference.cache
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.dll
+C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.pdb
