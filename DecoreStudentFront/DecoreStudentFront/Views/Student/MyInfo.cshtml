@@ -1,11 +1,11 @@
 ﻿@model DecoreStudentFront.UserServiceRef.StudentUsers
 
 @{
-    ViewBag.Title = "MyInfo";
+    ViewBag.Title = "Min information";
     Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
 }
 
-<h2>MyInfo</h2>
+<h2>Min personliga information</h2>
 
 <div>
     <h4>Mina uppgifter</h4>
@@ -80,7 +80,12 @@
 
     </dl>
 </div>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-warning" }) 
+        @Html.ActionLink("Tillbaka", "Start", null, new { @class = "btn btn-default" })
+    </div>
+</div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Tillbaka", "Start")
+    
 </p>

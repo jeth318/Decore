@@ -7,6 +7,7 @@ using DecoreStudentFront.TicketServiceRef;
 
 namespace DecoreStudentFront.Controllers
 {
+    [Authorize]
     public class EventListController : Controller
     {
         private readonly EmployeeServiceWCFClient _employeeWcfClient = new EmployeeServiceWCFClient();

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using DecoreStudentFront.StudentServiceRef;
 using DecoreStudentFront.UserServiceRef;
 using DecoreStudentFront.EventServiceRef;
 using DecoreStudentFront.TicketServiceRef;
@@ -13,6 +12,7 @@ using log4net;
 
 namespace DecoreStudentFront.Controllers
 {
+    [Authorize]
     public class StudentController : Controller
     {
         UserServiceClient userService = new UserServiceClient();
@@ -87,7 +87,6 @@ namespace DecoreStudentFront.Controllers
         public ActionResult Edit(int id, UserServiceRef.UserInfo updatedUser)
         {
             
-
             try
             {
                 userService.UpdateUser(updatedUser);
@@ -103,8 +102,6 @@ namespace DecoreStudentFront.Controllers
             }
         }
 
-
-
         public ActionResult Delete(int id)
         {
             try
@@ -114,10 +111,9 @@ namespace DecoreStudentFront.Controllers
             }
             catch (Exception)
             {
-
-                throw;
+                return View();
             }
-            return View();
+            
         }
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
