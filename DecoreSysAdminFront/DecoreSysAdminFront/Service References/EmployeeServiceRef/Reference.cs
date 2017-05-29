@@ -176,6 +176,9 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
         private DecoreSysAdminFront.EmployeeServiceRef.RoleInfo[] RolesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DecoreSysAdminFront.EmployeeServiceRef.SectionInfo[] SectionsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime UpdatedAtField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -242,6 +245,19 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
                 if ((object.ReferenceEquals(this.RolesField, value) != true)) {
                     this.RolesField = value;
                     this.RaisePropertyChanged("Roles");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DecoreSysAdminFront.EmployeeServiceRef.SectionInfo[] Sections {
+            get {
+                return this.SectionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SectionsField, value) != true)) {
+                    this.SectionsField = value;
+                    this.RaisePropertyChanged("Sections");
                 }
             }
         }
@@ -488,6 +504,7 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SectionInfo", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DecoreSysAdminFront.EmployeeServiceRef.SectionMembers))]
     public partial class SectionInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -507,6 +524,9 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> MemberCountField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
@@ -596,6 +616,19 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> MemberCount {
+            get {
+                return this.MemberCountField;
+            }
+            set {
+                if ((this.MemberCountField.Equals(value) != true)) {
+                    this.MemberCountField = value;
+                    this.RaisePropertyChanged("MemberCount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Name {
             get {
                 return this.NameField;
@@ -657,6 +690,250 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SectionMembers", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+    [System.SerializableAttribute()]
+    public partial class SectionMembers : DecoreSysAdminFront.EmployeeServiceRef.SectionInfo {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo[] MembersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DecoreSysAdminFront.EmployeeServiceRef.UserInfo[] UserInfoField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo[] Members {
+            get {
+                return this.MembersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MembersField, value) != true)) {
+                    this.MembersField = value;
+                    this.RaisePropertyChanged("Members");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DecoreSysAdminFront.EmployeeServiceRef.UserInfo[] UserInfo {
+            get {
+                return this.UserInfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserInfoField, value) != true)) {
+                    this.UserInfoField = value;
+                    this.RaisePropertyChanged("UserInfo");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserInfo", Namespace="http://schemas.datacontract.org/2004/07/UserServiceApplication")]
+    [System.SerializableAttribute()]
+    public partial class UserInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EmailVerifiedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EmployeeIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SocSecNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> StudentIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool SuccessfulOperationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TelNumField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool EmailVerified {
+            get {
+                return this.EmailVerifiedField;
+            }
+            set {
+                if ((this.EmailVerifiedField.Equals(value) != true)) {
+                    this.EmailVerifiedField = value;
+                    this.RaisePropertyChanged("EmailVerified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> EmployeeId {
+            get {
+                return this.EmployeeIdField;
+            }
+            set {
+                if ((this.EmployeeIdField.Equals(value) != true)) {
+                    this.EmployeeIdField = value;
+                    this.RaisePropertyChanged("EmployeeId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FirstName {
+            get {
+                return this.FirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
+                    this.FirstNameField = value;
+                    this.RaisePropertyChanged("FirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SocSecNum {
+            get {
+                return this.SocSecNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SocSecNumField, value) != true)) {
+                    this.SocSecNumField = value;
+                    this.RaisePropertyChanged("SocSecNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> StudentId {
+            get {
+                return this.StudentIdField;
+            }
+            set {
+                if ((this.StudentIdField.Equals(value) != true)) {
+                    this.StudentIdField = value;
+                    this.RaisePropertyChanged("StudentId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool SuccessfulOperation {
+            get {
+                return this.SuccessfulOperationField;
+            }
+            set {
+                if ((this.SuccessfulOperationField.Equals(value) != true)) {
+                    this.SuccessfulOperationField = value;
+                    this.RaisePropertyChanged("SuccessfulOperation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TelNum {
+            get {
+                return this.TelNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TelNumField, value) != true)) {
+                    this.TelNumField = value;
+                    this.RaisePropertyChanged("TelNum");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="EmployeeServiceRef.IEmployeeServiceWCF")]
     public interface IEmployeeServiceWCF {
@@ -666,6 +943,12 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/IsRunning", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/IsRunningResponse")]
         System.Threading.Tasks.Task<bool> IsRunningAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetAllAccess", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetAllAccessResponse")]
+        DecoreSysAdminFront.EmployeeServiceRef.AccessInfo[] GetAllAccess();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetAllAccess", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetAllAccessResponse")]
+        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.AccessInfo[]> GetAllAccessAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateAccess", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateAccessResponse")]
         DecoreSysAdminFront.EmployeeServiceRef.AccessInfo CreateAccess(int createdById, string name, string description);
@@ -685,11 +968,23 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteAccess", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteAccessResponse")]
         System.Threading.Tasks.Task<string> DeleteAccessAsync(int acessId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateEmployeeResponse")]
-        DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetAllEmployees", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetAllEmployeesResponse")]
+        DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo[] GetAllEmployees();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetAllEmployees", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetAllEmployeesResponse")]
+        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo[]> GetAllEmployeesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetSectionsMembersBySectionIds", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetSectionsMembersBySectionIdsResponse")]
+        DecoreSysAdminFront.EmployeeServiceRef.SectionMembers[] GetSectionsMembersBySectionIds(int[] sectionIds);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetSectionsMembersBySectionIds", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetSectionsMembersBySectionIdsResponse")]
+        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.SectionMembers[]> GetSectionsMembersBySectionIdsAsync(int[] sectionIds);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateEmployeeResponse")]
-        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn);
+        DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] roleIds);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateEmployeeResponse")]
+        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] roleIds);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByUserId", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetEmployeeByUserIdResponse")]
         DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo GetEmployeeByUserId(int userId);
@@ -704,16 +999,16 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
         System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> GetEmployeeByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRoles", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRolesResponse")]
-        DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo ChangeEmployeeRoles(int updatedById, int employeeId, int[] rolesToAddId, int[] rolesToRemoveId);
+        DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo ChangeEmployeeRoles(int updatedById, int employeeId, int[] rolesToAddId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRoles", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeRolesResponse")]
-        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeRolesAsync(int updatedById, int employeeId, int[] rolesToAddId, int[] rolesToRemoveId);
+        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeRolesAsync(int updatedById, int employeeId, int[] rolesToAddId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSections", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSectionsResponse")]
-        DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo ChangeEmployeeSections(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateEmployeeSectionAndRoles", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateEmployeeSectionAndRolesResponse")]
+        DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo UpdateEmployeeSectionAndRoles(int updatedById, int employeeId, int[] roleIds);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSections", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/ChangeEmployeeSectionsResponse")]
-        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeSectionsAsync(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateEmployeeSectionAndRoles", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateEmployeeSectionAndRolesResponse")]
+        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> UpdateEmployeeSectionAndRolesAsync(int updatedById, int employeeId, int[] roleIds);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployee", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployeeResponse")]
         string DeleteEmployee(int employeeId);
@@ -727,11 +1022,17 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/CreateRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/CreateRoleResponse")]
         System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.RoleInfo> CreateRoleAsync(int createdById, int sectionId, string name, string description, int[] access);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateRoleResponse")]
-        DecoreSysAdminFront.EmployeeServiceRef.RoleInfo UpdateRole(int updatedById, DecoreSysAdminFront.EmployeeServiceRef.RoleInfo updatedRole);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetRoleById", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetRoleByIdResponse")]
+        DecoreSysAdminFront.EmployeeServiceRef.RoleInfo GetRoleById(int roleId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/GetRoleById", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/GetRoleByIdResponse")]
+        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.RoleInfo> GetRoleByIdAsync(int roleId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateRoleResponse")]
-        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.RoleInfo> UpdateRoleAsync(int updatedById, DecoreSysAdminFront.EmployeeServiceRef.RoleInfo updatedRole);
+        DecoreSysAdminFront.EmployeeServiceRef.RoleInfo UpdateRole(int updatedById, int roleId, string roleName, string roleDescription, int[] roleAccessIdList);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateRoleResponse")]
+        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.RoleInfo> UpdateRoleAsync(int updatedById, int roleId, string roleName, string roleDescription, int[] roleAccessIdList);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteRole", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteRoleResponse")]
         string DeleteRole(int roleId);
@@ -762,6 +1063,18 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/UpdateSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/UpdateSectionResponse")]
         System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.SectionInfo> UpdateSectionAsync(int updatedById, DecoreSysAdminFront.EmployeeServiceRef.SectionInfo updatedSection);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/AddEmployeeToSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/AddEmployeeToSectionResponse")]
+        DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo AddEmployeeToSection(int addedById, int employeeId, int sectionId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/AddEmployeeToSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/AddEmployeeToSectionResponse")]
+        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> AddEmployeeToSectionAsync(int addedById, int employeeId, int sectionId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployeeFromSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployeeFromSectionResponse")]
+        DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo DeleteEmployeeFromSection(int deletedById, int employeeId, int sectionId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployeeFromSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteEmployeeFromSectionResponse")]
+        System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> DeleteEmployeeFromSectionAsync(int deletedById, int employeeId, int sectionId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeServiceWCF/DeleteSection", ReplyAction="http://tempuri.org/IEmployeeServiceWCF/DeleteSectionResponse")]
         string DeleteSection(int sectionId);
@@ -805,6 +1118,14 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
             return base.Channel.IsRunningAsync();
         }
         
+        public DecoreSysAdminFront.EmployeeServiceRef.AccessInfo[] GetAllAccess() {
+            return base.Channel.GetAllAccess();
+        }
+        
+        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.AccessInfo[]> GetAllAccessAsync() {
+            return base.Channel.GetAllAccessAsync();
+        }
+        
         public DecoreSysAdminFront.EmployeeServiceRef.AccessInfo CreateAccess(int createdById, string name, string description) {
             return base.Channel.CreateAccess(createdById, name, description);
         }
@@ -829,12 +1150,28 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
             return base.Channel.DeleteAccessAsync(acessId);
         }
         
-        public DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn) {
-            return base.Channel.CreateEmployee(userIdIn, createdByIdin, sectionIds, roleIdsIn);
+        public DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo[] GetAllEmployees() {
+            return base.Channel.GetAllEmployees();
         }
         
-        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] sectionIds, int[] roleIdsIn) {
-            return base.Channel.CreateEmployeeAsync(userIdIn, createdByIdin, sectionIds, roleIdsIn);
+        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo[]> GetAllEmployeesAsync() {
+            return base.Channel.GetAllEmployeesAsync();
+        }
+        
+        public DecoreSysAdminFront.EmployeeServiceRef.SectionMembers[] GetSectionsMembersBySectionIds(int[] sectionIds) {
+            return base.Channel.GetSectionsMembersBySectionIds(sectionIds);
+        }
+        
+        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.SectionMembers[]> GetSectionsMembersBySectionIdsAsync(int[] sectionIds) {
+            return base.Channel.GetSectionsMembersBySectionIdsAsync(sectionIds);
+        }
+        
+        public DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo CreateEmployee(int userIdIn, int createdByIdin, int[] roleIds) {
+            return base.Channel.CreateEmployee(userIdIn, createdByIdin, roleIds);
+        }
+        
+        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> CreateEmployeeAsync(int userIdIn, int createdByIdin, int[] roleIds) {
+            return base.Channel.CreateEmployeeAsync(userIdIn, createdByIdin, roleIds);
         }
         
         public DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo GetEmployeeByUserId(int userId) {
@@ -853,20 +1190,20 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
             return base.Channel.GetEmployeeByIdAsync(id);
         }
         
-        public DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo ChangeEmployeeRoles(int updatedById, int employeeId, int[] rolesToAddId, int[] rolesToRemoveId) {
-            return base.Channel.ChangeEmployeeRoles(updatedById, employeeId, rolesToAddId, rolesToRemoveId);
+        public DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo ChangeEmployeeRoles(int updatedById, int employeeId, int[] rolesToAddId) {
+            return base.Channel.ChangeEmployeeRoles(updatedById, employeeId, rolesToAddId);
         }
         
-        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeRolesAsync(int updatedById, int employeeId, int[] rolesToAddId, int[] rolesToRemoveId) {
-            return base.Channel.ChangeEmployeeRolesAsync(updatedById, employeeId, rolesToAddId, rolesToRemoveId);
+        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeRolesAsync(int updatedById, int employeeId, int[] rolesToAddId) {
+            return base.Channel.ChangeEmployeeRolesAsync(updatedById, employeeId, rolesToAddId);
         }
         
-        public DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo ChangeEmployeeSections(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds) {
-            return base.Channel.ChangeEmployeeSections(updatedById, employeeId, sectionsToAddIds, sectionsToRemoveIds);
+        public DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo UpdateEmployeeSectionAndRoles(int updatedById, int employeeId, int[] roleIds) {
+            return base.Channel.UpdateEmployeeSectionAndRoles(updatedById, employeeId, roleIds);
         }
         
-        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> ChangeEmployeeSectionsAsync(int updatedById, int employeeId, int[] sectionsToAddIds, int[] sectionsToRemoveIds) {
-            return base.Channel.ChangeEmployeeSectionsAsync(updatedById, employeeId, sectionsToAddIds, sectionsToRemoveIds);
+        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> UpdateEmployeeSectionAndRolesAsync(int updatedById, int employeeId, int[] roleIds) {
+            return base.Channel.UpdateEmployeeSectionAndRolesAsync(updatedById, employeeId, roleIds);
         }
         
         public string DeleteEmployee(int employeeId) {
@@ -885,12 +1222,20 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
             return base.Channel.CreateRoleAsync(createdById, sectionId, name, description, access);
         }
         
-        public DecoreSysAdminFront.EmployeeServiceRef.RoleInfo UpdateRole(int updatedById, DecoreSysAdminFront.EmployeeServiceRef.RoleInfo updatedRole) {
-            return base.Channel.UpdateRole(updatedById, updatedRole);
+        public DecoreSysAdminFront.EmployeeServiceRef.RoleInfo GetRoleById(int roleId) {
+            return base.Channel.GetRoleById(roleId);
         }
         
-        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.RoleInfo> UpdateRoleAsync(int updatedById, DecoreSysAdminFront.EmployeeServiceRef.RoleInfo updatedRole) {
-            return base.Channel.UpdateRoleAsync(updatedById, updatedRole);
+        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.RoleInfo> GetRoleByIdAsync(int roleId) {
+            return base.Channel.GetRoleByIdAsync(roleId);
+        }
+        
+        public DecoreSysAdminFront.EmployeeServiceRef.RoleInfo UpdateRole(int updatedById, int roleId, string roleName, string roleDescription, int[] roleAccessIdList) {
+            return base.Channel.UpdateRole(updatedById, roleId, roleName, roleDescription, roleAccessIdList);
+        }
+        
+        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.RoleInfo> UpdateRoleAsync(int updatedById, int roleId, string roleName, string roleDescription, int[] roleAccessIdList) {
+            return base.Channel.UpdateRoleAsync(updatedById, roleId, roleName, roleDescription, roleAccessIdList);
         }
         
         public string DeleteRole(int roleId) {
@@ -931,6 +1276,22 @@ namespace DecoreSysAdminFront.EmployeeServiceRef {
         
         public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.SectionInfo> UpdateSectionAsync(int updatedById, DecoreSysAdminFront.EmployeeServiceRef.SectionInfo updatedSection) {
             return base.Channel.UpdateSectionAsync(updatedById, updatedSection);
+        }
+        
+        public DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo AddEmployeeToSection(int addedById, int employeeId, int sectionId) {
+            return base.Channel.AddEmployeeToSection(addedById, employeeId, sectionId);
+        }
+        
+        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> AddEmployeeToSectionAsync(int addedById, int employeeId, int sectionId) {
+            return base.Channel.AddEmployeeToSectionAsync(addedById, employeeId, sectionId);
+        }
+        
+        public DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo DeleteEmployeeFromSection(int deletedById, int employeeId, int sectionId) {
+            return base.Channel.DeleteEmployeeFromSection(deletedById, employeeId, sectionId);
+        }
+        
+        public System.Threading.Tasks.Task<DecoreSysAdminFront.EmployeeServiceRef.EmployeeInfo> DeleteEmployeeFromSectionAsync(int deletedById, int employeeId, int sectionId) {
+            return base.Channel.DeleteEmployeeFromSectionAsync(deletedById, employeeId, sectionId);
         }
         
         public string DeleteSection(int sectionId) {

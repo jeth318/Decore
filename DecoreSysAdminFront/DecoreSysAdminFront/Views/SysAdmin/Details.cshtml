@@ -37,19 +37,19 @@
             {
                 @Html.ActionLink("Frånkoppla student", "DetatchStudent", new { id = Model.Id })
                 <br />
-                @Html.ActionLink("Frånkoppla personal", "DetachEmployee", new { id = Model.Id })
+                @Html.ActionLink("Frånkoppla personal", "DetatchEmployee", new { id = Model.Id })
             }
             else if (Model.StudentId == null && Model.EmployeeId != null)
             {
                 @Html.ActionLink("Gör till student", "DetatchStudent", new { id = Model.Id })
                 <br />
-                @Html.ActionLink("Frånkoppla personal", "DetachEmployee", new { id = Model.Id })
+                @Html.ActionLink("Frånkoppla personal", "DetatchEmployee", new { id = Model.Id })
             }
             else if (Model.StudentId != null && Model.EmployeeId == null)
             {
-                @Html.ActionLink("Frånkoppla student", "DetatchStudent", new { id = Model.Id })
+                @Html.ActionLink("Frånkoppla student", "DetatchEmployee", new { id = Model.Id })
                 <br />
-                @Html.ActionLink("Gör till personal", "DetachEmployee", new { id = Model.Id })
+                @Html.ActionLink("Gör till personal", "DetatchEmployee", new { id = Model.Id })
             }
         </div>
     </div>

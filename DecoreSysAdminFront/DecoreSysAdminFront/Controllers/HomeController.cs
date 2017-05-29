@@ -26,29 +26,21 @@ namespace DecoreSysAdminFront.Controllers
         public ActionResult Login(string userinputLogin, string passwordinputLogin)
         {
             LoginServiceClient loginService = new LoginServiceClient();
+
             EmployeeUsers employeeUser = new EmployeeUsers();
-            try
-            {
-                employeeUser = loginService.LoginEmployee(userinputLogin, passwordinputLogin);
-                loginService.Close();
-                if (employeeUser.SuccessfulOperation == true)
+            employeeUser = loginService.LoginEmployee(userinputLogin, passwordinputLogin);
+            loginService.Close();
+
+            if (employeeUser.EmployeeInfo.Roles.Any(role => role.Access.Any(access => access.Name.Contains("super_admin"))))
                 {
                     FormsAuthentication.RedirectFromLoginPage(employeeUser.Id.ToString(), false);                   
                     return null;
-                } else
-                {
-                    return RedirectToAction("Index");
                 }
-            }
-            catch (Exception)
-            {
-                logger.Fatal("Failed to login:" + userinputLogin);
-                return RedirectToAction("Index");
-            }
-
-            
-        }
-        
-              
+            else
+                {
+                    logger.Fatal("Failed to login:" + userinputLogin);
+                    return RedirectToAction("Index");     
+                }             
+        }            
     }
 }

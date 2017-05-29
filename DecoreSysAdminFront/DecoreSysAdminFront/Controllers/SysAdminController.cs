@@ -5,31 +5,27 @@ using System.Web;
 using System.Web.Mvc;
 using DecoreSysAdminFront.UserServiceRef;
 using DecoreSysAdminFront.StudentServiceRef;
-using DecoreSysAdminFront.EmployeeServiceRef;
+
 using log4net;
 
 namespace DecoreSysAdminFront.Controllers
 {
-    
+    [Authorize]
     public class SysAdminController : Controller
     {
         UserServiceClient userService = new UserServiceClient();
         StudentServiceClient studentService = new StudentServiceClient();
-        EmployeeServiceWCFClient employeeService = new EmployeeServiceWCFClient();
+    
         UserInfo userInfo = new UserInfo();
         StudentInfo studentInfo = new StudentInfo();     
         StudentUsers studentUser = new StudentUsers();
         EmployeeUsers employeeUser = new EmployeeUsers();
-        EmployeeServiceRef.EmployeeInfo employee = new EmployeeServiceRef.EmployeeInfo();
+        //EmployeeServiceRef.EmployeeInfo employee = new EmployeeServiceRef.EmployeeInfo();
 
         private static readonly ILog logger = LogManager.GetLogger("TestLogger");
 
 
-        /*
-        EmployeeServiceRef.RoleInfo roleInfo = new EmployeeServiceRef.RoleInfo();
-        EmployeeServiceRef.AccessInfo accessInfo = new EmployeeServiceRef.AccessInfo();
-        EmployeeServiceRef.SectionInfo sectionInfo = new EmployeeServiceRef.SectionInfo();
-        */
+        
 
 
         // GET: SysAdmin   STARTSIDA FÖR INLOGGAD SYSADMIN   
@@ -37,7 +33,7 @@ namespace DecoreSysAdminFront.Controllers
         {
          
             
-            List<UserInfo> allUsers = new List<UserInfo>();
+            List<UserServiceRef.UserInfo> allUsers = new List<UserInfo>();
 
             try
             {
@@ -232,29 +228,14 @@ namespace DecoreSysAdminFront.Controllers
             }
         }
 
-        // GET: SysAdmin/DetatchEmployee NOT IN USE AT THE MOOOMENT. -------------------------------------------- 
-        public ActionResult DetatchEmployee()
+        // GET: SysAdmin/DetatchEmployee REDIRECTS TO GROUP 3 . -------------------------------------------- 
+        public ActionResult DetatchEmployee(int id)
         {
-            return View();
+            var url = "http://193.10.202.73/Frontend";
+            return Redirect (url);
         }
 
-        // POST: SysAdmin/DetetchEmployee NOT IN USE AT THE MOOOMENT. -------------------------------------------- 
-        [HttpPost]
-        public ActionResult DetatchEmployee(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-
+       
         // GET: SysAdmin/Edit/5
         public ActionResult Edit(int id)
         {

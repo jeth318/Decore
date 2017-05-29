@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>DeCore - Studentkåren</title>
+    <title>DeCore - SysAdmin</title>
     <!-- Bootstrap Core CSS -->
     <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -30,7 +30,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="../Home">
+                <a class="navbar-brand page-scroll" href="@Url.Action("Dashboard", "SysAdmin")">
                     <i class="fa fa-graduation-cap"></i> <span class="light">DeCore</span> Högskolan Väst
                 </a>
             </div>
@@ -42,11 +42,8 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Studentlista</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#">Administratör</a>
-                    </li>
+                        <a class="page-scroll" href="#">Systemadministratör</a>
+                    </li>                  
                     <li>
                         <a class="page-scroll" href="@Url.Action("LogOut")">Logga ut</a>
                     </li>

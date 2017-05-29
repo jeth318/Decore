@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EmployeeService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EmployeeService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://193.10.202.73/EmployeeService/EmployeeServiceWCF.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/UserServiceApplication" />
+  <xs:complexType name="ArrayOfAccessInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccessInfo" nillable="true" type="tns:AccessInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccessInfo" nillable="true" type="tns:ArrayOfAccessInfo" />
   <xs:complexType name="AccessInfo">
     <xs:sequence>
       <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
@@ -12,12 +19,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="AccessInfo" nillable="true" type="tns:AccessInfo" />
+  <xs:complexType name="ArrayOfEmployeeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeInfo" nillable="true" type="tns:EmployeeInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeInfo" nillable="true" type="tns:ArrayOfEmployeeInfo" />
   <xs:complexType name="EmployeeInfo">
     <xs:sequence>
       <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
       <xs:element minOccurs="0" name="CreatedById" type="xs:int" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Roles" nillable="true" type="tns:ArrayOfRoleInfo" />
+      <xs:element minOccurs="0" name="Sections" nillable="true" type="tns:ArrayOfSectionInfo" />
       <xs:element minOccurs="0" name="UpdatedAt" type="xs:dateTime" />
       <xs:element minOccurs="0" name="UpdatedById" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="UserId" type="xs:int" />
@@ -45,18 +59,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="RoleInfo" nillable="true" type="tns:RoleInfo" />
-  <xs:complexType name="ArrayOfAccessInfo">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccessInfo" nillable="true" type="tns:AccessInfo" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfAccessInfo" nillable="true" type="tns:ArrayOfAccessInfo" />
-  <xs:complexType name="ArrayOfEmployeeInfo">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeInfo" nillable="true" type="tns:EmployeeInfo" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEmployeeInfo" nillable="true" type="tns:ArrayOfEmployeeInfo" />
   <xs:complexType name="SectionInfo">
     <xs:sequence>
       <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
@@ -64,6 +66,7 @@
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="MemberCount" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Roles" nillable="true" type="tns:ArrayOfRoleInfo" />
       <xs:element minOccurs="0" name="UpdatedAt" type="xs:dateTime" />
@@ -77,4 +80,21 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfSectionInfo" nillable="true" type="tns:ArrayOfSectionInfo" />
+  <xs:complexType name="ArrayOfSectionMembers">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SectionMembers" nillable="true" type="tns:SectionMembers" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSectionMembers" nillable="true" type="tns:ArrayOfSectionMembers" />
+  <xs:complexType name="SectionMembers">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SectionInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Members" nillable="true" type="tns:ArrayOfEmployeeInfo" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/UserServiceApplication" minOccurs="0" name="UserInfo" nillable="true" type="q1:ArrayOfUserInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SectionMembers" nillable="true" type="tns:SectionMembers" />
 </xs:schema>
