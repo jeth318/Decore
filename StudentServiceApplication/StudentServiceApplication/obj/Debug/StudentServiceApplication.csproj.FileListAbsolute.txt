@@ -88,3 +88,12 @@ C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\backEnd\StudentServiceApplicatio
 \\Mac\Home\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\Microsoft.ApplicationInsights.xml
 \\Mac\Home\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.dll
 \\Mac\Home\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.pdb
+C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\ApplicationInsights.config
+C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.dll.config
+C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.dll
+C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\StudentServiceApplication.pdb
+C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\log4net.dll
+C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\log4net.pdb
+C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\bin\log4net.xml
+C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.dll
+C:\Users\jeth0010\Desktop\Grupp1\StudentServiceApplication\StudentServiceApplication\obj\Debug\StudentServiceApplication.pdb

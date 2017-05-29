@@ -1,0 +1,3 @@
+DEBUG 2017-05-29 15:18:15,606   156ms StudentServiceLogger   IsRunning          - Is running
+ [IT007939] - 
+ 127.0.0.1

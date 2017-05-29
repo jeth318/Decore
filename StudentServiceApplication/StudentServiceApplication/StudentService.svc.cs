@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using StudentServiceApplication.UserServiceRef;
+using log4net;
 
 namespace StudentServiceApplication
 { 
@@ -21,6 +22,7 @@ namespace StudentServiceApplication
         UserInfo userInfo = new UserInfo();
 
         UserServiceClient userService = new UserServiceClient();
+        private static readonly ILog logger = LogManager.GetLogger("StudentServiceLogger");
 
         public StudentInfo CreateStudent(StudentInfo studentInfo)
         {
@@ -46,6 +48,7 @@ namespace StudentServiceApplication
                     }
                     catch (Exception)
                     {
+                        logger.Fatal("Failed when creating student");
                         return studentInfo;
                     }            
                 }          
@@ -68,7 +71,7 @@ namespace StudentServiceApplication
             }
             catch (Exception)
             {
-                throw;
+                logger.Fatal("Failed when deleting student");
             }
 
             try
@@ -79,7 +82,7 @@ namespace StudentServiceApplication
             }
             catch (Exception)
             {
-                throw;
+                logger.Fatal("Failed when deleting student");
             }
             return result;
         }
@@ -100,6 +103,7 @@ namespace StudentServiceApplication
             }
             catch (Exception)
             {
+                logger.Fatal("Failed when getting student with userid: " + user_Id);
                 return studentInfo;
             }
             return studentInfo;
@@ -122,9 +126,11 @@ namespace StudentServiceApplication
                 try
                 {
                     db.SaveChanges();
+                    logger.Debug("Success updating student with userid: " + studentInfo.UserId);
                 }
                 catch (Exception)
                 {
+                    logger.Fatal("Failed when updating student with userid: " + studentInfo.UserId);
                     return studentInfo;
                 }
             }
@@ -174,6 +180,7 @@ namespace StudentServiceApplication
 
         public bool IsRunning()
         {
+            logger.Debug("Is running");
             return true;
         }
     }
