@@ -1,1 +1,3 @@
-﻿
+﻿DEBUG 2017-05-29 14:47:46,764   124ms TestLogger             IsRunning          - Is running  was called
+ [IT007939] - 
+ 127.0.0.1
