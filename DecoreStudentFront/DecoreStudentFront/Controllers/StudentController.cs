@@ -22,10 +22,11 @@ namespace DecoreStudentFront.Controllers
         private readonly TicketServiceClient _ticketWCFclient = new TicketServiceClient();
         private readonly EmployeeServiceWCFClient _employeeWcfClient = new EmployeeServiceWCFClient();
         UserServiceRef.UserInfo userInfo = new UserServiceRef.UserInfo();
+        public string displayName = "";
 
         private static readonly ILog logger = LogManager.GetLogger("StudentFrontLogger");
 
-
+        
         // GET: Student
         public ActionResult Start()
         {
@@ -49,6 +50,8 @@ namespace DecoreStudentFront.Controllers
                 
                 studentUser = userService.GetStudentUser(id);
                 ViewBag.User = studentUser.FirstName + " " + studentUser.LastName;
+                displayName = studentUser.FirstName;
+                ViewBag.UserFirstName = displayName;
                 return View(viewModel);
                 
             }
