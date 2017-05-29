@@ -209,8 +209,6 @@
     <Content Include="bin\DecoreStudentFront.pdb" />
     <Content Include="bin\log4net.dll" />
     <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
-    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
-    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
     <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
     <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
     <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
