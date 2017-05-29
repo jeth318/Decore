@@ -97,14 +97,6 @@ C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication
 C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.dll.config
 C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.dll
 C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\LoginServiceApplication.pdb
-C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\log4net.dll
-C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.Web.dll
-C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.ApplicationInsights.dll
 C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\log4net.pdb
 C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\log4net.xml
 C:\Users\jeth0010\Desktop\Grupp1\LoginServiceApplication\LoginServiceApplication\bin\Microsoft.AI.DependencyCollector.xml
