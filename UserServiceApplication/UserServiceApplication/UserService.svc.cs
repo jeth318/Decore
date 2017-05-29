@@ -26,7 +26,7 @@ namespace UserServiceApplication
 
         UserDbModel db = new UserDbModel();
 
-        private static readonly ILog logger = LogManager.GetLogger("UserServiceLogger");
+        private static readonly ILog logger = LogManager.GetLogger("TestLogger");
 
 
 
@@ -393,7 +393,7 @@ namespace UserServiceApplication
 
         public bool IsRunning()
         {
-            logger.Fatal("Is running  was called");
+            logger.Debug("Is running  was called");
             return true;
         }
     }
