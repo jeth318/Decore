@@ -97,3 +97,6 @@ C:\Users\jeth0010\Desktop\Grupp1\UserServiceApplication\UserServiceApplication\b
 C:\Users\jeth0010\Desktop\Grupp1\UserServiceApplication\UserServiceApplication\obj\Debug\UserService.dll
 C:\Users\jeth0010\Desktop\Grupp1\UserServiceApplication\UserServiceApplication\obj\Debug\UserService.pdb
 C:\Users\jeth0010\Desktop\Grupp1\UserServiceApplication\UserServiceApplication\obj\Debug\UserServiceApplication.csprojResolveAssemblyReference.cache
+C:\Users\jeth0010\Desktop\Grupp1\UserServiceApplication\UserServiceApplication\bin\log4net.dll
+C:\Users\jeth0010\Desktop\Grupp1\UserServiceApplication\UserServiceApplication\bin\log4net.pdb
+C:\Users\jeth0010\Desktop\Grupp1\UserServiceApplication\UserServiceApplication\bin\log4net.xml
