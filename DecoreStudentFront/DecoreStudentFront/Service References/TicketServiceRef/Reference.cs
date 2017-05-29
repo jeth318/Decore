@@ -137,6 +137,12 @@ namespace DecoreStudentFront.TicketServiceRef {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketService/CreateTicket", ReplyAction="http://tempuri.org/ITicketService/CreateTicketResponse")]
         System.Threading.Tasks.Task CreateTicketAsync(DecoreStudentFront.TicketServiceRef.Ticket ticket);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketService/GetTicketByEventId", ReplyAction="http://tempuri.org/ITicketService/GetTicketByEventIdResponse")]
+        DecoreStudentFront.TicketServiceRef.Ticket[] GetTicketByEventId(int eventId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketService/GetTicketByEventId", ReplyAction="http://tempuri.org/ITicketService/GetTicketByEventIdResponse")]
+        System.Threading.Tasks.Task<DecoreStudentFront.TicketServiceRef.Ticket[]> GetTicketByEventIdAsync(int eventId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -180,6 +186,14 @@ namespace DecoreStudentFront.TicketServiceRef {
         
         public System.Threading.Tasks.Task CreateTicketAsync(DecoreStudentFront.TicketServiceRef.Ticket ticket) {
             return base.Channel.CreateTicketAsync(ticket);
+        }
+        
+        public DecoreStudentFront.TicketServiceRef.Ticket[] GetTicketByEventId(int eventId) {
+            return base.Channel.GetTicketByEventId(eventId);
+        }
+        
+        public System.Threading.Tasks.Task<DecoreStudentFront.TicketServiceRef.Ticket[]> GetTicketByEventIdAsync(int eventId) {
+            return base.Channel.GetTicketByEventIdAsync(eventId);
         }
     }
 }

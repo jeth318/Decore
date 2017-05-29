@@ -21,7 +21,7 @@ namespace DecoreStudentFront.Controllers
         private readonly EventServiceClient _eventWCFclient = new EventServiceClient();
         private readonly TicketServiceClient _ticketWCFclient = new TicketServiceClient();
         private readonly EmployeeServiceWCFClient _employeeWcfClient = new EmployeeServiceWCFClient();
-        UserInfo userInfo = new UserInfo();
+        UserServiceRef.UserInfo userInfo = new UserServiceRef.UserInfo();
 
         private static readonly ILog logger = LogManager.GetLogger("StudentFrontLogger");
 
@@ -84,7 +84,7 @@ namespace DecoreStudentFront.Controllers
             }
         }
         [HttpPost]
-        public ActionResult Edit(int id, UserInfo updatedUser)
+        public ActionResult Edit(int id, UserServiceRef.UserInfo updatedUser)
         {
             
 

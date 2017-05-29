@@ -303,9 +303,15 @@
     <Content Include="Service References\EmployeeServiceRef\DecoreStudentFront.EmployeeServiceRef.SectionInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\EmployeeServiceRef\DecoreStudentFront.EmployeeServiceRef.SectionMembers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF.disco" />
     <None Include="Service References\EmployeeServiceRef\configuration91.svcinfo" />
     <None Include="Service References\EmployeeServiceRef\configuration.svcinfo" />
+    <None Include="Service References\EmployeeServiceRef\EmployeeServiceWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\EmployeeServiceRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

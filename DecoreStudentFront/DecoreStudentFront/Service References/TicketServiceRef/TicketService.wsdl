@@ -19,6 +19,12 @@
   <wsdl:message name="ITicketService_CreateTicket_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateTicketResponse" />
   </wsdl:message>
+  <wsdl:message name="ITicketService_GetTicketByEventId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTicketByEventId" />
+  </wsdl:message>
+  <wsdl:message name="ITicketService_GetTicketByEventId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTicketByEventIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="ITicketService">
     <wsdl:operation name="GetTickets">
       <wsdl:input wsaw:Action="http://tempuri.org/ITicketService/GetTickets" message="tns:ITicketService_GetTickets_InputMessage" />
@@ -27,6 +33,10 @@
     <wsdl:operation name="CreateTicket">
       <wsdl:input wsaw:Action="http://tempuri.org/ITicketService/CreateTicket" message="tns:ITicketService_CreateTicket_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITicketService/CreateTicketResponse" message="tns:ITicketService_CreateTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketByEventId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketService/GetTicketByEventId" message="tns:ITicketService_GetTicketByEventId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketService/GetTicketByEventIdResponse" message="tns:ITicketService_GetTicketByEventId_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITicketService" type="tns:ITicketService">
@@ -42,6 +52,15 @@
     </wsdl:operation>
     <wsdl:operation name="CreateTicket">
       <soap:operation soapAction="http://tempuri.org/ITicketService/CreateTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketByEventId">
+      <soap:operation soapAction="http://tempuri.org/ITicketService/GetTicketByEventId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
