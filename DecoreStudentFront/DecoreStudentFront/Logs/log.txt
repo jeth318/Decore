@@ -58,3 +58,42 @@ DEBUG 2017-05-29 23:12:10,823 13345ms StudentFrontLogger     Edit               
 DEBUG 2017-05-29 23:31:32,317 11635ms StudentFrontLogger     Edit               - Success update student with ID 27
  [JESPERTHRNB82C5] - 27
  ::1
+DEBUG 2017-05-29 23:56:10,539 31543ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-29 23:56:19,750 40754ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-29 23:56:56,197   565ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-29 23:58:14,648 26094ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-29 23:58:22,364 33809ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-30 00:06:21,518 32378ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-30 00:07:58,359 129219ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-30 00:08:02,827 133687ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-30 00:08:50,068 180929ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-30 00:09:02,224 193084ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-30 00:09:21,715 212575ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-30 00:09:25,671 216531ms StudentFrontLogger     Edit               - Success update student with ID 19
+ [JESPERTHRNB82C5] - 19
+ ::1
+DEBUG 2017-05-30 00:12:42,812 88890ms StudentFrontLogger     Edit               - Success update student with ID 27
+ [JESPERTHRNB82C5] - 27
+ ::1

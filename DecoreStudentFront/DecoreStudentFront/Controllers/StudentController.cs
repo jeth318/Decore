@@ -22,15 +22,14 @@ namespace DecoreStudentFront.Controllers
         private readonly TicketServiceClient _ticketWCFclient = new TicketServiceClient();
         private readonly EmployeeServiceWCFClient _employeeWcfClient = new EmployeeServiceWCFClient();
         UserServiceRef.UserInfo userInfo = new UserServiceRef.UserInfo();
-        public string displayName = "";
+        
 
         private static readonly ILog logger = LogManager.GetLogger("StudentFrontLogger");
 
         
         // GET: Student
         public ActionResult Start()
-        {
-            
+        {     
             string idString = User.Identity.Name;
             int id = Int32.Parse(idString);
 
@@ -44,35 +43,24 @@ namespace DecoreStudentFront.Controllers
                 EventTypes = eventTypes,
                 SectionTypes = sectionTypes
             };
-            
-            try
-            {
-                
-                studentUser = userService.GetStudentUser(id);
-                ViewBag.User = studentUser.FirstName + " " + studentUser.LastName;
-                displayName = studentUser.FirstName;
-                ViewBag.UserFirstName = displayName;
-                return View(viewModel);
-                
-            }
-            catch (Exception)
-            {
-                logger.Fatal("Failed getting student");
-                return View();
-            }      
-        }
-
-        public ActionResult MyInfo()
-        {
-            string idString = User.Identity.Name;
-            int id = Int32.Parse(idString);
 
             studentUser = userService.GetStudentUser(id);
-            return View(studentUser);
+            if (studentUser.Email != null)
+            {
+                ViewBag.User = studentUser.FirstName + " " + studentUser.LastName;
+                           
+                return View(viewModel);
+            }
+            else
+            {              
+                logger.Fatal("Failed getting student");
+                return View();
+            }                  
         }
 
-        public ActionResult Edit(int id)
+        public ActionResult Edit()
         {
+            int id = Int32.Parse(User.Identity.Name);
             try
             {
                 userInfo = userService.GetUserById(id);
@@ -86,10 +74,10 @@ namespace DecoreStudentFront.Controllers
                 return View();
             }
         }
+
         [HttpPost]
         public ActionResult Edit(int id, UserServiceRef.UserInfo updatedUser)
-        {
-            
+        {      
             try
             {
                 userService.UpdateUser(updatedUser);
@@ -105,33 +93,33 @@ namespace DecoreStudentFront.Controllers
             }
         }
 
+        // ********** NOT IN USE. BUILT FOR FUTURE
         public ActionResult Delete(int id)
         {
-            try
-            {
-                studentUser = userService.GetStudentUser(id);
+            studentUser = userService.GetStudentUser(id);
+            if (studentUser.Email != null)
                 return View(studentUser);
-            }
-            catch (Exception)
-            {
+
+            else
                 return View();
-            }
-            
+
         }
+
+        // ********** NOT IN USE YET. BUILT FOR FUTURE
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
-            try
+            
+            if(userService.DeleteUser(id))
             {
-                userService.DeleteUser(id);
                 logger.Debug("Success delete student with ID " + id);
                 return RedirectToAction("Index", "Home");
             }
-            catch (Exception)
+            else
             {
                 logger.Fatal("Failed delete student with ID " + id);
                 return View();
-            }
+            }      
         }
 
         public ActionResult LogOut()

@@ -154,7 +154,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\EventListController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="EventViewModel.cs" />
@@ -485,7 +484,6 @@
     <Content Include="Views\Student\Start.cshtml" />
     <Content Include="Views\Student\Delete.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
-    <Content Include="Views\EventList\Index.cshtml" />
     <Content Include="Views\Shared\_navbar.cshtml" />
     <None Include="Service References\UserServiceRef\UserService.wsdl" />
     <None Include="Service References\UserServiceRef\UserService.xsd">
@@ -501,7 +499,6 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Shared\_navbar_start.cshtml" />
-    <Content Include="Views\Student\MyInfo.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>

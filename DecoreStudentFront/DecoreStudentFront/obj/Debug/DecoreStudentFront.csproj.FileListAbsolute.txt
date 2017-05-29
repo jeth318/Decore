@@ -119,7 +119,6 @@ C:\Users\elka0021\Desktop\DecoreStudentFront\DecoreStudentFront\obj\Debug\Decore
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\DecoreStudentFront.dll.config
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\DecoreStudentFront.dll
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\DecoreStudentFront.pdb
-\\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Microsoft.AI.DependencyCollector.xml
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.dll
 \\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.pdb
 H:\Decore Git\DecoreStudentFront\DecoreStudentFront\bin\ApplicationInsights.config
@@ -175,7 +174,6 @@ H:\Decore Git\DecoreStudentFront\DecoreStudentFront\bin\Newtonsoft.Json.xml
 H:\Decore Git\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.dll
 H:\Decore Git\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.pdb
 H:\Decore Git\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.csprojResolveAssemblyReference.cache
-\\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.csprojResolveAssemblyReference.cache
 C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\ApplicationInsights.config
 C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\csc.exe
 C:\Users\jeth0010\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
