@@ -9,6 +9,7 @@ using UserServiceApplication;
 using UserService.StudentServiceRef;
 using UserService;
 using UserService.EmployeeServiceRef;
+using log4net;
 
 
 namespace UserServiceApplication
@@ -25,8 +26,13 @@ namespace UserServiceApplication
 
         UserDbModel db = new UserDbModel();
 
+        private static readonly ILog logger = LogManager.GetLogger("TestLogger");
+
+
+
         public UserInfo CreateUser(UserInfo user)
         {
+            
             var row = (from users in db.Users
                        where users.Email == user.Email
                        select users).FirstOrDefault();
@@ -48,9 +54,12 @@ namespace UserServiceApplication
                     db.Users.Add(userModel);
                     db.SaveChanges();
                     user.SuccessfulOperation = true;
+                    logger.Debug("Success adding user");
+
                 }
                 catch (Exception)
                 {
+                    logger.Fatal("Failed adding user");
                     throw;
                 }
             }
@@ -60,6 +69,7 @@ namespace UserServiceApplication
 
         public UserInfo GetUserById(int user_Id)
         {
+            logger.Debug("Get user was called");
             try
             {
                 //userModel = db.Users.Find(user_Id);
@@ -82,7 +92,8 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
-
+                logger.Fatal("Failed adding user");
+                
             }
 
             return userInfo;
@@ -90,10 +101,12 @@ namespace UserServiceApplication
 
         public StudentUsers GetStudentUser(int user_Id)
         {
+            logger.Debug("Get user was called");
             try
             {
                 studentInfo = studentService.GetStudentByUserId(user_Id);
                 userModel = db.Users.Find(studentInfo.UserId);
+               
             }
             catch (Exception)
             {
@@ -166,7 +179,11 @@ namespace UserServiceApplication
 
             employeeInfo = employeeService.GetEmployeeByUserId(user_Id);
             if (employeeInfo == null)
+            {
+                logger.Fatal("Failed getting  employeeuser with ID: " + user_Id);
                 return null;
+            }
+                
 
             userModel = db.Users.Find(employeeInfo.UserId);
 
@@ -207,6 +224,7 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
+                logger.Fatal("Failed getting user ny socsecnum: " + socSecNum);
                 return userInfo;
             }
 
@@ -267,6 +285,7 @@ namespace UserServiceApplication
                 }
                 catch (Exception)
                 {
+                    logger.Fatal("Failed updating user with ID" + user.Id);
                     throw;
                 }
             }
@@ -286,6 +305,7 @@ namespace UserServiceApplication
             db.Users.Remove(userModel);
             db.SaveChanges();
 
+            logger.Debug("Deleted user with ID: " + userModel.Id);
             return true;
         }
 
@@ -297,7 +317,11 @@ namespace UserServiceApplication
                          select users).FirstOrDefault();
 
             if (userModel == null)
+            {
+                logger.Fatal("Failed validating user with email " + email);
                 return null;
+            }
+                
 
             userInfo.Id = userModel.Id;
             userInfo.SocSecNum = userModel.SocSecNum;
@@ -344,6 +368,7 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
+                logger.Fatal("Failed setting studentId to user: " + userModel.Id);
                 result = false;
             }
 
@@ -377,6 +402,7 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
+                logger.Fatal("Failed setting employeeId to user: " + userModel.Id);
                 result = false;
             }
 
@@ -385,6 +411,7 @@ namespace UserServiceApplication
 
         public bool IsRunning()
         {
+            logger.Debug("Is running  was called");
             return true;
         }
     }

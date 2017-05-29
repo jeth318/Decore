@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using DecoreSysAdminFront.UserServiceRef;
 using DecoreSysAdminFront.StudentServiceRef;
 using DecoreSysAdminFront.EmployeeServiceRef;
+using log4net;
 
 namespace DecoreSysAdminFront.Controllers
 {
@@ -20,6 +21,9 @@ namespace DecoreSysAdminFront.Controllers
         StudentUsers studentUser = new StudentUsers();
         EmployeeUsers employeeUser = new EmployeeUsers();
         EmployeeServiceRef.EmployeeInfo employee = new EmployeeServiceRef.EmployeeInfo();
+
+        private static readonly ILog logger = LogManager.GetLogger("TestLogger");
+
 
         /*
         EmployeeServiceRef.RoleInfo roleInfo = new EmployeeServiceRef.RoleInfo();
@@ -42,6 +46,7 @@ namespace DecoreSysAdminFront.Controllers
             }
             catch (Exception)
             {
+                logger.Fatal("Failed ot get all users");
                 ViewBag.Error = "Failed to fetch users list";
                 return View();
             }      
@@ -57,6 +62,7 @@ namespace DecoreSysAdminFront.Controllers
             }
             catch (Exception)
             {
+                logger.Fatal("Failed to find user:" + id);
                 ViewBag.Error = "Can't find user with ID: " + id;
                 return View();
             }     
@@ -100,8 +106,26 @@ namespace DecoreSysAdminFront.Controllers
             catch
             {
                 ViewBag.Error = "Failed creating the student user";
+                logger.Fatal("Failed to create user");
                 return View();
             }
+        }
+
+        public ActionResult AddCoreUser()
+        {
+            return View(userInfo);
+        }
+
+        [HttpPost]
+        public ActionResult AddCoreUser (UserInfo user)
+        {
+
+            userService.CreateUser(user);
+
+            var url = "http://193.10.202.73/Frontend/";
+
+            return Redirect(url);
+
         }
 
         // GET: SysAdmin/AddEmployee -- NOT IN USE AT THE MOOOMENT -------------------------------------------- 
@@ -147,6 +171,7 @@ namespace DecoreSysAdminFront.Controllers
             }
             catch
             {
+                logger.Fatal("Error while attatching student to user with ID: " + id);
                 ViewBag.Error = "Error while attatching student to user with ID: " + id;
                 return View();
             }
@@ -185,6 +210,7 @@ namespace DecoreSysAdminFront.Controllers
             }
             catch (Exception)
             {
+                logger.Fatal("Error while getting the stundet information for user with ID: " + id);
                 ViewBag.Error = "Error while getting the stundet information for user with ID: " + id;
                 return View();
             }                                
@@ -239,6 +265,7 @@ namespace DecoreSysAdminFront.Controllers
             }
             catch (Exception)
             {
+                logger.Fatal("Can't find user with ID " + id);
                 ViewBag.Error = "Can't find user with ID " + id;
                 return View();
             }      
@@ -269,6 +296,7 @@ namespace DecoreSysAdminFront.Controllers
             }
             catch (Exception)
             {
+                logger.Fatal("Can't find user with ID " + id);
                 ViewBag.Error = "Can't find user with ID " + id;
                 return View();
             }
@@ -286,6 +314,7 @@ namespace DecoreSysAdminFront.Controllers
             }
             catch
             {
+                logger.Fatal("Can't delete user with ID " + id);
                 ViewBag.Error = "Can't delete user with ID " + id;
                 return View();
             }

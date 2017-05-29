@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.Mvc;
 using DecoreSysAdminFront.LoginServiceRef;
+using log4net;
 
 
 
@@ -12,8 +13,10 @@ namespace DecoreSysAdminFront.Controllers
 {
     public class HomeController : Controller
     {
-        
-       
+
+        private static readonly ILog logger = LogManager.GetLogger("SysAdminLogger");
+
+
         public ActionResult Index()
         {
             return View();
@@ -39,6 +42,7 @@ namespace DecoreSysAdminFront.Controllers
             }
             catch (Exception)
             {
+                logger.Fatal("Failed to login:" + userinputLogin);
                 return RedirectToAction("Index");
             }
 

@@ -1,0 +1,3 @@
+FATAL 2017-05-29 15:41:59,690 44813ms SysAdminLogger         Login              - Failed to login:dasdasd@gashdkd.se
+ [IT007939] - 
+ 127.0.0.1

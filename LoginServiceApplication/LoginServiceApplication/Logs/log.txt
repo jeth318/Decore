@@ -1,0 +1,18 @@
+﻿DEBUG 2017-05-29 14:58:30,232    48ms LoginLogger            IsRunning          - IsRunning UP
+ [IT007939] - 
+ 127.0.0.1
+DEBUG 2017-05-29 14:59:40,038    48ms LoginLogger            IsRunning          - IsRunning UP
+ [IT007939] - 
+ 127.0.0.1
+DEBUG 2017-05-29 15:00:34,910    49ms LoginLogger            IsRunning          - IsRunning UP
+ [IT007939] - 
+ 127.0.0.1
+DEBUG 2017-05-29 15:00:57,500 22638ms LoginLogger            IsRunning          - IsRunning UP
+ [IT007939] - 
+ 127.0.0.1
+DEBUG 2017-05-29 15:01:32,386 57525ms LoginLogger            IsRunning          - IsRunning UP
+ [IT007939] - 
+ 127.0.0.1
+DEBUG 2017-05-29 15:02:12,550 97689ms LoginLogger            IsRunning          - IsRunning UP
+ [IT007939] - 
+ 127.0.0.1

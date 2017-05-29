@@ -8,7 +8,7 @@ using DecoreStudentFront.LoginServiceRef;
 using DecoreStudentFront.UserServiceRef;
 using DecoreStudentFront.StudentServiceRef;
 using DecoreStudentFront.ViewModels;
-
+using log4net;
 namespace DecoreStudentFront.Controllers
 {
     public class HomeController : Controller
@@ -18,7 +18,7 @@ namespace DecoreStudentFront.Controllers
         LoginServiceRef.StudentUsers studentUser = new LoginServiceRef.StudentUsers();
         UserServiceClient userService = new UserServiceClient();
         StudentServiceClient studentService = new StudentServiceClient();
-
+        private static readonly ILog logger = LogManager.GetLogger("StudentFrontLogger");
 
         public ActionResult Index()
         {
@@ -78,6 +78,7 @@ namespace DecoreStudentFront.Controllers
             {
                 TempData["Message"] = "Registreringen misslyckades";
                 ViewBag.Message = TempData["Message"];
+                logger.Fatal("Failed register student");
                 return View(regViewModel);
             }
         }
@@ -103,6 +104,7 @@ namespace DecoreStudentFront.Controllers
             }
             catch (Exception)
             {
+                logger.Fatal("Login failed for user: "+ loginViewModel.Username);
                 TempData["Message"] = "Login failed";
             }
 

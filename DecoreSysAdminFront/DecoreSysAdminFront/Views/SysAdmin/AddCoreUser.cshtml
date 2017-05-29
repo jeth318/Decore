@@ -1,0 +1,77 @@
+﻿@model DecoreSysAdminFront.UserServiceRef.UserInfo
+
+@{
+    Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        <h1 style="text-align: center;">Skapa användare</h1>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <h4 class="control-label col-md-2">Personnummer</h4>
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.SocSecNum, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SocSecNum, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4 class="control-label col-md-2">Förnamn</h4>
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4 class="control-label col-md-2">Efternamn</h4>
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4 class="control-label col-md-2">Lösenord</h4>
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @style = "color: black;" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4 class="control-label col-md-2">Email</h4>
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4 class="control-label col-md-2">Telefonnummer</h4>
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.TelNum, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TelNum, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+      
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Spara användare och gå vidare" class="btn btn-success" />
+                <a href="Dashboard" class="btn btn-info" style="margin-left: 5px;">Tillbaka</a>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+
