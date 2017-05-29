@@ -32,7 +32,7 @@ namespace UserServiceApplication
 
         public UserInfo CreateUser(UserInfo user)
         {
-            logger.Debug("Get user was called");
+            
             var row = (from users in db.Users
                        where users.Email == user.Email
                        select users).FirstOrDefault();
@@ -57,6 +57,7 @@ namespace UserServiceApplication
                 }
                 catch (Exception)
                 {
+                    logger.Fatal("Failed adding user");
                     throw;
                 }
             }
@@ -89,7 +90,8 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
-
+                logger.Fatal("Failed adding user");
+                
             }
 
             return userInfo;
@@ -215,6 +217,7 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
+                logger.Fatal("Failed getting user");
                 return userInfo;
             }
 
@@ -275,6 +278,7 @@ namespace UserServiceApplication
                 }
                 catch (Exception)
                 {
+                    logger.Fatal("Failed updating user");
                     throw;
                 }
             }
@@ -294,6 +298,7 @@ namespace UserServiceApplication
             db.Users.Remove(userModel);
             db.SaveChanges();
 
+            logger.Debug("Deleted user with ID: " + userModel.Id);
             return true;
         }
 
@@ -352,6 +357,7 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
+                logger.Fatal("Failed setting studentId to user: " + userModel.Id);
                 result = false;
             }
 
@@ -385,6 +391,7 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
+                logger.Fatal("Failed setting employeeId to user: " + userModel.Id);
                 result = false;
             }
 
