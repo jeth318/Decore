@@ -9,6 +9,7 @@ using DecoreStudentFront.EventServiceRef;
 using DecoreStudentFront.TicketServiceRef;
 using DecoreStudentFront.EmployeeServiceRef;
 using DecoreStudentFront.ViewModels;
+using log4net;
 
 namespace DecoreStudentFront.Controllers
 {
@@ -21,7 +22,9 @@ namespace DecoreStudentFront.Controllers
         private readonly TicketServiceClient _ticketWCFclient = new TicketServiceClient();
         private readonly EmployeeServiceWCFClient _employeeWcfClient = new EmployeeServiceWCFClient();
         UserInfo userInfo = new UserInfo();
-  
+
+        private static readonly ILog logger = LogManager.GetLogger("StudentFrontLogger");
+
 
         // GET: Student
         public ActionResult Start()
@@ -51,6 +54,7 @@ namespace DecoreStudentFront.Controllers
             }
             catch (Exception)
             {
+                logger.Fatal("Failed getting student");
                 return View();
             }      
         }
@@ -69,12 +73,13 @@ namespace DecoreStudentFront.Controllers
             try
             {
                 userInfo = userService.GetUserById(id);
+                logger.Debug("Success update student with ID " + id);
                 return View(userInfo);
             }
             catch (Exception)
             {
-
-                ViewBag.Message = "Snap, coulnd't find user detailjs for user with ID: " + id;
+                logger.Fatal("Failed update student with ID " + id);
+                ViewBag.Message = "Snap, couldn't find user details for user with ID: " + id;
                 return View();
             }
         }
@@ -86,12 +91,14 @@ namespace DecoreStudentFront.Controllers
             try
             {
                 userService.UpdateUser(updatedUser);
+                logger.Debug("Success update student with ID " + id);
                 return RedirectToAction("Start");
             }
             catch (Exception)
             {
 
-                ViewBag.Message = "Snap, coulnd't update the user info";
+                ViewBag.Message = "Snap, couldn't update the user info";
+                logger.Fatal("Failed update student with ID " + id);
                 return View(userInfo);
             }
         }
@@ -118,11 +125,12 @@ namespace DecoreStudentFront.Controllers
             try
             {
                 userService.DeleteUser(id);
+                logger.Debug("Success delete student with ID " + id);
                 return RedirectToAction("Index", "Home");
             }
             catch (Exception)
             {
-
+                logger.Fatal("Failed delete student with ID " + id);
                 return View();
             }
         }
