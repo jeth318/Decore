@@ -64,7 +64,7 @@ namespace DecoreStudentFront.Controllers
             try
             {
                 userInfo = userService.GetUserById(id);
-                logger.Debug("Success update student with ID " + id);
+                
                 return View(userInfo);
             }
             catch (Exception)
