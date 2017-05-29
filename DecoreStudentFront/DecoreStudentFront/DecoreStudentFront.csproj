@@ -161,6 +161,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\EmployeeServiceRef\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -266,6 +269,21 @@
     <Content Include="img\summerparty.jpg" />
     <Content Include="js\grayscale.js" />
     <Content Include="js\grayscale.min.js" />
+    <Content Include="obj\Debug\DecoreStudentFront.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DecoreStudentFront.dll" />
+    <Content Include="obj\Debug\DecoreStudentFront.pdb" />
+    <Content Include="obj\Debug\TempPE\Service References.EmployeeServiceRef.Reference.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Service References.EmployeeServiceRef.Reference1.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Service References.EventServiceRef.Reference.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Service References.LoginServiceRef.Reference.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Service References.LoginServiceRef.Reference1.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Service References.StudentServiceRef.Reference.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Service References.StudentServiceRef.Reference1.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Service References.TicketServiceRef.Reference.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Service References.UserServiceRef.Reference.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Service References.UserServiceRef.Reference1.cs.dll" />
+    <Content Include="obj\Release\DecoreStudentFront.dll" />
+    <Content Include="obj\Release\DecoreStudentFront.pdb" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -279,6 +297,10 @@
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Debug\CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\DecoreStudentFront.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\CoreCompileInputs.cache" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
