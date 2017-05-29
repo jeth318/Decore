@@ -54,6 +54,8 @@ namespace UserServiceApplication
                     db.Users.Add(userModel);
                     db.SaveChanges();
                     user.SuccessfulOperation = true;
+                    logger.Debug("Success adding user");
+
                 }
                 catch (Exception)
                 {
@@ -104,6 +106,7 @@ namespace UserServiceApplication
             {
                 studentInfo = studentService.GetStudentByUserId(user_Id);
                 userModel = db.Users.Find(studentInfo.UserId);
+               
             }
             catch (Exception)
             {
@@ -176,7 +179,11 @@ namespace UserServiceApplication
 
             employeeInfo = employeeService.GetEmployeeByUserId(user_Id);
             if (employeeInfo == null)
+            {
+                logger.Fatal("Failed getting  employeeuser with ID: " + user_Id);
                 return null;
+            }
+                
 
             userModel = db.Users.Find(employeeInfo.UserId);
 
@@ -217,7 +224,7 @@ namespace UserServiceApplication
             }
             catch (Exception)
             {
-                logger.Fatal("Failed getting user");
+                logger.Fatal("Failed getting user ny socsecnum: " + socSecNum);
                 return userInfo;
             }
 
@@ -278,7 +285,7 @@ namespace UserServiceApplication
                 }
                 catch (Exception)
                 {
-                    logger.Fatal("Failed updating user");
+                    logger.Fatal("Failed updating user with ID" + user.Id);
                     throw;
                 }
             }
@@ -310,7 +317,11 @@ namespace UserServiceApplication
                          select users).FirstOrDefault();
 
             if (userModel == null)
+            {
+                logger.Fatal("Failed validating user with email " + email);
                 return null;
+            }
+                
 
             userInfo.Id = userModel.Id;
             userInfo.SocSecNum = userModel.SocSecNum;
