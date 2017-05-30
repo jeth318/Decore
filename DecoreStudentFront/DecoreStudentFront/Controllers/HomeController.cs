@@ -95,17 +95,22 @@ namespace DecoreStudentFront.Controllers
                 loginService.Close();
                 if (studentUser.SuccessfulOperation == true)
                 {
+                    // Session variable only used for displaying user-email in navbar.
+                    System.Web.HttpContext.Current.Session["student_name_session"] = studentUser.FirstName;
+       
                     FormsAuthentication.RedirectFromLoginPage(studentUser.Id.ToString(), false);
                     return null;
                 } else
                 {
+                    logger.Fatal("Login failed for user: " + loginViewModel.Username);
+                    TempData["Message"] = "Inloggningen misslyckades";
                     return RedirectToAction("Index");
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                logger.Fatal("Login failed for user: "+ loginViewModel.Username);
-                TempData["Message"] = "Login failed";
+                logger.Fatal("Login crashed for user: "+ loginViewModel.Username  + "\nExeption: " + e);
+                TempData["Message"] = "Inloggningen misslyckades";
             }
 
             return RedirectToAction("Index");

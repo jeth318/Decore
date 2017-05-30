@@ -5,8 +5,10 @@
 }
 
 <div style="text-align: center;">
+    <br />
+    <br />
     <hr />
-    <h1>Redigera student</h1>
+    <h1>Redigera användare</h1>
             <h3>Epostadress: @Html.DisplayFor(model => model.Email)</h3> 
 
             <h3>Verifierat konto: @Html.DisplayFor(model => model.EmailVerified)</h3>
@@ -41,15 +43,15 @@
             }
             else if (Model.StudentId == null && Model.EmployeeId != null)
             {
-                @Html.ActionLink("Gör till student", "DetatchStudent", new { id = Model.Id })
+                @Html.ActionLink("Gör till student", "AttatchStudent", new { id = Model.Id })
                 <br />
                 @Html.ActionLink("Frånkoppla personal", "DetatchEmployee", new { id = Model.Id })
             }
             else if (Model.StudentId != null && Model.EmployeeId == null)
             {
-                @Html.ActionLink("Frånkoppla student", "DetatchEmployee", new { id = Model.Id })
+                @Html.ActionLink("Frånkoppla student", "DetatchStudent", new { id = Model.Id })
                 <br />
-                @Html.ActionLink("Gör till personal", "DetatchEmployee", new { id = Model.Id })
+                @Html.ActionLink("Gör till personal", "AttatchEmployee", new { id = Model.Id })
             }
         </div>
     </div>

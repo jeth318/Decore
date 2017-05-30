@@ -43,7 +43,11 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#">Systemadministratör</a>
-                    </li>                  
+                    </li>    
+                    <li>
+                        <a class="page-scroll" href="#">Inloggad som @HttpContext.Current.Session["user_session_string"].ToString()</a>
+                         
+                    </li>              
                     <li>
                         <a class="page-scroll" href="@Url.Action("LogOut")">Logga ut</a>
                     </li>

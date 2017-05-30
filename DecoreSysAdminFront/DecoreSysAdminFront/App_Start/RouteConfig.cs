@@ -14,10 +14,21 @@ namespace DecoreSysAdminFront
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+               name: "SysAdmin",
+               url: "SysAdmin",
+               defaults: new { controller = "SysAdmin", action = "Dashboard", id = UrlParameter.Optional }
+           );
+
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+           
+
+
         }
     }
 }

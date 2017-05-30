@@ -100,3 +100,6 @@ DEBUG 2017-05-30 00:12:42,812 88890ms StudentFrontLogger     Edit               
 DEBUG 2017-05-30 00:23:48,143 95112ms StudentFrontLogger     Edit               - Success update student with ID 27
  [JESPERTHRNB82C5] - 27
  ::1
+FATAL 2017-05-30 10:18:43,532 11933ms StudentFrontLogger     Login              - Login failed for user: sdfsd@maa.se
+ [JESPERTHRNB82C5] - 
+ ::1

@@ -94,6 +94,10 @@
                         {
                             <h3 style="color: darkred;">@TempData["Message"]</h3>
                         }
+                        else if ((string)TempData["Message"] == "Inloggningen misslyckades")
+                        {
+                            <h3 style="color: darkred;">@TempData["Message"]</h3>
+                        }
                         <h2 class="login-h2">Inloggning</h2>
 
                         <div class="form-group login-group" style="text-align: left">

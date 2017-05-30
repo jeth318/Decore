@@ -19,6 +19,7 @@ namespace DecoreSysAdminFront.Controllers
 
         public ActionResult Index()
         {
+            
             return View();
         }
 
@@ -31,16 +32,35 @@ namespace DecoreSysAdminFront.Controllers
             employeeUser = loginService.LoginEmployee(userinputLogin, passwordinputLogin);
             loginService.Close();
 
-            if (employeeUser.EmployeeInfo.Roles.Any(role => role.Access.Any(access => access.Name.Contains("super_admin"))))
+            try
+            {
+                if(employeeUser.EmployeeInfo.Roles.Any(role => role.Access.Any(access => access.Name.Contains("super_admin"))))
                 {
-                    FormsAuthentication.RedirectFromLoginPage(employeeUser.Id.ToString(), false);                   
+                    System.Web.HttpContext.Current.Session["user_session_string"] = employeeUser.Email;
+                    FormsAuthentication.RedirectFromLoginPage(employeeUser.Id.ToString(), false);
                     return null;
-                }
-            else
+                } else if (employeeUser != null)
                 {
                     logger.Fatal("Failed to login:" + userinputLogin);
-                    return RedirectToAction("Index");     
-                }             
+                    
+                    TempData["ErrorMessage"] = "Inloggningen misslyckades. Kontrollera att kontot har systemadminbehörighet";
+                    return new RedirectResult(Url.Action("Index") + "#login");
+                } else
+                {
+                    TempData["ErrorMessage"] = "Inloggningen misslyckades. Användaren finns ej eller saknar systemadminbehörighet";
+                    return new RedirectResult(Url.Action("Index") + "#login");
+                }
+                
+                 
+            }
+            catch (Exception)
+            {
+
+                logger.Fatal("Failed to login:" + userinputLogin);
+                TempData["ErrorMessage"] = "Inloggningen misslyckades. Användaren finns ej eller saknar systemadminbehörighet";
+                return new RedirectResult(Url.Action("Index") + "#login");
+            }
+                                
         }            
     }
 }

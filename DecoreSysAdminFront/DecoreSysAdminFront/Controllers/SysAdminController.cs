@@ -172,28 +172,13 @@ namespace DecoreSysAdminFront.Controllers
                 return View();
             }
         }
-        // GET: SysAdmin/AttatchEmployee NOT IN USE AT THE MOOOMENT. -------------------------------------------- 
-        public ActionResult AttatchEmployee()
+        // GET: SysAdmin/AttatchEmployee REDIRECT TO GROUP 2. -------------------------------------------- 
+        public ActionResult AttatchEmployee(int id)
         {
-            return View();
+            var url = "http://193.10.202.73/Frontend";
+            return Redirect(url);
         }
 
-        // POST: SysAdmin/AttatchEmployee NOT IN USE AT THE MOOOMENT. -------------------------------------------- 
-        [HttpPost]
-        public ActionResult AttatchEmployee(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-                // Ta in ett ifyllt EmployeeInfo-object och skicka in i en servicemetod. 
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
         // GET: SysAdmin/DetatchStudent
         public ActionResult DetatchStudent(int id)

@@ -55,10 +55,14 @@
                     </li>
                     <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "EventList" ? "active" : "")">
                        <a href="http://193.10.202.72/Homepage/Homepage/Home/Apply">Anmälan till Event</a>
-                    </li>    
+                    </li> 
+                    
                     <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Student/MyInfo" ? "active" : "")">
                         @Html.ActionLink("Mina uppgifter", "Edit", "Student")
                     </li>
+                    <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Student/MyInfo" ? "active" : "")">
+                        <a href="#">Inloggad som: @HttpContext.Current.Session["student_name_session"].ToString()</a>
+                    </li>  
                     <li class="@(ViewContext.RouteData.Values["controller"].ToString() == "Student/MyInfo" ? "active" : "")">
                         @Html.ActionLink("Logga ut", "LogOut", "Student")
                     </li>                          
