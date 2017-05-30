@@ -40,3 +40,6 @@ FATAL 2017-05-30 09:54:19,940 168155ms SysAdminLogger         Login             
 FATAL 2017-05-30 09:55:31,398 14150ms SysAdminLogger         Login              - Failed to login:mats@me.se
  [JESPERTHRNB82C5] - 
  ::1
+FATAL 2017-05-30 10:38:38,802 11472ms SysAdminLogger         Login              - Failed to login:sdfsf@se.se
+ [JESPERTHRNB82C5] - 
+ ::1
