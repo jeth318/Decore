@@ -64,7 +64,6 @@ namespace DecoreStudentFront.Controllers
             try
             {
                 userInfo = userService.GetUserById(id);
-                
                 return View(userInfo);
             }
             catch (Exception)

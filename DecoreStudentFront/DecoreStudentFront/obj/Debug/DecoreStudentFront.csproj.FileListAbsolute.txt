@@ -231,3 +231,4 @@ C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\Decore
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.dll
 C:\Users\Administratör.WIN-JUJMH1N8TFP\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.pdb
+\\Mac\Home\Desktop\Grupp1\DecoreStudentFront\DecoreStudentFront\obj\Debug\DecoreStudentFront.csprojResolveAssemblyReference.cache
